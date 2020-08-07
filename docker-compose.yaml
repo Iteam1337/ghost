@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  ghost:
+    build: ghost
+    ports:
+      - 2368:2368
+    environment:
+      url: http://127.0.0.1:2368
+      database__client: mysql
+      database__connection__host: mariadb
+      database__connection__database: ghost
+      database__connection__user: ghost
+      database__connection__password: ${MYSQL_PASSWORD}
+    depends_on:
+      - mariadb
+    restart: always
+    volumes:
+      - files:/var/lib/ghost/content
+
+  mariadb:
+    image: mariadb:10
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ghost
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ghost
+    restart: always
+    volumes:
+      - mariadb:/var/lib/mysql
+
+volumes:
+  files:
+    driver: local
+  mariadb:
+    driver: local
