@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: mariadb
+  name: iteam-ghost-mariadb
+  namespace: iteam-se
+spec:
+  ports:
+  - name: mysql
+    port: 3306
+    protocol: TCP
+    targetPort: mysql
+  selector:
+    app: mariadb
+    component: master
+    release: iteam-ghost
+  sessionAffinity: None
+  type: ClusterIP

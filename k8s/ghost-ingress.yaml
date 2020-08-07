@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+  generation: 1
+  labels:
+    app: iteam-ghost
+  name: iteam-ghost
+  namespace: iteam-se
+spec:
+  rules:
+  - host: ghost.iteam.se
+    http:
+      paths:
+      - backend:
+          serviceName: iteam-ghost
+          servicePort: http
+        path: /
+  tls:
+  - hosts:
+    - ghost.iteam.se
+    secretName: iteam-ghost-prod-tls
+
