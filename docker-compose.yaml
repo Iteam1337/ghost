@@ -36,7 +36,7 @@ services:
         GHOST: localhost
         GPORT: 2368
     ports:
-      - 5000:5000
+      - 8000:80
 
 volumes:
   files:
