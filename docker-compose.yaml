@@ -29,6 +29,15 @@ services:
     volumes:
       - mariadb:/var/lib/mysql
 
+  web:
+    build:
+      context: web
+      args:
+        GHOST: localhost
+        GPORT: 2368
+    ports:
+      - 5000:5000
+
 volumes:
   files:
     driver: local
