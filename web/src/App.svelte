@@ -1,9 +1,8 @@
 <script>
+  import page from 'page'
+
+  import Hem from './Hem.svelte'
   import Medarbetare from './Medarbetare.svelte'
-
-  import { API } from './services/api.js'
-
-  const postPromise = API.Posts.Filter(['erbjudande', 'js'])
 
   /**
    * Routing
@@ -20,6 +19,16 @@
   if (!!activeView) {
     show(activeView)
   }
+
+  // set default component
+  let current = Hem
+
+  // Map routes to page. If a route is hit the current
+  // reference is set to the route's component
+  page('/', () => (current = Hem))
+  page('/medarbetare', () => (current = Medarbetare))
+  // activate router
+  page.start()
 </script>
 
 <style>
@@ -48,38 +57,13 @@
   <h1>Iteam</h1>
   <ul>
     <li>
-      <a href="?{viewQueryStringParameter}=hem" on:click={() => show('hem')}>
-        Hem
-      </a>
+      <a href="/">Hem</a>
     </li>
     <li>
-      <a
-        href="?{viewQueryStringParameter}=medarbetare"
-        on:click={() => show('medarbetare')}>
-        Medarbetare
-      </a>
+      <a href="/medarbetare">Medarbetare</a>
     </li>
   </ul>
 
-  {#if activeArea == 'hem'}
-    {#await postPromise then data}
-      {#each data.posts as post}
-        <div>
-          <h2>{post.title}</h2>
-          <p>{post.excerpt}</p>
-          <p>
-            {@html post.html}
-          </p>
-          <p>
-            <img src={post.feature_image} />
-          </p>
-        </div>
-      {/each}
-    {/await}
-  {/if}
-
-  {#if activeArea == 'medarbetare'}
-    <Medarbetare />
-  {/if}
+  <svelte:component this={current} />
 
 </main>
