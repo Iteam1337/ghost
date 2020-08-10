@@ -16,9 +16,9 @@
   }
 
   const urlParams = new URLSearchParams(window.location.search)
-  const myParam = urlParams.get(viewQueryStringParameter)
-  if (!!myParam) {
-    show(myParam)
+  const activeView = urlParams.get(viewQueryStringParameter)
+  if (!!activeView) {
+    show(activeView)
   }
 </script>
 
