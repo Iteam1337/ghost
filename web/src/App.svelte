@@ -1,16 +1,22 @@
 <script>
+  import Medarbetare from './Medarbetare.svelte'
+
   import { API } from './services/api.js'
 
   const postPromise = API.Posts.Filter(['erbjudande', 'js'])
 
+  /**
+   * Routing
+   */
   let activeArea = 'hem'
+  const viewQueryStringParameter = 'show'
   const show = area => {
     activeArea = area
     console.log('set area', activeArea)
   }
 
   const urlParams = new URLSearchParams(window.location.search)
-  const myParam = urlParams.get('view')
+  const myParam = urlParams.get(viewQueryStringParameter)
   if (!!myParam) {
     show(myParam)
   }
@@ -42,10 +48,14 @@
   <h1>Iteam</h1>
   <ul>
     <li>
-      <a href="?view=hem" on:click={() => show('hem')}>Hem</a>
+      <a href="?{viewQueryStringParameter}=hem" on:click={() => show('hem')}>
+        Hem
+      </a>
     </li>
     <li>
-      <a href="?view=medarbetare" on:click={() => show('medarbetare')}>
+      <a
+        href="?{viewQueryStringParameter}=medarbetare"
+        on:click={() => show('medarbetare')}>
         Medarbetare
       </a>
     </li>
@@ -66,6 +76,10 @@
         </div>
       {/each}
     {/await}
+  {/if}
+
+  {#if activeArea == 'medarbetare'}
+    <Medarbetare />
   {/if}
 
 </main>

@@ -45,6 +45,20 @@ const get = async (uri) => {
  * API collection
  */
 export const API = {
+  Pages: {
+    Filter: async (tags) => {
+      console.log('hej!')
+      let filter = '?filter='
+
+      tags.forEach((tag) => {
+        filter += `tag:${tag},`
+      })
+
+      filter = filter.substring(0, filter.length - 1)
+
+      return await get(`/pages${filter}`)
+    },
+  },
   Posts: {
     Filter: async (tags) => {
       let filter = '?filter='
