@@ -3,8 +3,16 @@
 
   const postPromise = API.Posts.Filter(['erbjudande', 'js'])
 
-  const structure = {
-    Start: { tags: '', types: 'posts,pages' },
+  let activeArea = 'hem'
+  const show = area => {
+    activeArea = area
+    console.log('set area', activeArea)
+  }
+
+  const urlParams = new URLSearchParams(window.location.search)
+  const myParam = urlParams.get('view')
+  if (!!myParam) {
+    show(myParam)
   }
 </script>
 
@@ -32,19 +40,32 @@
 
 <main>
   <h1>Iteam</h1>
-  <p>Startsida - flöde med allt</p>
-  {#await postPromise then data}
-    {#each data.posts as post}
-      <div>
-        <h2>{post.title}</h2>
-        <p>{post.excerpt}</p>
-        <p>
-          {@html post.html}
-        </p>
-        <p>
-          <img src={post.feature_image} />
-        </p>
-      </div>
-    {/each}
-  {/await}
+  <ul>
+    <li>
+      <a href="?view=hem" on:click={() => show('hem')}>Hem</a>
+    </li>
+    <li>
+      <a href="?view=medarbetare" on:click={() => show('medarbetare')}>
+        Medarbetare
+      </a>
+    </li>
+  </ul>
+
+  {#if activeArea == 'hem'}
+    {#await postPromise then data}
+      {#each data.posts as post}
+        <div>
+          <h2>{post.title}</h2>
+          <p>{post.excerpt}</p>
+          <p>
+            {@html post.html}
+          </p>
+          <p>
+            <img src={post.feature_image} />
+          </p>
+        </div>
+      {/each}
+    {/await}
+  {/if}
+
 </main>
