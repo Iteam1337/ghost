@@ -12,7 +12,7 @@ metadata:
   namespace: iteam-se
 spec:
   rules:
-  - host: ghost.iteam.se
+  - host: iteam-se.iteamdev.io
     http:
       paths:
       - backend:
@@ -21,6 +21,6 @@ spec:
         path: /
   tls:
   - hosts:
-    - ghost.iteam.se
+    - iteam-se.iteamdev.io
     secretName: iteam-ghost-prod-tls
 

@@ -2,6 +2,10 @@ apiVersion: skaffold/v2alpha4
 kind: Config
 metadata:
   name: iteam.se
+build:
+  artifacts:
+  - image: iteam1337/iteam-ghost
+    context: ./ghost
 deploy:
   kubectl:
     manifests:

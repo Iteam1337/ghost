@@ -4,7 +4,6 @@ metadata:
   labels:
     app: mariadb
     chart: mariadb-7.3.16
-    component: master
   name: iteam-ghost-mariadb
   namespace: iteam-se
 spec:
@@ -13,29 +12,13 @@ spec:
   selector:
     matchLabels:
       app: mariadb
-      component: master
-      release: iteam-ghost
   serviceName: iteam-ghost-mariadb
   template:
     metadata:
-      annotations:
-        kubectl.kubernetes.io/restartedAt: "2020-05-08T14:29:39+02:00"
       labels:
         app: mariadb
         chart: mariadb-7.3.16
-        component: master
-        release: iteam-ghost
     spec:
-      affinity:
-        podAntiAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-          - podAffinityTerm:
-              labelSelector:
-                matchLabels:
-                  app: mariadb
-                  release: iteam-ghost
-              topologyKey: kubernetes.io/hostname
-            weight: 1
       containers:
       - env:
         - name: MARIADB_ROOT_PASSWORD
@@ -107,6 +90,11 @@ spec:
       serviceAccount: default
       serviceAccountName: default
       terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: iteam-ghost-mariadb
+        name: config
   updateStrategy:
     type: RollingUpdate
   volumeClaimTemplates:
@@ -115,9 +103,6 @@ spec:
     metadata:
       labels:
         app: mariadb
-        component: master
-        heritage: Helm
-        release: iteam-ghost
       name: data
     spec:
       accessModes:

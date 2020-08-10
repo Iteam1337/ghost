@@ -27,7 +27,7 @@ spec:
         - name: ALLOW_EMPTY_PASSWORD
           value: "yes"
         - name: MARIADB_HOST
-          value: iteam-ghost-mariadb
+          value: iteam-ghost-mariadb-0
         - name: MARIADB_PORT_NUMBER
           value: "3306"
         - name: GHOST_DATABASE_NAME
@@ -40,7 +40,7 @@ spec:
               key: mariadb-password
               name: mariadb-password
         - name: GHOST_HOST
-          value: ghost.iteam.se/
+          value: iteam-se.iteamdev.io/
         - name: GHOST_PROTOCOL
           value: https
         - name: GHOST_PORT_NUMBER
@@ -56,14 +56,14 @@ spec:
           value: christian.landgren@iteam.se
         - name: BLOG_TITLE
           value: Iteam
-        image: docker.io/bitnami/ghost:3.12.1-debian-10-r0
+        image: iteam1337/iteam-ghost
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 6
           httpGet:
             httpHeaders:
             - name: Host
-              value: ghost.iteam.se/
+              value: iteam-se.iteamdev.io/
             path: /
             port: https
             scheme: HTTPS
@@ -81,7 +81,7 @@ spec:
           httpGet:
             httpHeaders:
             - name: Host
-              value: ghost.iteam.se/
+              value: iteam-se.iteamdev.io/
             path: /
             port: https
             scheme: HTTPS
