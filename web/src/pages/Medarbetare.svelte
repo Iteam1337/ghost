@@ -22,7 +22,7 @@
   {#await contentPromise then data}
     {#each data.pages as medarbetare}
       <div>
-        <img src={medarbetare.feature_image} />
+        <img src={medarbetare.feature_image} alt={medarbetare.title} />
       </div>
     {/each}
   {/await}
