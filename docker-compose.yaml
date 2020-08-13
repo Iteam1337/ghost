@@ -35,6 +35,7 @@ services:
       args:
         GHOST: localhost
         GPORT: 2368
+        GKEY: e1b252686ec60b429aa17d742f
     ports:
       - 8000:80
 

@@ -15,6 +15,7 @@ const addKeyParameterToUrl = (url) => {
 }
 
 const call = async ({ uri, options }) => {
+  console.log('DEBUG', GHOST_URL, uri)
   // Build full URL.
   let url = `${GHOST_URL}/ghost/api/v3/content${uri}`
 
@@ -47,7 +48,6 @@ const get = async (uri) => {
 export const API = {
   Pages: {
     Filter: async (tags) => {
-      console.log('hej!')
       let filter = '?filter='
 
       tags.forEach((tag) => {
