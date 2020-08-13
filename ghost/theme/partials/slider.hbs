@@ -1,0 +1,54 @@
+<div class="featured-post-card">
+
+    {{#get "posts" filter="featured:true" include="authors,tags" limit="all" as |featured|}}
+    {{#foreach featured visibility="all"}}
+    <div class="post-card {{post_class}} {{#unless feature_image}} no-image{{/unless}}">
+    
+        <div class="post-card-media">
+            {{#if feature_image}}
+            <a class="post-card-image" href="{{url}}" style="background-image: url('{{img_url feature_image size="m"}}')"></a>
+            {{/if}}
+        </div>
+
+        <div class="post-card-content">
+            <div class="entry-tag">{{tags separator=", "}}</div>
+
+            <header class="entry-header">
+                <h2 class="entry-title"><a href="{{url}}">{{title}}</a></h2>
+            </header>
+
+            <div class="entry-author">
+                {{#has author="count:>1"}}
+                <div class="entry-authors">
+                    <ul class="entry-authors-list">
+                        {{#foreach authors}}
+                        <li class="entry-author-avatar">
+                            <a href="{{url}}" title="{{name}}" class="author-{{slug}}">
+                                <img class="avatar avatar-80" src="{{#if profile_image}} {{img_url profile_image absolute="true"}} {{else}} {{asset "images/default-avatar.png"}} {{/if}}" alt="{{name}}">
+                            </a>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                </div>
+
+                <div class="entry-aurhor-name">{{authors separator=", "}}</div>
+                {{else}}
+                {{#primary_author}}
+                <div class="entry-author-avatar">
+                    <a href="{{url}}" title="{{name}}" class="author-{{slug}}">
+                        <img class="avatar avatar-80" src="{{#if profile_image}} {{img_url profile_image absolute="true"}} {{else}} {{asset "images/default-avatar.png"}} {{/if}}" alt="{{name}}">
+                    </a>
+                </div>
+                <a href="{{url}}" title="{{name}}" class="author-{{slug}} entry-author-name">{{name}}</a>
+                {{/primary_author}}
+                {{/has}}
+            </div>
+
+            <div class="entry-excerpt">{{excerpt}}</div>
+        </div>   
+
+    </div>
+    {{/foreach}}
+    {{/get}} 
+    
+</div>

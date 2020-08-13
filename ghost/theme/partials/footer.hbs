@@ -1,0 +1,36 @@
+<footer id="footer" class="site-footer">
+    <div class="container">
+        <div class="footer-flex">
+            <div class="footer-column left">
+                <div class="footer-logo">
+                {{#if @site.logo}}
+                    <h1><a href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}"/></a></h1>
+                {{else}}
+                    <h2><a href="{{@site.url}}">{{@site.title}}</a></h2>
+                {{/if}}
+                </div>
+            </div>
+
+            <div class="footer-column center">
+                <div class="footer-nav">
+                    {{#if @blog.navigation}}
+                        {{navigation type="secondary"}}
+                    {{/if}}  
+
+                    <div class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> {{{t "&copy;"}}} {{date format="YYYY"}} - {{t "All rights reserved."}}<br/>Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></div>
+                </div>
+            </div>
+
+            <div class="footer-column right">
+                <div class="social-link">
+                    {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>{{/if}}
+                    {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>{{/if}}
+
+                    {{> "social-icons"}}
+                    
+                    <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,23 @@
+<article class="entry-grid js-post-card {{post_class}}">
+
+    {{#if feature_image}}
+    <div class="entry-media post-card-image-link">
+        <a class="entry-media-img post-card-image js-fadein" href="{{url}}" style="background-image: url('{{img_url feature_image size="m"}}')"></a>
+    </div>
+    {{/if}}
+
+    <div class="entry-body post-card-content">
+        <header class="entry-header">
+            <h2 class="entry-title"><a href="{{url}}">{{title}}</a></h2>
+        </header>
+
+        <div class="entry-excerpt">{{excerpt}}</div>
+
+        <div class="entry-datetime">
+            <span><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="MMMM DD, YYYY"}}</time></span>
+            <span>-</span>
+            <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+        </div>
+    </div>
+
+</article>

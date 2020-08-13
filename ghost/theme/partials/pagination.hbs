@@ -1,0 +1,9 @@
+{{#if pagination.next}}
+<div class="pagination">
+    <button class="pagination-load js-page-load" data-href="{{page_url pagination.next}}">{{t "Load More"}} <span></span></button>
+</div>
+{{else}}
+<div class="pagination">
+    <button class="pagination-load pagination-disabled js-page-load " data-href="#" disabled="disabled">{{t "No More Posts"}}</button>
+</div>
+{{/if}}
