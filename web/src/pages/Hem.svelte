@@ -1,5 +1,5 @@
 <script>
-  import { API } from './services/api.js'
+  import { API } from '../services/api.js'
 
   const postPromise = API.Posts.Filter(['erbjudande', 'js'])
 </script>

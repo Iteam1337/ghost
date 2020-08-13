@@ -1,5 +1,5 @@
 <script>
-  import { API } from './services/api.js'
+  import { API } from '../services/api.js'
   const contentPromise = API.Pages.Filter(['medarbetare'])
 </script>
 
