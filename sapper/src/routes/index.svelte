@@ -1,13 +1,13 @@
 <script context="module">
-  import { API } from "../services/api.js";
+  import { API } from '../services/api.js'
 
   export async function preload() {
-    return API(this.fetch).Posts.ByTags(["erbjudande", "js"]);
+    return API(this.fetch).Posts.List()
   }
 </script>
 
 <script>
-  export let posts;
+  export let posts
 </script>
 
 <svelte:head>
