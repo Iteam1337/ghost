@@ -1,6 +1,13 @@
-<script>
+<script context="module">
   import { API } from '../../services/api.js'
-  const contentPromise = API.Pages.ByTags(['medarbetare'])
+
+  export async function preload() {
+    return API(this.fetch).Pages.ByTags(['medarbetare'])
+  }
+</script>
+
+<script>
+  export let pages
 </script>
 
 <style>
@@ -26,11 +33,9 @@
 <h1>Medarbetare</h1>
 
 <div class="grid">
-  {#await contentPromise then data}
-    {#each data.pages as medarbetare}
-      <div>
-        <img src={medarbetare.feature_image} alt={medarbetare.title} />
-      </div>
-    {/each}
-  {/await}
+  {#each pages as medarbetare}
+    <div>
+      <img src={medarbetare.feature_image} alt={medarbetare.title} />
+    </div>
+  {/each}
 </div>
