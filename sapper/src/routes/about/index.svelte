@@ -1,8 +1,3 @@
-<script>
-  import { API } from '../services/api.js'
-  const contentPromise = API.Pages.ByTags(['medarbetare'])
-</script>
-
 <style>
   img {
     width: 256px;
@@ -28,5 +23,5 @@
 <p>Om Iteam...</p>
 
 <p>
-  <a href="/coworkers">Här hitta du mer om oss som jobbar på Iteam</a>
+  <a href="/about/coworkers">Här hitta du mer om oss som jobbar på Iteam</a>
 </p>
