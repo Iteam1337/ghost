@@ -24,7 +24,7 @@ const call = async (context, { uri, options }) => {
 
   // Apply Ghost API key.
   url = addKeyParameterToUrl(url, context.session.GHOST_KEY)
-  console.log('aa', url)
+
   // Call Ghost API.
   const response = await context.fetch(url, options)
 
