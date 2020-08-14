@@ -1,8 +1,8 @@
 <script context="module">
   import { API } from '../../services/api.js'
 
-  export async function preload() {
-    return API(this.fetch).Pages.ByTags(['medarbetare'])
+  export async function preload(page, session) {
+    return API({ fetch: this.fetch, session }).Pages.ByTags(['medarbetare'])
   }
 </script>
 
