@@ -1,8 +1,7 @@
 <script context="module">
   import { API } from "../services/api.js";
 
-  export async function preload(_, session) {
-    console.log("tihs is the session: ", session);
+  export async function preload() {
     return API(this.fetch).Posts.ByTags(["erbjudande", "js"]);
   }
 </script>
