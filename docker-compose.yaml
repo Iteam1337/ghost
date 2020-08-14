@@ -31,13 +31,11 @@ services:
 
   web:
     build:
-      context: web
-      args:
-        GHOST: localhost
-        GPORT: 2368
-        GKEY: e1b252686ec60b429aa17d742f
+      context: sapper
+    environment:
+      GHOST_KEY: abc123
     ports:
-      - 8000:80
+      - 3030:3000
 
 volumes:
   files:
