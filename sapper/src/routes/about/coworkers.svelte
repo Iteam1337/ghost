@@ -1,6 +1,6 @@
 <script>
-  import { API } from "../services/api.js";
-  const contentPromise = API.Pages.ByTags(["medarbetare"]);
+  import { API } from '../../services/api.js'
+  const contentPromise = API.Pages.ByTags(['medarbetare'])
 </script>
 
 <style>
@@ -18,15 +18,12 @@
   }
 </style>
 
+<!-- Medarbetare -->
 <svelte:head>
-  <title>Cats</title>
+  <title>Medarbetare</title>
 </svelte:head>
 
-<h1>Om oss</h1>
-
-<p>Om Iteam...</p>
-
-<h2>Medarbetare</h2>
+<h1>Medarbetare</h1>
 
 <div class="grid">
   {#await contentPromise then data}

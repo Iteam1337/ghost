@@ -1,5 +1,7 @@
+<!-- Case -->
+
 <svelte:head>
-  <title>About</title>
+  <title>Case</title>
 </svelte:head>
 
 <h1>Case</h1>
