@@ -11,9 +11,8 @@ spec:
     port: 3306
     protocol: TCP
     targetPort: mysql
+  clusterIP: None
   selector:
     app: mariadb
-    component: master
-    release: iteam-ghost
   sessionAffinity: None
   type: ClusterIP
