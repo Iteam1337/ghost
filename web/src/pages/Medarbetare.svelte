@@ -1,6 +1,6 @@
 <script>
   import { API } from '../services/api.js'
-  const contentPromise = API.Pages.Filter(['medarbetare'])
+  const contentPromise = API.Pages.ByTags(['medarbetare'])
 </script>
 
 <style>

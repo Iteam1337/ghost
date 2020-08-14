@@ -1,7 +1,7 @@
 <script>
   import { API } from '../services/api.js'
 
-  const postPromise = API.Posts.Filter(['erbjudande', 'js'])
+  const postPromise = API.Posts.ByTags(['erbjudande', 'js'])
 </script>
 
 {#await postPromise then data}

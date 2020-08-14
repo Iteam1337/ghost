@@ -2,9 +2,9 @@ import { GHOST_URL } from '../config/ghost_url.js'
 import { GHOST_KEY } from '../config/ghost_key.js'
 
 /*
- * Fetch helpers
+ * Each request to Ghost's API requires a content key.
+ * This function adds it to the provided URL.
  */
-
 const addKeyParameterToUrl = (url) => {
   let key = `key=${GHOST_KEY}`
   if (url.indexOf('?') > -1) {
@@ -14,8 +14,10 @@ const addKeyParameterToUrl = (url) => {
   }
 }
 
+/*
+ * Use fetch to make a request to Ghost's API.
+ */
 const call = async ({ uri, options }) => {
-  console.log('DEBUG', GHOST_URL, uri)
   // Build full URL.
   let url = `${GHOST_URL}/ghost/api/v3/content${uri}`
 
@@ -29,10 +31,14 @@ const call = async ({ uri, options }) => {
     return response.json()
   }
 
+  // Something has gone wrong.
   console.error(response.status, response.statusText, response.json())
   throw new Error(response.statusText)
 }
 
+/**
+ * A wrapper for GET requests.
+ */
 const get = async (uri) => {
   const data = await call({
     uri,
@@ -47,7 +53,7 @@ const get = async (uri) => {
  */
 export const API = {
   Pages: {
-    Filter: async (tags) => {
+    ByTags: async (tags) => {
       let filter = '?filter='
 
       tags.forEach((tag) => {
@@ -60,7 +66,7 @@ export const API = {
     },
   },
   Posts: {
-    Filter: async (tags) => {
+    ByTags: async (tags) => {
       let filter = '?filter='
 
       tags.forEach((tag) => {
