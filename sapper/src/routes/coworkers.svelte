@@ -18,15 +18,19 @@
   }
 </style>
 
-<!-- Om oss -->
+<!-- Medarbetare -->
 <svelte:head>
-  <title>Om oss</title>
+  <title>Medarbetare</title>
 </svelte:head>
 
-<h1>Om oss</h1>
+<h1>Medarbetare</h1>
 
-<p>Om Iteam...</p>
-
-<p>
-  <a href="/coworkers">Här hitta du mer om oss som jobbar på Iteam</a>
-</p>
+<div class="grid">
+  {#await contentPromise then data}
+    {#each data.pages as medarbetare}
+      <div>
+        <img src={medarbetare.feature_image} alt={medarbetare.title} />
+      </div>
+    {/each}
+  {/await}
+</div>

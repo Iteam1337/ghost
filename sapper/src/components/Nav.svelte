@@ -1,5 +1,5 @@
 <script>
-  export let segment;
+  export let segment
 </script>
 
 <style>
@@ -16,7 +16,7 @@
 
   /* clearfix */
   ul::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }
@@ -33,7 +33,7 @@
 
   [aria-current]::after {
     position: absolute;
-    content: "";
+    content: '';
     width: calc(100% - 1em);
     height: 2px;
     background-color: rgb(255, 62, 0);
@@ -83,15 +83,20 @@
         Kontakt
       </a>
     </li>
+    <li>
+      <a aria-current={segment === 'career' ? 'page' : undefined} href="career">
+        Karriär
+      </a>
 
-    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+      <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
+    </li>
     <li>
       <a
         rel="prefetch"
         aria-current={segment === 'blog' ? 'page' : undefined}
         href="blog">
-        blog
+        Blogg
       </a>
     </li>
   </ul>

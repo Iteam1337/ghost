@@ -1,5 +1,7 @@
+<!-- Kontakt -->
+
 <svelte:head>
-  <title>Cats</title>
+  <title>Kontakt</title>
 </svelte:head>
 
 <h1>Kontakt</h1>
