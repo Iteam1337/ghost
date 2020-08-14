@@ -1,0 +1,47 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- Location: partials/header.hbs --}}
+{{> "header"}}
+
+{{!-- The main content area --}}
+<main id="main-content" class="site-tag">
+
+    <div class="container">
+    
+        {{#tag}}
+        <div class="archive-page">
+
+            <div class="archive-meta archive-tag">
+                <h1 class="archive-title">{{name}}</h1>
+
+                <div class="archive-desc">
+                    {{#if description}}
+                        {{description}}
+                    {{else}}
+                        {{t "A collection of"}} {{plural ../pagination.total empty=(t 'No posts') singular=(t '1 post') plural=(t '% posts')}}
+                    {{/if}}
+                </div>
+            </div>
+            
+        </div>
+        {{/tag}}
+
+        <div class="content grid js-grid">
+        {{#foreach posts visibility="all"}}
+
+            {{!-- Location: partials/post-card.hbs --}}
+            {{> "post-card"}}
+        
+        {{/foreach}}
+        </div>
+        
+        {{!-- Location: partials/pagination.hbs --}}
+        {{> "pagination"}}
+                
+    </div>
+
+</main>
+
+{{!-- Location: partials/footer.hbs --}}
+{{> "footer"}}

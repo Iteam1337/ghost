@@ -1,0 +1,35 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- Location: partials/header.hbs --}}
+{{> "header"}}
+
+{{!-- The main content area --}}
+<main id="main-content"  class="site-index">
+
+    <div class="container">
+
+        {{#is "home"}}
+
+            {{> "slider"}}
+            
+        {{/is}}
+        
+        <div class="content grid js-grid">
+        {{#foreach posts visibility="all"}}
+
+            {{!-- Location: partials/post-card.hbs --}}
+            {{> "post-card"}}
+        
+        {{/foreach}}
+        </div>
+        
+        {{!-- Location: partials/post-card.hbs --}}
+        {{> "pagination"}}
+
+    </div>
+
+</main>
+
+{{!-- Location: partials/footer.hbs --}}
+{{> "footer"}}

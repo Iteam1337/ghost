@@ -2,17 +2,25 @@
 
 iteam.se ghost
 
-## Running
+## Contributing
 
 ### Requirements
 
 - docker
 - docker-compose
+- nvm
 
-### Quick start
+### Starting up the dev environment
 
-```bash
-docker-compose up
-```
+The following assumes that you have cloned the repo and installed the requirements.
 
-Open http://localhost:2368/ghost and setup your account.
+1. Get ghost and mariadb running with `docker-compose up`
+2. Open http://localhost:2368/ghost
+3. Setup your account
+4. Open http://localhost:2368/ghost/#/settings/integrations
+5. Click "Add custom integration"
+6. After creating the integration, copy the "Content API Key"
+7. Paste the key into `./web/src/config/ghost_key.js`
+8. `cd ./web`
+9. `npm run dev`
+10. Open http://localhost:5000

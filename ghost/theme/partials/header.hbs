@@ -1,0 +1,82 @@
+<header id="header">
+    <div class="container">
+        <div class="header-flex">
+            <div class="header-column left">
+                <div class="navbar-brand">
+                    <div class="navbar-title">
+                        {{#if @site.logo}}
+                            <h1><a href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}"/></a></h1>
+                        {{else}}
+                            <h1><a href="{{@site.url}}">{{@site.title}}</a></h1>
+                        {{/if}}
+                        <p class="navbar-description">{{@site.description}}</p>
+                    </div>
+                    {{#if @blog.navigation}}
+                    <nav class="navbar-menu">
+                        {{navigation}}
+                    </nav>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="header-column right">
+                <div class="navbar-tools">
+                    {{#if @labs.members}}
+                        {{#if @member}}
+                            {{#link href="/account/" class="nav-account" activeClass="nav-current"}}{{t "Account"}}{{/link}}
+                            <a href="#signout" class="nav-signout" role="link" data-members-signout>{{t "Sign Out"}}</a>
+                        {{else}}
+                            {{#link href="/signin/" class="nav-signin" activeClass="nav-current"}}{{t "Sign In"}}{{/link}}
+                            {{#link href="/signup/" class="nav-signup" activeClass="nav-current"}}{{> "icons/email"}} {{t "Subscribe"}}{{/link}}
+                        {{/if}}
+                    {{/if}}
+                    <a href="#" class="nav-darkmode js-darkmode-toggle">{{> "icons/darkmode"}}</a>
+                    <a href="#" class="nav-search js-search-toggle">{{> "icons/search"}}</a>
+                </div>
+            </div>
+            <a href="#" class="mobile-menu-toggle js-menu-toggle">{{> "icons/menu"}}</a>
+            <a href="#" class="mobile-search-toggle js-search-toggle">{{> "icons/search"}}</a>
+        </div>
+    </div>
+</header>
+
+<div class="search-wrap js-search result">
+    <div class="search-container">
+
+        <form class="search-form search-field">
+            <span class="search-close js-search-toggle">{{> "icons/close"}}</span>
+
+            <input class="search-input js-search-input" placeholder="{{t "Type to Search"}}" type="search">
+            <p class="search-info js-search-error" style="display: none">{{{t "The content API key is missing, please read the <a href='{href}'>theme documentation</a>." href="https://docs.maltiv.com/korima#contentapi"}}}</p>
+        </form>
+        
+        <div class="search-results js-search-results">
+            <div class="js-search-result"></div>
+        </div>
+
+    </div>    
+</div>
+
+<aside class="mobile-nav">
+    <a href="#" class="mobile-menu-close js-menu-toggle">{{> "icons/close"}}</a>
+    <div class="mobile-menu-wrap">
+        {{#if @blog.navigation}}
+        <nav class="mobile-menu">
+            {{navigation}}
+        </nav>
+        {{/if}}
+
+        {{#if @labs.members}}
+        <div class="mobile-menu mobile-menu-subscriber">
+            {{#if @member}}
+            {{#link href="/account/" class="nav-account" activeClass="nav-current"}}{{t "Account"}}{{/link}}
+            <a href="#signout" class="nav-signout" role="link" data-members-signout>{{t "Sign Out"}}</a>
+            {{else}}
+            {{#link href="/signin/" class="nav-signin" activeClass="nav-current"}}{{t "Sign In"}}{{/link}}
+            {{#link href="/signup/" class="nav-signup" activeClass="nav-current"}}{{t "Subscribe"}}{{/link}}
+            {{/if}}
+            <a href="#" class="nav-darkmode js-darkmode-toggle">{{> "icons/darkmode"}}</a>
+        </div>
+        {{/if}}
+    </div>
+</aside>
+<div class="mobile-overlay js-mobile-overlay"></div>

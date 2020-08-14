@@ -1,0 +1,39 @@
+{{!< ../default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area --}}
+<main id="main-content" class="site-subscription">
+    {{#if @site.cover_image}}
+    <figure class="site-subscription-cover">
+        <img src="{{@site.cover_image}}" />
+    </figure>
+    {{else}}
+    <div class="site-subscription-cover"></div>
+    {{/if}}
+    
+    <div class="site-subscription-form">
+        <div class="auth-header">
+            <a href="{{@site.url}}"><span></span> {{t "Back to Homepage"}}</a>
+        </div>
+        <div class="auth-form-wrap">
+            <div class="auth-form">
+                <h4>{{t "Welcome back!"}}</h4>
+                <p>{{t "Sign into your account to get to the good stuff"}}</p>
+
+                <form data-members-form="signin">
+                    <div class="form-submit flex">
+                        <input data-members-email type="email" placeholder="yourmail@example.com" required="true"/>
+                        <button type="submit"><span>{{t "Send Magic Link"}}</span></button>
+                    </div>
+
+                    <div class="response-message">
+                        <p class="message-success">{{{t "<strong>Great!</strong> Check your inbox and click the link to complete signin."}}}</p>
+                        <p class="message-error" data-members-error></p>
+                    </div>
+                </form>
+
+                <small>{{{t "Don't have an account? {signuplink}" signuplink="<a href='/signup/'>Sign up</a>"}}}</small>
+            </div>
+        </div>
+    </div>
+</main>

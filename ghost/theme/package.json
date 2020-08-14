@@ -1,0 +1,62 @@
+{
+    "name": "korima",
+    "description": "a lightweight Ghost theme",
+    "demo": "https://korima.maltiv.com",
+    "version": "1.9.3",
+    "engines": {
+        "ghost": ">=3.0.0",
+        "ghost-api": "v3"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {  
+        "name": "maltiv",
+        "email": "hello@maltiv.com",
+        "url": "https://maltiv.com"
+    },
+    "config": {
+        "posts_per_page": 9,
+        "image_sizes": {
+            "xxs": {
+                "width": 30
+            },
+            "xs": {
+                "width": 100
+            },
+            "s": {
+                "width": 300
+            },
+            "m": {
+                "width": 800
+            },
+            "l": {
+                "width": 1000
+            },
+            "xl": {
+                "width": 2000
+            }
+        }
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Magazine"
+        ]
+    },
+    "keywords": [
+        "ghost-theme",
+        "ghost",
+        "theme",
+        "lightweight",
+		"minimal",
+        "white",
+        "blog",
+        "magazine",
+        "personal",
+        "slider"
+    ]
+}

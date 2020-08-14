@@ -14,7 +14,6 @@ services:
       database__connection__password: ${MYSQL_PASSWORD}
     depends_on:
       - mariadb
-    restart: always
     volumes:
       - files:/var/lib/ghost/content
 
@@ -27,9 +26,18 @@ services:
       MYSQL_USER: ghost
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_DATABASE: ghost
-    restart: always
     volumes:
       - mariadb:/var/lib/mysql
+
+  web:
+    build:
+      context: web
+      args:
+        GHOST: localhost
+        GPORT: 2368
+        GKEY: e1b252686ec60b429aa17d742f
+    ports:
+      - 8000:80
 
 volumes:
   files:

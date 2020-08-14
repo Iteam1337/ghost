@@ -1,0 +1,67 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- Location: partials/header.hbs --}}
+{{> "header"}}
+
+{{!-- The main content area --}}
+<main id="main-content" class="site-author">
+    
+    <div class="container">
+
+        {{#author}}
+        <div class="archive-page">
+
+            {{#if profile_image}}
+                <img class="archive-profile-image" src="{{img_url profile_image absolute="true"}}" alt="{{name}}">
+            {{else}}
+                {{#if cover_image}}
+                    <img class="archive-profile-image" src="{{cover_image}}" alt="{{name}}">
+                {{else}}    
+                    <img class="archive-profile-image" src="{{asset "images/default-avatar.png"}}" alt="{{name}}">
+                {{/if}}
+            {{/if}}
+
+            <h1 class="archive-title">{{name}}</h1>
+            
+            {{#has any="facebook, twitter, website"}}
+            <div class="archive-author-meta">
+                {{#if location}}
+                <span class="social-location">{{location}}</span>
+                {{/if}}
+                {{#if website}}
+                <a class="social-website" href="{{website}}" target="_blank" rel="noopener">{{t "Website"}}</a>
+                {{/if}}
+                {{#if twitter}}
+                <a class="social-twitter" href="{{twitter_url}}" target="_blank" rel="noopener">{{t "Twitter"}}</a>
+                {{/if}}
+                {{#if facebook}}
+                <a class="social-facebook" href="{{facebook_url}}" target="_blank" rel="noopener">{{t "Facebook"}}</a>
+                {{/if}}
+            </div>
+            {{/has}}
+
+            {{#if bio}}
+            <div class="archive-desc">{{bio}}</div>
+            {{/if}}
+        </div>
+        {{/author}}
+
+        <div class="content grid js-grid">
+        {{#foreach posts visibility="all"}}
+
+            {{!-- Location: partials/post-card.hbs --}}
+            {{> "post-card"}}
+        
+        {{/foreach}}
+        </div>
+        
+        {{!-- Location: partials/pagination.hbs --}}
+        {{> "pagination"}}
+
+    </div>
+
+</main>
+
+{{!-- Location: partials/footer.hbs --}}
+{{> "footer"}}
