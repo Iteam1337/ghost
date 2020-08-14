@@ -4,6 +4,8 @@
   import Hem from './pages/Hem.svelte'
   import Medarbetare from './pages/Medarbetare.svelte'
 
+  import Header from './components/Header.svelte'
+
   /**
    * Routing
    */
@@ -28,6 +30,7 @@
 </style>
 
 <main>
+  <Header />
   <h1>Iteam</h1>
   <ul>
     <li>
