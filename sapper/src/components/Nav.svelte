@@ -77,19 +77,16 @@
       </a>
     </li>
     <li>
+      <a aria-current={segment === 'career' ? 'page' : undefined} href="career">
+        Karriär
+      </a>
+    </li>
+    <li>
       <a
         aria-current={segment === 'contact' ? 'page' : undefined}
         href="contact">
         Kontakt
       </a>
-    </li>
-    <li>
-      <a aria-current={segment === 'career' ? 'page' : undefined} href="career">
-        Karriär
-      </a>
-
-      <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
     </li>
     <li>
       <a
