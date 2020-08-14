@@ -12,7 +12,7 @@ iteam.se ghost
 
 ### Starting up the dev environment
 
-The following assumes that you have cloned the repo and installed the requirements.
+The following assumes that you have cloned the repo and installed the requirements. First of all, prepare your local configuration. Use either .env or direnv.
 
 #### Configuration (.env)
 
@@ -23,7 +23,7 @@ GHOST_URL=http://localhost:2368
 GHOST_KEY=
 ```
 
-#### (direnv)
+#### Configuration (direnv)
 
 If you are using direnv, create a file called `.envrc` in `./sapper` and paste the following:
 
