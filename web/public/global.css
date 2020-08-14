@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap');
 
+:root {
+  --beige: #fcfbfb;
+  --dark-grey: #363636;
+}
+
 html,
 body {
   position: relative;
@@ -12,6 +17,7 @@ body {
   padding: 8px;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  background-color: var(--beige);
 }
 
 a {

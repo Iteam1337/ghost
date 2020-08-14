@@ -5,6 +5,7 @@
   import Medarbetare from './pages/Medarbetare.svelte'
 
   import Header from './components/Header.svelte'
+  import Footer from './components/Footer.svelte'
 
   /**
    * Routing
@@ -42,4 +43,6 @@
   </ul>
 
   <svelte:component this={current} />
+
+  <Footer />
 </main>
