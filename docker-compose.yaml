@@ -2,7 +2,7 @@ version: "3"
 
 services:
   ghost:
-    build: ghost
+    image: ghost:3-alpine
     ports:
       - 2368:2368
     environment:
