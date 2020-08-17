@@ -6,6 +6,8 @@
   nav {
     display: flex;
     justify-content: space-between;
+    max-width: 60em;
+    margin: 0 auto;
   }
 
   ul {
@@ -23,7 +25,7 @@
   li {
     display: block;
     float: left;
-    padding-right: 1em;
+    padding-left: 1em;
   }
 
   a {
