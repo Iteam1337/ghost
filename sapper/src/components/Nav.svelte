@@ -4,9 +4,8 @@
 
 <style>
   nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
-    font-weight: 300;
-    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
   }
 
   ul {
@@ -24,21 +23,7 @@
   li {
     display: block;
     float: left;
-  }
-
-  [aria-current] {
-    position: relative;
-    display: inline-block;
-  }
-
-  [aria-current]::after {
-    position: absolute;
-    content: '';
-    width: calc(100% - 1em);
-    height: 2px;
-    background-color: rgb(255, 62, 0);
-    display: block;
-    bottom: -1px;
+    padding-right: 1em;
   }
 
   a {
@@ -48,17 +33,16 @@
   }
 
   img.logo {
-    width: 50px;
+    width: 100px;
   }
 </style>
 
 <nav>
+  <a aria-current={segment === undefined ? 'page' : undefined} href=".">
+    <img src="iteam.png" alt="Iteam" class="logo" />
+  </a>
   <ul>
-    <li>
-      <a aria-current={segment === undefined ? 'page' : undefined} href=".">
-        <img src="iteam.png" alt="iteam" class="logo" />
-      </a>
-    </li>
+    <li />
     <li>
       <a aria-current={segment === 'case' ? 'page' : undefined} href="case">
         Case
