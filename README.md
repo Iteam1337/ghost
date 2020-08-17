@@ -24,3 +24,13 @@ The following assumes that you have cloned the repo and installed the requiremen
 8. `cd ./web`
 9. `npm run dev`
 10. Open http://localhost:5000
+
+
+### Deployment
+
+To deploy on the K8s cluster. Connect the VPN and then run: 
+
+    skaffold run
+
+Use `kubens iteam-se` to explore the stack. You can also run `skaffold run --tail` to see the logs of the deployment.
+

@@ -56,7 +56,7 @@ spec:
           value: christian.landgren@iteam.se
         - name: BLOG_TITLE
           value: Iteam
-        image: docker.io/bitnami/ghost:3.12.1-debian-10-r0
+        image: iteam1337/iteam-ghost
         imagePullPolicy: IfNotPresent
         name: iteam-ghost
         ports:
