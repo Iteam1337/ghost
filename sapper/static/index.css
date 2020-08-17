@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap');
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -14440,6 +14440,7 @@ video {
 
 :root {
   --beige: #fcfbfb;
+  --cornflower: #668cff;
   --dark-grey: #363636;
 }
 
@@ -14466,19 +14467,12 @@ h6 {
 
 h1 {
   font-size: 2em;
+  font-weight: 500;
 }
 
-a {
-  color: inherit;
-}
-
-code {
-  font-family: menlo, inconsolata, monospace;
-  font-size: calc(1em - 2px);
-  color: #555;
-  background-color: #f0f0f0;
-  padding: 0.2em 0.4em;
-  border-radius: 2px;
+p {
+  font-weight: 300;
+  margin: 1em 0;
 }
 
 @media (min-width: 400px) {
