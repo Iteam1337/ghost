@@ -6,8 +6,6 @@
   nav {
     display: flex;
     justify-content: space-between;
-    max-width: 64em;
-    margin: 0 auto;
   }
 
   ul {
@@ -42,7 +40,7 @@
   }
 </style>
 
-<nav>
+<nav class="lg:container lg:mx-auto">
   <a aria-current={segment === undefined ? 'page' : undefined} href=".">
     <img src="iteam.png" alt="Iteam" class="logo" />
   </a>
