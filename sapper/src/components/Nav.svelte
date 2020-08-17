@@ -6,7 +6,7 @@
   nav {
     display: flex;
     justify-content: space-between;
-    max-width: 60em;
+    max-width: 64em;
     margin: 0 auto;
   }
 
@@ -28,10 +28,13 @@
     padding-left: 1em;
   }
 
-  a {
+  a,
+  a:visited {
+    color: black;
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
+    font-weight: 500;
   }
 
   img.logo {
