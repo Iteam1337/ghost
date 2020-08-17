@@ -33,7 +33,8 @@ services:
     build:
       context: sapper
     environment:
-      GHOST_KEY: abc123
+      GHOST_KEY: e1b252686ec60b429aa17d742f
+      GHOST_URL: http://ghost:2368/
     ports:
       - 3030:3000
 
