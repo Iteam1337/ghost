@@ -30,7 +30,14 @@
   <title>Medarbetare</title>
 </svelte:head>
 
-<h1>Medarbetare</h1>
+<div class="lg:container lg:mx-auto py-20">
+  <div class="flex px-20 max-w-3xl">
+    <div class="flex-initial">
+      <h1 class="text-4xl font-medium">Medarbetare</h1>
+      <p>Här är vi som jobbar på Iteam!</p>
+    </div>
+  </div>
+</div>
 
 <div class="grid">
   {#each pages as medarbetare}

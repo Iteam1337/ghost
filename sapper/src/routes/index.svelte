@@ -64,12 +64,8 @@
   </p>
 
   <div class="flex my-20 items-center md:container md:mx-auto space-x-3">
-    <div class="service flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+    <div class="service flex-shrink-1 rounded-lg px-5 flex-col justify-center">
+      <img src="broken.png" alt="illustration" width="100" class="my-8" />
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
       <p class="px-5 text-base font-light tracking-wider">
@@ -113,7 +109,9 @@
       </p>
     </div>
   </div>
-  <a class="bordered" href="/services">Alla tjänster</a>
+  <a class="border px-10 py-5 rounded-lg text-white" href="/services">
+    Alla tjänster
+  </a>
 </div>
 
 <div class="lg:container lg:mx-auto py-20 px-20">
@@ -152,7 +150,7 @@
 </div>
 
 <div class="lg:container lg:mx-auto py-20 px-20">
-  <div class="flex justify-around max-w-3xl">
+  <div class="flex justify-around max-w-lg">
     <div class="">
       <h1 class="text-4xl font-medium">Er digitala partner</h1>
       <p class="font-light text-base">
