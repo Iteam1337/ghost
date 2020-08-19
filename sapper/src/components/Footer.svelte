@@ -32,6 +32,21 @@
 
   </div>
   <div class="py-10">
-    <p class="text-white text-right">Facebook Instagram LinkedIn Youtube</p>
+    <p class="text-white text-right">
+      <a href="https://www.facebook.com/iteam1337/" target="_blank">
+        <i class="fa fa-facebook" />
+      </a>
+      <a href="https://instagram.com/iteam1337" target="_blank">
+        <i class="fa fa-instagram" />
+      </a>
+      <a href="https://www.linkedin.com/company/270569/" target="_blank">
+        <i class="fa fa-linkedin" />
+      </a>
+      <a
+        href="https://www.youtube.com/channel/UCU2TdLZ7p0jEuuGUxaod4lw"
+        target="_blank">
+        <i class="fa fa-youtube" />
+      </a>
+    </p>
   </div>
 </div>
