@@ -61,36 +61,52 @@
     Lorem meow ipsum purr dolor meow meow fräs.
   </p>
 
-  <div class="flex my-20 px-40 items-center md:container md:mx-auto space-x-3">
-    <div class="service flex-initial rounded-lg">
-      <img src="iteam.png" alt="meow" width="100" class="object-center my-8" />
+  <div class="flex my-20 items-center md:container md:mx-auto space-x-3">
+    <div class="service flex-shrink-1 rounded-lg px-5">
+      <img
+        src="broken.png"
+        alt="illustration"
+        width="100"
+        class="object-center my-8" />
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
-      <p class="mx-4 text-base font-light tracking-wider">
+      <p class="px-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
-    <div class="service flex-initial rounded-lg">
-      <img src="iteam.png" alt="meow" width="100" class="object-center my-8" />
+    <div class="service flex-shrink-1 rounded-lg px-5">
+      <img
+        src="broken.png"
+        alt="illustration"
+        width="100"
+        class="object-center my-8" />
 
       <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
-      <p class="mx-4 text-base font-light tracking-wider">
+      <p class="px-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
-    <div class="service flex-initial rounded-lg">
-      <img src="iteam.png" alt="meow" width="100" class="object-center my-8" />
+    <div class="service flex-shrink-1 rounded-lg px-5">
+      <img
+        src="broken.png"
+        alt="illustration"
+        width="100"
+        class="object-center my-8" />
 
       <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
-      <p class="mx-4 text-base font-light tracking-wider">
+      <p class="px-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
-    <div class="service flex-initial rounded-lg">
-      <img src="iteam.png" alt="meow" width="100" class="object-center my-8" />
+    <div class="service flex-shrink-1 rounded-lg px-5">
+      <img
+        src="broken.png"
+        alt="illustration"
+        width="100"
+        class="object-center my-8" />
 
       <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
-      <p class="mx-4 text-base font-light tracking-wider">
+      <p class="px-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
