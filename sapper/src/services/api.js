@@ -1,4 +1,5 @@
-const GHOST_URL = 'http://localhost:2368'
+const GHOST_KEY = '69ef634d3f43ce96eb4739d4d2'
+const GHOST_URL = 'https://iteam-se.iteamdev.io'
 
 /*
  * Each request to Ghost's API requires a content key.
@@ -23,7 +24,7 @@ const call = async (context, { uri, options }) => {
   }/ghost/api/v3/content${uri}`
 
   // Apply Ghost API key.
-  url = addKeyParameterToUrl(url, context.session.GHOST_KEY)
+  url = addKeyParameterToUrl(url, context.session.GHOST_KEY || GHOST_KEY)
 
   // Call Ghost API.
   const response = await context.fetch(url, options)
