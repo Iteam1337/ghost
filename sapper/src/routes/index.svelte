@@ -45,9 +45,11 @@
     <div class="flex-initial text-right">TODO: Illustrationer</div>
   </div>
 
-  <div class="flex flex-wrap px-20 my-20">
+  <div
+    class="flex flex-wrap justify-center my-20 px-20 items-center md:container
+    md:mx-auto space-x-3">
     {#each posts as post}
-      <div class="flex-initial shadow-md bg-white-400 px-4 py-2 m-2">
+      <div class="shadow-md bg-white-400 px-4 py-2 m-2">
         <img src={post.feature_image} alt="feature" />
         <h2>{post.title}</h2>
       </div>
