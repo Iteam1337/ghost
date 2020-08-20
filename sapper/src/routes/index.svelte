@@ -1,7 +1,8 @@
 <script context="module">
   import { API } from '../services/api.js'
+  import Typography from '../components/typography/'
 
-  export async function preload(page, session) {
+  export async function preload(_page, session) {
     return API({ fetch: this.fetch, session }).Posts.List()
   }
 </script>
@@ -34,6 +35,9 @@
   <div class="flex px-20 max-w-3xl">
     <div class="flex-initial">
       <h1 class="text-4xl font-medium">Kod, kultur och strategi</h1>
+      <Typography.BaseParagraph>
+        This is the base paragraph
+      </Typography.BaseParagraph>
       <p class="font-light text-sm">
         Genom agilitet, användarfokus och i nära samarbete med våra kunder
         skapar vi digital innovation.
