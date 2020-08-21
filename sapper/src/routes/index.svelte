@@ -1,6 +1,7 @@
 <script context="module">
   import { API } from '../services/api.js'
   import Typography from '../components/typography/'
+  import ContactBanner from '../components/ContactBanner.svelte'
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session }).Posts.List()
@@ -154,3 +155,5 @@
     <div class="px-10" />
   </div>
 </div>
+
+<ContactBanner />
