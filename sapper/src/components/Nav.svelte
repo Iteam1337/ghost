@@ -3,28 +3,7 @@
 </script>
 
 <style>
-  nav {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
   /* clearfix */
-  ul::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-
-  li {
-    display: block;
-    float: left;
-    padding-left: 1em;
-  }
 
   a,
   a:visited {
@@ -40,42 +19,41 @@
   }
 </style>
 
-<nav class="lg:container lg:mx-auto">
+<nav class="lg:container lg:mx-auto flex justify-between">
   <a aria-current={segment === undefined ? 'page' : undefined} href=".">
     <img src="iteam.png" alt="Iteam" class="logo" />
   </a>
-  <ul>
-    <li />
-    <li>
+  <ul class="p-0 m-0">
+    <li class="block float-left pl-6">
       <a aria-current={segment === 'case' ? 'page' : undefined} href="case">
         Case
       </a>
     </li>
-    <li>
+    <li class="block float-left pl-6">
       <a
         aria-current={segment === 'services' ? 'page' : undefined}
         href="services">
         Tjänster
       </a>
     </li>
-    <li>
+    <li class="block float-left pl-6">
       <a aria-current={segment === 'about' ? 'page' : undefined} href="about">
         Om oss
       </a>
     </li>
-    <li>
+    <li class="block float-left pl-6">
       <a aria-current={segment === 'career' ? 'page' : undefined} href="career">
         Karriär
       </a>
     </li>
-    <li>
+    <li class="block float-left pl-6">
       <a
         aria-current={segment === 'contact' ? 'page' : undefined}
         href="contact">
         Kontakt
       </a>
     </li>
-    <li>
+    <li class="block float-left pl-6">
       <a
         rel="prefetch"
         aria-current={segment === 'blog' ? 'page' : undefined}

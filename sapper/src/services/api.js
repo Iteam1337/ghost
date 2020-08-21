@@ -76,10 +76,19 @@ export const API = (context) => ({
 
       filter = filter.substring(0, filter.length - 1)
 
-      return await get(context, `/posts${filter}`)
+      return await get(context, `/posts${filter}&include=tags`)
     },
     List: async () => {
       return await get(context, '/posts')
+    },
+  },
+  Post: {
+    BySlug: async (slug) => {
+      const {
+        posts: [post],
+      } = await get(context, `/posts/slug/${slug}/`)
+
+      return { post }
     },
   },
 })
