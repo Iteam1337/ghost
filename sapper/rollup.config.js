@@ -1,14 +1,14 @@
+import babel from '@rollup/plugin-babel'
+import commonjs from '@rollup/plugin-commonjs'
 import resolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
-import commonjs from '@rollup/plugin-commonjs'
 import svelte from 'rollup-plugin-svelte'
-import babel from '@rollup/plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 import config from 'sapper/config/rollup.js'
-import pkg from './package.json'
 import sveltePreprocess from 'svelte-preprocess'
+import pkg from './package.json'
 const sapperEnv = require('sapper-environment')
-
+import svelteSVG from 'rollup-plugin-svelte-svg'
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
 const legacy = !!process.env.SAPPER_LEGACY_BUILD
@@ -30,6 +30,7 @@ export default {
     input: config.client.input(),
     output: config.client.output(),
     plugins: [
+      svelteSVG({ dev }),
       replace({
         ...sapperEnv(),
         'process.browser': true,
@@ -85,6 +86,7 @@ export default {
     input: config.server.input(),
     output: config.server.output(),
     plugins: [
+      svelteSVG({ generate: 'ssr', dev }),
       replace({
         ...sapperEnv(),
         'process.browser': false,
