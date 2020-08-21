@@ -16,19 +16,8 @@
       "files": ["**/*.svelte"],
       "processor": "svelte3/svelte3",
       "rules": {
-        "no-unused-vars": [
-          "error",
-          {
-            "vars": "all",
-            "args": "after-used",
-            "ignoreRestSiblings": true,
-            "argsIgnorePattern": "^_",
-            "varsIgnorePattern": "^_"
-          }
-        ]
+        "no-unused-vars": "error"
       }
-    },
-    
-  ],
-  
+    }
+  ]
 }
