@@ -23,7 +23,10 @@
           <br />
           114 26 Stockholm
           <br />
-          <a href="https://goo.gl/maps/cVxFADSToWkbwCjBA" target="_blank">
+          <a
+            href="https://goo.gl/maps/cVxFADSToWkbwCjBA"
+            target="_blank"
+            class="underline">
             Google Maps
           </a>
         </p>
@@ -36,7 +39,10 @@
           <br />
           413 01 Göteborg
           <br />
-          <a href="https://goo.gl/maps/fDzuuDuUSxU6jLGb8" target="_blank">
+          <a
+            href="https://goo.gl/maps/fDzuuDuUSxU6jLGb8"
+            target="_blank"
+            class="underline">
             Google Maps
           </a>
         </p>
