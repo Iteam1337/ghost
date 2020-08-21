@@ -4,13 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --beige: #fcfbfb;
-  --cornflower: #668cff;
-  --dark-grey: #363636;
-  --medium-dark-grey: #444444;
-}
-
 body {
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
