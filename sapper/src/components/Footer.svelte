@@ -7,14 +7,14 @@
   import YouTubeIcon from '../assets/youtube_icon.svg'
 </script>
 
-<div class="bg-darker-grey px-32">
-  <p class="text-white py-20 max-w-2xl">
+<div class="bg-darker-grey px-16 md:px-32">
+  <p class="text-white py-20 max-w-2xl text-lg">
     Vi är en digitaliseringsbyrå med kontor i Stockholm och Göteborg. Vi är 25
     personer som drivs av tre grundläggande värderingar – att göra något bra,
     att ha kul och att skapa värde.
   </p>
-  <div class="flex items-end">
-    <div class="w-2/3 flex py-10">
+  <div class="flex items-start md:items-end flex-col md:flex-row">
+    <div class="w-2/3 flex flex-col md:flex-row py-10">
       <div>
         <CityIcon />
         <p class="text-white font-medium tracking-wide">Iteam Stockholm</p>
@@ -28,7 +28,7 @@
           </a>
         </p>
       </div>
-      <div class="px-20">
+      <div class="pt-20 md:pt-0 md:px-20">
         <HarborIcon />
         <p class="text-white font-medium tracking-wide">Iteam Göteborg</p>
         <p class="text-white font-light text-sm leading-7">
@@ -44,7 +44,7 @@
         <div />
       </div>
     </div>
-    <div class="py-20 w-1/3 flex justify-end text-white">
+    <div class="py-20 w-auto md:w-1/3 flex justify-end text-white">
       <a href="https://www.facebook.com/iteam1337/" target="_blank">
         <FacebookIcon />
       </a>
