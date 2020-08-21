@@ -1,14 +1,19 @@
-<script context="module">
+<script context="module" lang="ts">
+  // @check-js
   import { API } from '../services/api.js'
   import Typography from '../components/typography/'
-
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session }).Posts.List()
   }
 </script>
 
-<script>
-  export let posts
+<script lang="ts">
+  type Posts = IPost[]
+  interface IPost {
+    title: string
+    feature_image: string
+  }
+  export let posts: Posts
 </script>
 
 <style>
