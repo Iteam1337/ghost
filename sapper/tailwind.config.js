@@ -3,7 +3,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-grey': '#444444',
+        beige: '#fcfbfb',
+        cornflower: '#668cff',
+        grey: {
+          dark: '#363636',
+          medium: '#444444',
+        },
       },
     },
     container: {
