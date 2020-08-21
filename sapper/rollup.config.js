@@ -7,6 +7,8 @@ import { terser } from 'rollup-plugin-terser'
 import config from 'sapper/config/rollup.js'
 import pkg from './package.json'
 import sveltePreprocess from 'svelte-preprocess'
+import autoPreprocess from 'svelte-preprocess'
+import typescript from '@rollup/plugin-typescript'
 const sapperEnv = require('sapper-environment')
 
 const mode = process.env.NODE_ENV
@@ -36,7 +38,7 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       svelte({
-        preprocess,
+        preprocess: autoPreprocess(),
         dev,
         hydratable: true,
         emitCss: true,
@@ -46,6 +48,7 @@ export default {
         dedupe: ['svelte'],
       }),
       commonjs(),
+      typescript({ sourceMap: mode !== 'production' }),
 
       legacy &&
         babel({
