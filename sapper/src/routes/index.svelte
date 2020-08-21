@@ -1,9 +1,15 @@
 <script context="module">
   import { API } from '../services/api.js'
   import Typography from '../components/typography/'
+  import FeaturedPosts from '../components/FeaturedPosts.svelte'
+  import Links from '../components/links'
+  import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
 
   export async function preload(_page, session) {
-    return API({ fetch: this.fetch, session }).Posts.List()
+    return API({ fetch: this.fetch, session }).Posts.ByTags([
+      'erbjudande',
+      'case',
+    ])
   }
 </script>
 
@@ -15,36 +21,26 @@
   <title>Iteam Solutions</title>
 </svelte:head>
 
-<div class="lg:container lg:mx-auto py-20">
-  <div class="flex px-20 max-w-3xl">
-    <div class="flex-initial">
-      <h1 class="text-4xl font-medium">Kod, kultur och strategi</h1>
-      <Typography.BaseParagraph>
-        This is the base paragraph
-      </Typography.BaseParagraph>
-      <p class="font-light text-sm">
+<div class="lg:container lg:mx-auto py-24">
+  <div class="flex px-32 justify-between">
+    <div class="flex-initial max-w-md pt-8">
+      <Typography.H1>Kod, kultur och strategi</Typography.H1>
+      <Typography.BaseParagraph class="font-light text-sm">
         Genom agilitet, användarfokus och i nära samarbete med våra kunder
         skapar vi digital innovation.
-      </p>
-      <p class="font-medium text-sm">
-        <a href="/about" class="font-medium text-cornflower">
-          Så här går det till &rightarrow;
-        </a>
-      </p>
+      </Typography.BaseParagraph>
+      <Links.ArrowTextLink to="/about">Så här går det till</Links.ArrowTextLink>
     </div>
-    <div class="flex-initial text-right">TODO: Illustrationer</div>
+    <div class="w-1/2">
+      <FeaturedImageIteam />
+    </div>
   </div>
-
+  <div class="px-32 pt-32">
+    <FeaturedPosts {posts} />
+  </div>
   <div
     class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-    md:mx-auto space-x-3">
-    {#each posts as post}
-      <div class="shadow-md bg-white-400 px-4 py-2 m-2">
-        <img src={post.feature_image} alt="feature" />
-        <h2>{post.title}</h2>
-      </div>
-    {/each}
-  </div>
+    md:mx-auto space-x-3" />
 </div>
 
 <div class="bg-grey-medium w-screen text-center text-white py-20">
