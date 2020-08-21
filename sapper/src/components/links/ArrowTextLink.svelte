@@ -1,5 +1,9 @@
+<script>
+  export let to
+</script>
+
 <p class="font-medium text-sm" style="color: var(--cornflower);">
-  <a href="/about">
+  <a href={to}>
     <slot />
     &rightarrow;
   </a>

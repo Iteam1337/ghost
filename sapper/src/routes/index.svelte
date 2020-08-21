@@ -38,8 +38,7 @@
         Genom agilitet, användarfokus och i nära samarbete med våra kunder
         skapar vi digital innovation.
       </Typography.BaseParagraph>
-      <Links.ArrowTextLink>Så här går det till</Links.ArrowTextLink>
-
+      <Links.ArrowTextLink to="/about">Så här går det till</Links.ArrowTextLink>
     </div>
     <div class="flex-initial text-right">TODO: Illustrationer</div>
   </div>
