@@ -67,9 +67,17 @@
     Lorem meow ipsum purr dolor meow meow fräs.
   </p>
 
-  <div class="flex my-20 items-center md:container md:mx-auto space-x-3">
+  <div
+    class="flex my-20 items-center items-stretch md:container md:mx-auto
+    space-x-3">
     <div class="service flex-shrink-1 rounded-lg px-5 flex-col justify-center">
-      <img src="broken.png" alt="illustration" width="100" class="my-8" />
+      <div class="flex justify-center">
+        <img
+          src="illustrations/beakers.svg"
+          alt="illustration"
+          width="100"
+          class="my-8" />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
       <p class="px-5 text-base font-light tracking-wider">
@@ -77,11 +85,13 @@
       </p>
     </div>
     <div class="service flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center">
+        <img
+          src="illustrations/magnifying-glass.svg"
+          alt="illustration"
+          width="100"
+          class="object-center my-8" />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
       <p class="px-5 text-base font-light tracking-wider">
@@ -89,11 +99,13 @@
       </p>
     </div>
     <div class="service flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center">
+        <img
+          src="illustrations/emoji.svg"
+          alt="illustration"
+          width="100"
+          class="object-center my-8" />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
       <p class="px-5 text-base font-light tracking-wider">
@@ -101,11 +113,13 @@
       </p>
     </div>
     <div class="service flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center">
+        <img
+          src="illustrations/vr-glasses.svg"
+          alt="illustration"
+          width="100"
+          class="object-center my-8" />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
       <p class="px-5 text-base font-light tracking-wider">
