@@ -22,6 +22,7 @@
 
 <div class="lg:container lg:mx-auto py-32">
   <div class="flex px-32 max-w-3xl">
+
     <div class="flex-initial">
       <Typography.H1>Kod, kultur och strategi</Typography.H1>
       <Typography.BaseParagraph class="font-light text-sm">
