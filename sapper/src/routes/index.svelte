@@ -11,22 +11,6 @@
   export let posts
 </script>
 
-<style>
-  a,
-  a:visited {
-    font-weight: 500;
-    color: var(--cornflower);
-  }
-
-  div.services {
-    background-color: var(--dark-grey);
-  }
-
-  div.service {
-    background-color: var(--medium-dark-grey);
-  }
-</style>
-
 <svelte:head>
   <title>Iteam Solutions</title>
 </svelte:head>
@@ -43,7 +27,9 @@
         skapar vi digital innovation.
       </p>
       <p class="font-medium text-sm">
-        <a href="/about">Så här går det till &rightarrow;</a>
+        <a href="/about" class="font-medium text-cornflower">
+          Så här går det till &rightarrow;
+        </a>
       </p>
     </div>
     <div class="flex-initial text-right">TODO: Illustrationer</div>
@@ -61,14 +47,15 @@
   </div>
 </div>
 
-<div class="services w-screen text-center text-white py-20">
+<div class="bg-grey-medium w-screen text-center text-white py-20">
   <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
   <p class="text-base font-light tracking-wider">
     Lorem meow ipsum purr dolor meow meow fräs.
   </p>
 
   <div class="flex my-20 items-center md:container md:mx-auto space-x-3">
-    <div class="service flex-shrink-1 rounded-lg px-5 flex-col justify-center">
+    <div
+      class="bg-grey-dark flex-shrink-1 rounded-lg px-5 flex-col justify-center">
       <img src="broken.png" alt="illustration" width="100" class="my-8" />
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
@@ -76,7 +63,7 @@
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
-    <div class="service flex-shrink-1 rounded-lg px-5">
+    <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
       <img
         src="broken.png"
         alt="illustration"
@@ -88,7 +75,7 @@
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
-    <div class="service flex-shrink-1 rounded-lg px-5">
+    <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
       <img
         src="broken.png"
         alt="illustration"
@@ -100,7 +87,7 @@
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
-    <div class="service flex-shrink-1 rounded-lg px-5">
+    <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
       <img
         src="broken.png"
         alt="illustration"
