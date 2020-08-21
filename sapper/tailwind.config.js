@@ -14,6 +14,10 @@ module.exports = {
     container: {
       center: false,
     },
+    fontFamily: {
+      display: ['Roboto', 'sans-serif'],
+      body: ['Roboto', 'sans-serif'],
+    },
   },
   variants: {},
   plugins: [],
