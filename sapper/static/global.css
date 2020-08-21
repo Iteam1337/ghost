@@ -29,7 +29,7 @@ h6 {
 }
 
 .custom-flex-span-narrow {
-  flex: 1 1 calc((100% / 3) - 2rem);
+  flex: 1 1 calc((100% / 3) - 5rem);
 }
 
 .custom-flex-span-wide {

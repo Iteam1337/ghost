@@ -3,6 +3,7 @@
   import Typography from '../components/typography/'
   import FeaturedPosts from '../components/FeaturedPosts.svelte'
   import Links from '../components/links'
+  import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session }).Posts.ByTags([
@@ -20,10 +21,9 @@
   <title>Iteam Solutions</title>
 </svelte:head>
 
-<div class="lg:container lg:mx-auto py-32">
-  <div class="flex px-32 max-w-3xl">
-
-    <div class="flex-initial">
+<div class="lg:container lg:mx-auto py-24">
+  <div class="flex px-32 justify-between">
+    <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Kod, kultur och strategi</Typography.H1>
       <Typography.BaseParagraph class="font-light text-sm">
         Genom agilitet, användarfokus och i nära samarbete med våra kunder
@@ -31,7 +31,9 @@
       </Typography.BaseParagraph>
       <Links.ArrowTextLink to="/about">Så här går det till</Links.ArrowTextLink>
     </div>
-    <div class="flex-initial text-right">TODO: Illustrationer</div>
+    <div class="w-1/2">
+      <FeaturedImageIteam />
+    </div>
   </div>
   <div class="px-32 pt-32">
     <FeaturedPosts {posts} />
