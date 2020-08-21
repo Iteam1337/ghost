@@ -1,14 +1,25 @@
 # ghost
 
-iteam.se ghost
+This is the source for iteam.se
+The site is built with sapper using a headless ghost as a content backend.
 
 ## Contributing
 
-### Requirements
+### Quick start
 
-- docker
-- docker-compose
-- nvm
+There is a dev environment setup on https://iteam-se.iteamdev.io and if you just pull this repo and run the sapper web, your local instance is already configured to pull content from it. You will require `nvm` for this step.
+
+```bash
+cd sapper
+nvm use # or nvm install
+npm ci
+npm run dev
+# Now open http://localhost:3000
+```
+
+### Running the whole stack locally
+
+For this you will need to have `docker` and `docker-compose` installed. After cloning the repo, run `docker-compose up` in the root of the project. This will launch ghost and mariadb inside docker.
 
 ### Starting up the dev environment
 
