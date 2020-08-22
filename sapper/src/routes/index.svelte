@@ -1,6 +1,7 @@
 <script context="module">
   import { API } from '../services/api.js'
   import Typography from '../components/typography/'
+  import ContactBanner from '../components/ContactBanner.svelte'
   import FeaturedPosts from '../components/FeaturedPosts.svelte'
   import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
@@ -150,3 +151,5 @@
     <div class="px-10" />
   </div>
 </div>
+
+<ContactBanner />

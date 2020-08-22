@@ -8,7 +8,7 @@
 </script>
 
 <div class="bg-grey-dark px-16 md:px-32">
-  <p class="text-white py-20 max-w-2xl text-lg">
+  <p class="text-white py-20 max-w-2xl text-lg m-0">
     Vi är en digitaliseringsbyrå med kontor i Stockholm och Göteborg. Vi är 25
     personer som drivs av tre grundläggande värderingar – att göra något bra,
     att ha kul och att skapa värde.
