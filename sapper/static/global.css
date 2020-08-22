@@ -22,18 +22,16 @@ h6 {
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 2em;
-  font-weight: 500;
-}
-
-p {
-  font-weight: 300;
-  margin: 1em 0;
-}
-
 @media (min-width: 400px) {
   body {
     font-size: 16px;
   }
+}
+
+.custom-flex-span-narrow {
+  flex: 1 1 calc((100% / 3) - 5rem);
+}
+
+.custom-flex-span-wide {
+  flex: 1 49%;
 }
