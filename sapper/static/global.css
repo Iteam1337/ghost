@@ -4,19 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --beige: #fcfbfb;
-  --cornflower: #668cff;
-  --dark-grey: #363636;
-  --medium-dark-grey: #444444;
-}
-
 body {
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 16px;
-  background-color: var(--beige);
 }
 
 h1,
@@ -30,18 +22,16 @@ h6 {
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 2em;
-  font-weight: 500;
-}
-
-p {
-  font-weight: 300;
-  margin: 1em 0;
-}
-
 @media (min-width: 400px) {
   body {
     font-size: 16px;
   }
+}
+
+.custom-flex-span-narrow {
+  flex: 1 1 calc((100% / 3) - 5rem);
+}
+
+.custom-flex-span-wide {
+  flex: 1 49%;
 }
