@@ -65,7 +65,7 @@
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
@@ -75,7 +75,7 @@
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
@@ -85,7 +85,7 @@
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
@@ -95,7 +95,7 @@
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
