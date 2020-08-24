@@ -6,6 +6,11 @@
   import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
 
+  import BeakerSymbol from '../assets/illustrations/beakers.svg'
+  import EmojiSymbol from '../assets/illustrations/emoji.svg'
+  import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
+  import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
+
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session }).Posts.ByTags([
       'erbjudande',
@@ -50,49 +55,47 @@
     Lorem meow ipsum purr dolor meow meow fräs.
   </p>
 
-  <div class="flex my-20 items-center md:container md:mx-auto space-x-3">
+  <div
+    class="flex my-20 items-center items-stretch md:container md:mx-auto
+    space-x-3">
     <div
       class="bg-grey-dark flex-shrink-1 rounded-lg px-5 flex-col justify-center">
-      <img src="broken.png" alt="illustration" width="100" class="my-8" />
+      <div class="flex justify-center py-8">
+        <BeakerSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <MagnifyingGlassSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <EmojiSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <VRGlassesSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
