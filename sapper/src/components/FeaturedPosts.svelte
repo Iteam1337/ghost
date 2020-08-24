@@ -4,7 +4,7 @@
   export let posts
 </script>
 
-<div class="flex flex-wrap" style="gap: 1rem;">
+<div class="flex flex-col lg:flex-row lg:flex-wrap" style="gap: 1rem;">
   {#each posts as post}
     <FeaturedPost {post} />
   {/each}

@@ -27,8 +27,11 @@
   <title>Iteam - There is a Better Way</title>
 </svelte:head>
 
-<div class="container py-24">
-  <div class="flex px-32 justify-between">
+<div class="container py-10 sm:py-24">
+  <div class="flex flex-col md:flex-row-reverse <justify-between px-8 sm:px-32">
+    <div class="w-1/2">
+      <FeaturedImageIteam />
+    </div>
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Kod, kultur och strategi</Typography.H1>
       <Typography.BaseParagraph class="font-light text-sm">
@@ -37,11 +40,9 @@
       </Typography.BaseParagraph>
       <Links.ArrowTextLink to="/about">Så här går det till</Links.ArrowTextLink>
     </div>
-    <div class="w-1/2">
-      <FeaturedImageIteam />
-    </div>
+
   </div>
-  <div class="px-32 pt-32">
+  <div class="px-8 md:px-16 lg:px-32 pt-32">
     <FeaturedPosts {posts} />
   </div>
   <div
