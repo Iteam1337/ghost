@@ -27,7 +27,7 @@
   <title>Iteam Solutions</title>
 </svelte:head>
 
-<div class="lg:container lg:mx-auto py-24">
+<div class="container py-24">
   <div class="flex px-32 justify-between">
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Kod, kultur och strategi</Typography.H1>

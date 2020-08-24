@@ -24,7 +24,7 @@ module.exports = {
       },
     },
     container: {
-      center: false,
+      center: true,
     },
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
