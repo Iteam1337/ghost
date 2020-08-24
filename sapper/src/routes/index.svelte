@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-  <title>Iteam Solutions</title>
+  <title>Iteam - There is a Better Way</title>
 </svelte:head>
 
 <div class="container py-24">
