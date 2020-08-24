@@ -6,6 +6,11 @@
   import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
 
+  import BeakerSymbol from '../assets/illustrations/beakers.svg'
+  import EmojiSymbol from '../assets/illustrations/emoji.svg'
+  import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
+  import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
+
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session }).Posts.ByTags([
       'erbjudande',
@@ -55,12 +60,8 @@
     space-x-3">
     <div
       class="bg-grey-dark flex-shrink-1 rounded-lg px-5 flex-col justify-center">
-      <div class="flex justify-center">
-        <img
-          src="illustrations/beakers.svg"
-          alt="illustration"
-          width="100"
-          class="my-8" />
+      <div class="flex justify-center py-8">
+        <BeakerSymbol />
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
@@ -69,12 +70,8 @@
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <div class="flex justify-center">
-        <img
-          src="illustrations/magnifying-glass.svg"
-          alt="illustration"
-          width="100"
-          class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <MagnifyingGlassSymbol />
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
@@ -83,12 +80,8 @@
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <div class="flex justify-center">
-        <img
-          src="illustrations/emoji.svg"
-          alt="illustration"
-          width="100"
-          class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <EmojiSymbol />
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
@@ -97,12 +90,8 @@
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <div class="flex justify-center">
-        <img
-          src="illustrations/vr-glasses.svg"
-          alt="illustration"
-          width="100"
-          class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <VRGlassesSymbol />
       </div>
 
       <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
