@@ -5,10 +5,6 @@
   export let segment
 
   let menuHidden = true
-
-  const toggleMenu = () => {
-    menuHidden = !menuHidden
-  }
 </script>
 
 <nav class="sm:container flex justify-between mx-5">
@@ -21,7 +17,9 @@
 
   <ul class="p-0 m-0 flex flex-col items-end sm:block">
     <button
-      on:click={() => toggleMenu()}
+      on:click={() => {
+        menuHidden = !menuHidden
+      }}
       class="sm:hidden my-5 mx-0 px-0 h-6 w-6 fill-current">
       <Hamburger />
     </button>
