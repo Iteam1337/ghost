@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-flex-span-narrow {
+  flex: 1 1 calc((100% / 3) - 5rem);
+}
+
+.custom-flex-span-wide {
+  flex: 1 49%;
+}

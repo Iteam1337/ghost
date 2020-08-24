@@ -1,9 +1,21 @@
 <script context="module">
   import { API } from '../services/api.js'
   import Typography from '../components/typography/'
+  import ContactBanner from '../components/ContactBanner.svelte'
+  import FeaturedPosts from '../components/FeaturedPosts.svelte'
+  import Links from '../components/links'
+  import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
+
+  import BeakerSymbol from '../assets/illustrations/beakers.svg'
+  import EmojiSymbol from '../assets/illustrations/emoji.svg'
+  import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
+  import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
 
   export async function preload(_page, session) {
-    return API({ fetch: this.fetch, session }).Posts.List()
+    return API({ fetch: this.fetch, session }).Posts.ByTags([
+      'erbjudande',
+      'case',
+    ])
   }
 </script>
 
@@ -15,36 +27,26 @@
   <title>Iteam Solutions</title>
 </svelte:head>
 
-<div class="lg:container lg:mx-auto py-20">
-  <div class="flex px-20 max-w-3xl">
-    <div class="flex-initial">
-      <h1 class="text-4xl font-medium">Kod, kultur och strategi</h1>
-      <Typography.BaseParagraph>
-        This is the base paragraph
-      </Typography.BaseParagraph>
-      <p class="font-light text-sm">
+<div class="lg:container lg:mx-auto py-24">
+  <div class="flex px-32 justify-between">
+    <div class="flex-initial max-w-md pt-8">
+      <Typography.H1>Kod, kultur och strategi</Typography.H1>
+      <Typography.BaseParagraph class="font-light text-sm">
         Genom agilitet, användarfokus och i nära samarbete med våra kunder
         skapar vi digital innovation.
-      </p>
-      <p class="font-medium text-sm">
-        <a href="/about" class="font-medium text-cornflower">
-          Så här går det till &rightarrow;
-        </a>
-      </p>
+      </Typography.BaseParagraph>
+      <Links.ArrowTextLink to="/about">Så här går det till</Links.ArrowTextLink>
     </div>
-    <div class="flex-initial text-right">TODO: Illustrationer</div>
+    <div class="w-1/2">
+      <FeaturedImageIteam />
+    </div>
   </div>
-
+  <div class="px-32 pt-32">
+    <FeaturedPosts {posts} />
+  </div>
   <div
     class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-    md:mx-auto space-x-3">
-    {#each posts as post}
-      <div class="shadow-md bg-white-400 px-4 py-2 m-2">
-        <img src={post.feature_image} alt="feature" />
-        <h2>{post.title}</h2>
-      </div>
-    {/each}
-  </div>
+    md:mx-auto space-x-3" />
 </div>
 
 <div class="bg-grey-medium w-screen text-center text-white py-20">
@@ -53,49 +55,47 @@
     Lorem meow ipsum purr dolor meow meow fräs.
   </p>
 
-  <div class="flex my-20 items-center md:container md:mx-auto space-x-3">
+  <div
+    class="flex my-20 items-center items-stretch md:container md:mx-auto
+    space-x-3">
     <div
       class="bg-grey-dark flex-shrink-1 rounded-lg px-5 flex-col justify-center">
-      <img src="broken.png" alt="illustration" width="100" class="my-8" />
+      <div class="flex justify-center py-8">
+        <BeakerSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">User research</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <MagnifyingGlassSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <EmojiSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
     <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <img
-        src="broken.png"
-        alt="illustration"
-        width="100"
-        class="object-center my-8" />
+      <div class="flex justify-center py-8">
+        <VRGlassesSymbol />
+      </div>
 
       <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
-      <p class="px-5 text-base font-light tracking-wider">
+      <p class="px-5 py-5 text-base font-light tracking-wider">
         Lorem ipsum dolor sit meow meow meow.
       </p>
     </div>
@@ -154,3 +154,5 @@
     <div class="px-10" />
   </div>
 </div>
+
+<ContactBanner />
