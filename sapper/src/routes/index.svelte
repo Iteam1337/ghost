@@ -83,7 +83,8 @@
       title={'Systemutveckling'}
       text={'Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow.'} />
   </div>
-  <a class="border px-10 py-5 rounded-lg text-white" href="/services">
+
+  <a class="border px-16 py-4 rounded-full text-white" href="/services">
     Alla tjänster
   </a>
 </div>
