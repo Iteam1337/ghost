@@ -28,7 +28,7 @@
 </svelte:head>
 
 <div class="container py-10 sm:py-24">
-  <div class="flex flex-col md:flex-row-reverse <justify-between px-8 sm:px-32">
+  <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
     <div class="w-1/2">
       <FeaturedImageIteam />
     </div>
