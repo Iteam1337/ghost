@@ -12,6 +12,7 @@
   import EmojiSymbol from '../assets/illustrations/emoji.svg'
   import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
   import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
+  import IteamA from '../assets/illustrations/a.svg'
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session }).Posts.ByTags([
@@ -89,10 +90,11 @@
   </a>
 </div>
 
-<div class="lg:container lg:mx-auto py-20 px-20">
-  <div class="flex justify-around max-w-3xl">
-    <div class="">
-      <h1 class="text-4xl font-medium">Vi är Iteam</h1>
+<!-- Blocks -->
+<div class="container lg:mx-auto my-10 lg:my-32 xl:my-40 px-8 sm:px-32">
+  <div class="flex">
+    <div class="flex-1 flex-grow-1 align-middle sm:py-2">
+      <h1 class="text-4xl font-medium py-4 leading-10">Vi är Iteam</h1>
       <p class="font-light text-base">
         Vi är en digital byrå med teknik som spetskompetens. Vi är ett tätt
         sammansvetsat gäng som jobbar med moderna tekniker och metoder. Vi
@@ -100,19 +102,18 @@
         landskapet och dra nytta av digitaliseringens möjligheter.
       </p>
     </div>
-    <div class="px-10">
-      <img class="" src="Commodore-Joystick-Lowres.jpg" alt="commodore" />
+    <div class="px-10 hidden lg:block mx-8">
+      <img class="w-3/5 h-auto" src="TAC-2.jpg" alt="illustration" />
     </div>
   </div>
 </div>
 
-<div class="lg:container lg:mx-auto py-20 px-20">
-  <div class="flex justify-around max-w-3xl">
-    <div class="px-10">
-      <img class="" src="Neon-Sign-Lowres.jpg" alt="commodore" />
-    </div>
-    <div class="">
-      <h1 class="text-4xl font-medium">Vi löser komplexa utmaningar</h1>
+<div class="container lg:mx-auto px-8 sm:px-32">
+  <div class="flex flex-row-reverse">
+    <div class="flex-1 flex-grow-1 align-middle lg:py-16">
+      <h1 class="text-4xl font-medium py-4 leading-10">
+        Vi löser komplexa utmaningar
+      </h1>
       <p class="font-light text-base">
         Vi kombinerar strategi, kod och kultur för att ta fram digitala
         lösningar som möter användarnas behov. Vi utvecklar inte bara appar. Vi
@@ -121,13 +122,16 @@
         affär.
       </p>
     </div>
+    <div class="flex-1 hidden lg:block mx-2">
+      <IteamA />
+    </div>
   </div>
 </div>
 
-<div class="lg:container lg:mx-auto py-20 px-20">
-  <div class="flex justify-around max-w-lg">
-    <div class="">
-      <h1 class="text-4xl font-medium">Er digitala partner</h1>
+<div class="container lg:mx-auto my-10 lg:my-32 xl:my-40 px-8 sm:px-32">
+  <div class="flex">
+    <div class="flex-1 flex-grow-1 align-middle sm:py-2">
+      <h1 class="text-4xl font-medium py-4 leading-10">Er digitala partner</h1>
       <p class="font-light text-base">
         Med ett långsiktigt engagemang hjälper vi er att navigera i den digitala
         världen. Vi omvandlar visioner till verklighet, utmanar föråldrade
@@ -135,7 +139,12 @@
         älskar att använda.
       </p>
     </div>
-    <div class="px-10" />
+    <div class="px-10 hidden lg:block mx-8">
+      <img
+        class="w-64 h-auto"
+        src="Monday-meeting-4-Lowres.jpg"
+        alt="illustration" />
+    </div>
   </div>
 </div>
 
