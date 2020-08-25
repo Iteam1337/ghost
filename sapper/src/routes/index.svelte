@@ -6,6 +6,8 @@
   import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
 
+  import Card from '../components/Card.svelte'
+
   import BeakerSymbol from '../assets/illustrations/beakers.svg'
   import EmojiSymbol from '../assets/illustrations/emoji.svg'
   import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
@@ -50,56 +52,36 @@
     md:mx-auto space-x-3" />
 </div>
 
-<div class="bg-grey-medium w-screen text-center text-white py-20">
+<!-- Tjänster -->
+<div
+  class="bg-grey-medium w-screen text-center text-white py-20 sm:px-32 lg:px-20">
+
   <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
-  <p class="text-base font-light tracking-wider">
-    Lorem meow ipsum purr dolor meow meow fräs.
+  <p class="text-base font-light tracking-wider my-4 mx-6 lg:mx-20 lg:px-16">
+    Vi erbjuder dig ett självgående team som utvecklar din produkt. Man säga att
+    du hyr din egen startup. Det inspirerar din organisation att tänka på nya
+    sätt och leder till en bättre affär.
   </p>
 
   <div
-    class="flex my-20 items-center items-stretch md:container md:mx-auto
-    space-x-3">
-    <div
-      class="bg-grey-dark flex-shrink-1 rounded-lg px-5 flex-col justify-center">
-      <div class="flex justify-center py-8">
-        <BeakerSymbol />
-      </div>
-
-      <h3 class="text-xl font-medium tracking-wide">User research</h3>
-      <p class="px-5 py-5 text-base font-light tracking-wider">
-        Lorem ipsum dolor sit meow meow meow.
-      </p>
-    </div>
-    <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <div class="flex justify-center py-8">
-        <MagnifyingGlassSymbol />
-      </div>
-
-      <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
-      <p class="px-5 py-5 text-base font-light tracking-wider">
-        Lorem ipsum dolor sit meow meow meow.
-      </p>
-    </div>
-    <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <div class="flex justify-center py-8">
-        <EmojiSymbol />
-      </div>
-
-      <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
-      <p class="px-5 py-5 text-base font-light tracking-wider">
-        Lorem ipsum dolor sit meow meow meow.
-      </p>
-    </div>
-    <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-      <div class="flex justify-center py-8">
-        <VRGlassesSymbol />
-      </div>
-
-      <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
-      <p class="px-5 py-5 text-base font-light tracking-wider">
-        Lorem ipsum dolor sit meow meow meow.
-      </p>
-    </div>
+    class="container flex flex-col lg:flex-row my-20 items-center
+    lg:items-stretch space-x-3 space-y-3 lg:space-y-0 px-8">
+    <Card
+      symbol={BeakerSymbol}
+      title={'User research'}
+      text={'Systematiskt lärande och experimenterande'} />
+    <Card
+      symbol={MagnifyingGlassSymbol}
+      title={'Digital strategi'}
+      text={'Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow.'} />
+    <Card
+      symbol={EmojiSymbol}
+      title={'Apputveckling'}
+      text={'Lorem ipsum dolor sit meow meow meow.'} />
+    <Card
+      symbol={VRGlassesSymbol}
+      title={'Systemutveckling'}
+      text={'Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow.'} />
   </div>
   <a class="border px-10 py-5 rounded-lg text-white" href="/services">
     Alla tjänster
