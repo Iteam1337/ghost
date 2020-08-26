@@ -8,6 +8,15 @@
   const toggleMenu = () => {
     menuHidden = !menuHidden
   }
+
+  const menu = [
+    { text: 'Case', to: 'case' },
+    { text: 'Tjänster', to: 'services' },
+    { text: 'Om oss', to: 'about' },
+    { text: 'Karriär', to: 'career' },
+    { text: 'Kontakt', to: 'contact' },
+    { text: 'Blogg', to: 'blog' },
+  ]
 </script>
 
 <nav class="sm:container flex justify-between mx-5">
@@ -24,41 +33,13 @@
       class="sm:hidden my-5 mx-0 px-0 h-6 w-6 fill-current">
       <Hamburger />
     </button>
-    <NavItem
-      on:menuSelection={() => toggleMenu()}
-      hidden={menuHidden}
-      text="Case"
-      to="case"
-      {segment} />
-    <NavItem
-      on:menuSelection={() => toggleMenu()}
-      hidden={menuHidden}
-      text="Tjänster"
-      to="services"
-      {segment} />
-    <NavItem
-      on:menuSelection={() => toggleMenu()}
-      hidden={menuHidden}
-      text="Om oss"
-      to="about"
-      {segment} />
-    <NavItem
-      on:menuSelection={() => toggleMenu()}
-      hidden={menuHidden}
-      text="Karriär"
-      to="career"
-      {segment} />
-    <NavItem
-      on:menuSelection={() => toggleMenu()}
-      hidden={menuHidden}
-      text="Kontakt"
-      to="contact"
-      {segment} />
-    <NavItem
-      on:menuSelection={() => toggleMenu()}
-      hidden={menuHidden}
-      text="Blogg"
-      to="blog"
-      {segment} />
+
+    {#each menu as item}
+      <NavItem
+        on:menuSelection={() => toggleMenu()}
+        hidden={menuHidden}
+        {item}
+        {segment} />
+    {/each}
   </ul>
 </nav>

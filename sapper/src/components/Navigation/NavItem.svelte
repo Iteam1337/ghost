@@ -1,5 +1,5 @@
 <script>
-  export let segment, to, text, hidden
+  export let hidden, item, segment
 
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
@@ -9,11 +9,11 @@
   class="text-black px-2 py-4 font-medium block float-left pl-6 hidden sm:block"
   class:hidden>
   <a
-    aria-current={segment === to ? 'page' : undefined}
-    href={to}
+    aria-current={segment === item.to ? 'page' : undefined}
+    href={item.to}
     on:click={() => {
       dispatch('menuSelection', {})
     }}>
-    {text}
+    {item.text}
   </a>
 </li>
