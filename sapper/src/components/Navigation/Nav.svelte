@@ -5,6 +5,9 @@
   export let segment
 
   let menuHidden = true
+  const toggleMenu = () => {
+    menuHidden = !menuHidden
+  }
 </script>
 
 <nav class="sm:container flex justify-between mx-5">
@@ -17,17 +20,45 @@
 
   <ul class="p-0 m-0 flex flex-col items-end sm:block">
     <button
-      on:click={() => {
-        menuHidden = !menuHidden
-      }}
+      on:click={() => toggleMenu()}
       class="sm:hidden my-5 mx-0 px-0 h-6 w-6 fill-current">
       <Hamburger />
     </button>
-    <NavItem hidden={menuHidden} text="Case" to="case" {segment} />
-    <NavItem hidden={menuHidden} text="Tjänster" to="services" {segment} />
-    <NavItem hidden={menuHidden} text="Om oss" to="about" {segment} />
-    <NavItem hidden={menuHidden} text="Karriär" to="career" {segment} />
-    <NavItem hidden={menuHidden} text="Kontakt" to="contact" {segment} />
-    <NavItem hidden={menuHidden} text="Blogg" to="blog" {segment} />
+    <NavItem
+      on:menuSelection={() => toggleMenu()}
+      hidden={menuHidden}
+      text="Case"
+      to="case"
+      {segment} />
+    <NavItem
+      on:menuSelection={() => toggleMenu()}
+      hidden={menuHidden}
+      text="Tjänster"
+      to="services"
+      {segment} />
+    <NavItem
+      on:menuSelection={() => toggleMenu()}
+      hidden={menuHidden}
+      text="Om oss"
+      to="about"
+      {segment} />
+    <NavItem
+      on:menuSelection={() => toggleMenu()}
+      hidden={menuHidden}
+      text="Karriär"
+      to="career"
+      {segment} />
+    <NavItem
+      on:menuSelection={() => toggleMenu()}
+      hidden={menuHidden}
+      text="Kontakt"
+      to="contact"
+      {segment} />
+    <NavItem
+      on:menuSelection={() => toggleMenu()}
+      hidden={menuHidden}
+      text="Blogg"
+      to="blog"
+      {segment} />
   </ul>
 </nav>
