@@ -30,7 +30,7 @@
   <title>Iteam - There is a Better Way</title>
 </svelte:head>
 
-<div class="container py-10 sm:py-24">
+<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
   <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
     <div class="w-1/2">
       <FeaturedImageIteam />
