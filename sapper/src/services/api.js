@@ -53,6 +53,11 @@ const get = async (fetch, uri) => {
  * API collection
  */
 export const API = (context) => ({
+  Authors: {
+    List: async () => {
+      return await get(context, '/authors')
+    },
+  },
   Pages: {
     ByTags: async (tags) => {
       let filter = '?filter='
