@@ -1,14 +1,16 @@
 <script>
   export let symbol, title, text
+
+  import Typography from '../components/typography/'
 </script>
 
-<div class="bg-grey-dark flex-1 rounded-lg lg:px-5 flex-col w-full md:w-80">
-  <div class="flex justify-center py-8 h-32">
+<div class="bg-grey-medium rounded-lg my-2 mx-2 px-2 " style="width: 170px;">
+  <div class="flex justify-center pb-4 pt-6 h-24">
     <svelte:component this={symbol} />
   </div>
 
-  <h3 class="text-xl font-medium tracking-wide align-top">{title}</h3>
-  <p class="py-5 px-8 md:px-4 text-base font-light tracking-wider align-top">
+  <Typography.H4>{title}</Typography.H4>
+  <p class="pb-4 px-2 md:px-4 text-sm font-light tracking-wider align-top">
     {text}
   </p>
 </div>
