@@ -55,7 +55,7 @@
 
 <!-- Tjänster -->
 <div
-  class="bg-grey-medium w-screen text-center text-white py-20 sm:px-32 lg:px-20">
+  class="bg-grey-dark w-screen text-center text-white py-20 sm:px-32 lg:px-20">
 
   <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
   <p class="text-base font-light tracking-wider my-4 mx-6 lg:mx-20 lg:px-16">
@@ -64,25 +64,33 @@
     sätt och leder till en bättre affär.
   </p>
 
-  <div
-    class="container flex flex-col lg:flex-row my-20 items-center
-    lg:items-stretch space-x-3 space-y-3 lg:space-y-0 px-8">
-    <Card
-      symbol={BeakerSymbol}
-      title={'User research'}
-      text={'Systematiskt lärande och experimenterande'} />
-    <Card
-      symbol={MagnifyingGlassSymbol}
-      title={'Digital strategi'}
-      text={'Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow.'} />
-    <Card
-      symbol={EmojiSymbol}
-      title={'Apputveckling'}
-      text={'Lorem ipsum dolor sit meow meow meow.'} />
-    <Card
-      symbol={VRGlassesSymbol}
-      title={'Systemutveckling'}
-      text={'Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow. Lorem ipsum dolor sit meow meow meow.'} />
+  <div class="container mb-8 mt-16">
+    <div class="flex flex-wrap justify-center px-8 md:px-12">
+      <Card
+        symbol={BeakerSymbol}
+        title={'User research'}
+        text={'Systematiskt lärande och experimenterande'} />
+      <Card
+        symbol={MagnifyingGlassSymbol}
+        title={'Digital strategi'}
+        text={'Lorem ipsum dolor sit meow meow meow.'} />
+      <Card
+        symbol={EmojiSymbol}
+        title={'Apputveckling'}
+        text={'Lorem ipsum dolor sit meow meow meow.'} />
+      <Card
+        symbol={VRGlassesSymbol}
+        title={'Systemutveckling'}
+        text={'Lorem ipsum dolor sit meow meow meow.'} />
+      <Card
+        symbol={VRGlassesSymbol}
+        title={'Machine Learning'}
+        text={'Lorem ipsum dolor sit meow meow meow.'} />
+      <Card
+        symbol={VRGlassesSymbol}
+        title={'Forskning'}
+        text={'Lorem ipsum dolor sit meow meow meow.'} />
+    </div>
   </div>
 
   <a class="border px-16 py-4 rounded-full text-white" href="/services">

@@ -36,28 +36,27 @@
         Vill du se ditt ansikte här?
       </Links.ArrowTextLink>
     </div>
-
   </div>
 
-  <div class="flex flex-wrap justify-center px-8 md:px-16 lg:px-32 pt-32">
+  <div class="flex flex-wrap justify-center px-8 md:px-12 pt-32">
     {#each pages as coworker}
       <div
-        class="transform hover:shadow-hover transition duration-100 ease-in
-        shadow-featured bg-white p-4 rounded-md my-2 mx-2 w-full sm:w-2/5
-        xl:w-1/5">
+        class="transform hover:shadow-hover transition duration-500 ease-in
+        hover:bg-white p-4 rounded-md my-2 mx-2 w-full sm:w-2/5 xl:w-1/5 ">
         <a rel="prefetch" href={`/about/coworker/${coworker.slug}`}>
           <div class="h-full pb-4">
             <div class="relative" style="height: 90%;">
               <img
-                class="rounded-md object-cover }"
+                class="rounded-full object-cover"
                 src={coworker.feature_image}
                 alt="feature" />
               <p class="mt-4 font-medium text-center">{coworker.title}</p>
-              <p class="font-light text-center">{coworker.excerpt}</p>
+              <p class="font-light text-center mt-4">
+                {@html coworker.excerpt.replace('\n', '<br />')}
+              </p>
             </div>
           </div>
         </a>
-
       </div>
     {/each}
   </div>
