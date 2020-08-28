@@ -156,4 +156,6 @@
   </div>
 </div>
 
-<ContactBanner />
+<ContactBanner
+  text="Nyfiken på vad vi kan göra tillsammans?"
+  ctaText="Hör av dig" />
