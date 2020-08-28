@@ -6,7 +6,7 @@ module.exports = {
         featured:
           '0 0px 17px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
         hover:
-          '0 0px 17px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
+          '0 0px 17px 0px rgba(0, 0, 0, 0.05), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
       },
       margin: {
         heading: '0 0 0.3em 0;',
@@ -24,7 +24,11 @@ module.exports = {
       },
     },
     container: {
-      center: false,
+      center: true,
+    },
+    fontFamily: {
+      display: ['Roboto', 'sans-serif'],
+      body: ['Roboto', 'sans-serif'],
     },
   },
   variants: {},

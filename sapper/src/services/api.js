@@ -53,6 +53,11 @@ const get = async (fetch, uri) => {
  * API collection
  */
 export const API = (context) => ({
+  Authors: {
+    List: async () => {
+      return await get(context, '/authors')
+    },
+  },
   Pages: {
     ByTags: async (tags) => {
       let filter = '?filter='
@@ -64,6 +69,15 @@ export const API = (context) => ({
       filter = filter.substring(0, filter.length - 1)
 
       return await get(context, `/pages${filter}`)
+    },
+  },
+  Post: {
+    BySlug: async (slug) => {
+      const {
+        posts: [post],
+      } = await get(context, `/posts/slug/${slug}/`)
+
+      return { post }
     },
   },
   Posts: {
@@ -80,15 +94,6 @@ export const API = (context) => ({
     },
     List: async () => {
       return await get(context, '/posts')
-    },
-  },
-  Post: {
-    BySlug: async (slug) => {
-      const {
-        posts: [post],
-      } = await get(context, `/posts/slug/${slug}/`)
-
-      return { post }
     },
   },
 })
