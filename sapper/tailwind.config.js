@@ -18,6 +18,7 @@ module.exports = {
         beige: '#fcfbfb',
         cornflower: '#668cff',
         green: '#36F49A',
+        greenBg: 'rgba(56, 255, 161, 0.5)',
         grey: {
           dark: '#363636',
           medium: '#444444',
