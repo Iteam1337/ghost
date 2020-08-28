@@ -36,7 +36,8 @@
 
   <!-- Menu visible on mobile. -->
   <div
-    class="bg-white w-full h-full fixed left-0 top-0 z-40 bg-opacity-95 pr-6"
+    class="bg-white w-full h-full fixed left-0 top-0 z-40 bg-opacity-95 pr-6
+    sm:hidden"
     class:hidden={menuHidden}>
     <div class="relative h-full w-full">
       <ul
