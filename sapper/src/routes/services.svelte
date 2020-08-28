@@ -9,14 +9,14 @@
 </svelte:head>
 
 <div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-  <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
-    <div class="w-1/2">
-      <FeaturedImageIteam />
-    </div>
+  <div class="flex flex-col px-8 sm:px-32">
     <div class="flex-initial max-w-md pt-8">
-      <Typography.H1>Tjänster</Typography.H1>
+      <Typography.H1>Våra tjänster</Typography.H1>
       <Typography.BaseParagraph class="font-light text-sm">
-        Lorem ipsum...
+        Vi är våra kunders digitala partner. Vi utvecklar innovativa digitala
+        tjänster, mobila lösningar och API:er baserade på insikter om
+        målgruppens behov, verksamhetens mål och tekniska möjligheter. Vi skapar
+        digitala tjänster som dina användare faktiskt älskar.
       </Typography.BaseParagraph>
     </div>
 
