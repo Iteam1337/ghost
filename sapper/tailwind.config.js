@@ -17,10 +17,14 @@ module.exports = {
       colors: {
         beige: '#fcfbfb',
         cornflower: '#668cff',
+        green: '#36F49A',
         grey: {
           dark: '#363636',
           medium: '#444444',
         },
+      },
+      opacity: {
+        '95': '0.95',
       },
     },
     container: {
