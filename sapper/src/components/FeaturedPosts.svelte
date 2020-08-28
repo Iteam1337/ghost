@@ -8,7 +8,5 @@
   {#each posts as post}
     <FeaturedPost {post} />
   {/each}
-  {#each posts as post}
-    <FeaturedPost {post} />
-  {/each}
+
 </div>
