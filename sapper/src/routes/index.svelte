@@ -60,7 +60,7 @@
 <!-- Tjänster -->
 <div
   class="bg-grey-dark w-screen text-center text-white py-20 sm:px-32 lg:px-20">
-  <WithScrollFadeIn threshold={0.5}>
+  <WithScrollFadeIn>
     <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
     <p class="text-base font-light tracking-wider my-4 mx-6 lg:mx-20 lg:px-16">
       Vi erbjuder dig ett självgående team som utvecklar din produkt. Man säga
