@@ -5,10 +5,12 @@
   import FeaturedPosts from '../components/FeaturedPosts.svelte'
   import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
+  import Card from '../components/Card.svelte'
   import BeakerSymbol from '../assets/illustrations/beakers.svg'
   import EmojiSymbol from '../assets/illustrations/emoji.svg'
   import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
   import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
+  import IteamA from '../assets/illustrations/a.svg'
   import WithScrollFadeIn from '../components/WithScrollFadeIn.svelte'
 
   export async function preload(_page, session) {
@@ -24,102 +26,90 @@
 </script>
 
 <svelte:head>
-  <title>Iteam Solutions</title>
+  <title>Iteam - There is a Better Way</title>
 </svelte:head>
 
-<div class="lg:container lg:mx-auto py-24">
+<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
   <WithScrollFadeIn>
-    <div>
-      <div class="flex px-32 justify-between">
-        <div class="flex-initial max-w-md pt-8">
-          <Typography.H1>Kod, kultur och strategi</Typography.H1>
-          <Typography.BaseParagraph class="font-light text-sm">
-            Genom agilitet, användarfokus och i nära samarbete med våra kunder
-            skapar vi digital innovation.
-          </Typography.BaseParagraph>
-          <Links.ArrowTextLink to="/about">
-            Så här går det till
-          </Links.ArrowTextLink>
-        </div>
-        <div class="w-1/2">
-          <FeaturedImageIteam />
-        </div>
+    <div
+      class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
+      <div class="w-1/2">
+        <FeaturedImageIteam />
+      </div>
+      <div class="flex-initial max-w-md pt-8">
+        <Typography.H1>Kod, kultur och strategi</Typography.H1>
+        <Typography.BaseParagraph class="font-light text-sm">
+          Genom agilitet, användarfokus och i nära samarbete med våra kunder
+          skapar vi digital innovation.
+        </Typography.BaseParagraph>
+        <Links.ArrowTextLink to="/about">
+          Så här går det till
+        </Links.ArrowTextLink>
       </div>
 
-      <div class="px-32 pt-32">
-        <FeaturedPosts {posts} />
-      </div>
     </div>
+    <div class="px-8 md:px-16 lg:px-16 pt-32">
+      <FeaturedPosts {posts} />
+    </div>
+    <div
+      class="flex flex-wrap justify-center my-20 px-20 items-center md:container
+      md:mx-auto space-x-3" />
   </WithScrollFadeIn>
-  <div
-    class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-    md:mx-auto space-x-3" />
 </div>
 
-<div class="bg-grey-medium w-screen text-center text-white py-20">
+<!-- Tjänster -->
+<div
+  class="bg-grey-dark w-screen text-center text-white py-20 sm:px-32 lg:px-20">
   <WithScrollFadeIn threshold={0.5}>
     <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
-    <p class="text-base font-light tracking-wider">
-      Lorem meow ipsum purr dolor meow meow fräs.
+    <p class="text-base font-light tracking-wider my-4 mx-6 lg:mx-20 lg:px-16">
+      Vi erbjuder dig ett självgående team som utvecklar din produkt. Man säga
+      att du hyr din egen startup. Det inspirerar din organisation att tänka på
+      nya sätt och leder till en bättre affär.
     </p>
 
-    <div
-      class="flex my-20 items-center items-stretch md:container md:mx-auto
-      space-x-3">
-      <div
-        class="bg-grey-dark flex-shrink-1 rounded-lg px-5 flex-col
-        justify-center">
-        <div class="flex justify-center py-8">
-          <BeakerSymbol />
-        </div>
-
-        <h3 class="text-xl font-medium tracking-wide">User research</h3>
-        <p class="px-5 py-5 text-base font-light tracking-wider">
-          Lorem ipsum dolor sit meow meow meow.
-        </p>
+    <div class="container mb-8 mt-16">
+      <div class="flex flex-wrap justify-center px-8 md:px-12">
+        <Card
+          symbol={BeakerSymbol}
+          title={'User research'}
+          text={'Systematiskt lärande och experimenterande'} />
+        <Card
+          symbol={MagnifyingGlassSymbol}
+          title={'Digital strategi'}
+          text={'Lorem ipsum dolor sit meow meow meow.'} />
+        <Card
+          symbol={EmojiSymbol}
+          title={'Apputveckling'}
+          text={'Lorem ipsum dolor sit meow meow meow.'} />
+        <Card
+          symbol={VRGlassesSymbol}
+          title={'Systemutveckling'}
+          text={'Lorem ipsum dolor sit meow meow meow.'} />
+        <Card
+          symbol={VRGlassesSymbol}
+          title={'Machine Learning'}
+          text={'Lorem ipsum dolor sit meow meow meow.'} />
+        <Card
+          symbol={VRGlassesSymbol}
+          title={'Forskning'}
+          text={'Lorem ipsum dolor sit meow meow meow.'} />
       </div>
-      <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-        <div class="flex justify-center py-8">
-          <MagnifyingGlassSymbol />
-        </div>
 
-        <h3 class="text-xl font-medium tracking-wide">Digital strategi</h3>
-        <p class="px-5 py-5 text-base font-light tracking-wider">
-          Lorem ipsum dolor sit meow meow meow.
-        </p>
-      </div>
-      <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-        <div class="flex justify-center py-8">
-          <EmojiSymbol />
-        </div>
-
-        <h3 class="text-xl font-medium tracking-wide">Apputveckling</h3>
-        <p class="px-5 py-5 text-base font-light tracking-wider">
-          Lorem ipsum dolor sit meow meow meow.
-        </p>
-      </div>
-      <div class="bg-grey-dark flex-shrink-1 rounded-lg px-5">
-        <div class="flex justify-center py-8">
-          <VRGlassesSymbol />
-        </div>
-
-        <h3 class="text-xl font-medium tracking-wide">Systemutveckling</h3>
-        <p class="px-5 py-5 text-base font-light tracking-wider">
-          Lorem ipsum dolor sit meow meow meow.
-        </p>
-      </div>
     </div>
-    <a class="border px-10 py-5 rounded-lg text-white" href="/services">
+
+    <a class="border px-16 py-4 rounded-full text-white" href="/services">
       Alla tjänster
     </a>
   </WithScrollFadeIn>
 </div>
 
+<!-- Blocks -->
 <WithScrollFadeIn threshold={0.5}>
-  <div class="lg:container lg:mx-auto py-20 px-20">
-    <div class="flex justify-around max-w-3xl">
-      <div class="">
-        <h1 class="text-4xl font-medium">Vi är Iteam</h1>
+  <div class="container lg:mx-auto my-10 lg:my-32 xl:my-40 px-8 sm:px-32">
+    <div class="flex">
+      <div class="flex-1 flex-grow-1 align-middle sm:py-2">
+        <h1 class="text-4xl font-medium py-4 leading-10">Vi är Iteam</h1>
         <p class="font-light text-base">
           Vi är en digital byrå med teknik som spetskompetens. Vi är ett tätt
           sammansvetsat gäng som jobbar med moderna tekniker och metoder. Vi
@@ -127,21 +117,20 @@
           landskapet och dra nytta av digitaliseringens möjligheter.
         </p>
       </div>
-      <div class="px-10">
-        <img class="" src="Commodore-Joystick-Lowres.jpg" alt="commodore" />
+      <div class="px-10 hidden lg:block mx-8">
+        <img class="w-3/5 h-auto" src="TAC-2.jpg" alt="illustration" />
       </div>
     </div>
   </div>
 </WithScrollFadeIn>
 
 <WithScrollFadeIn threshold={0.5}>
-  <div class="lg:container lg:mx-auto py-20 px-20">
-    <div class="flex justify-around max-w-3xl">
-      <div class="px-10">
-        <img class="" src="Neon-Sign-Lowres.jpg" alt="commodore" />
-      </div>
-      <div class="">
-        <h1 class="text-4xl font-medium">Vi löser komplexa utmaningar</h1>
+  <div class="container lg:mx-auto px-8 sm:px-32">
+    <div class="flex flex-row-reverse">
+      <div class="flex-1 flex-grow-1 align-middle lg:py-16">
+        <h1 class="text-4xl font-medium py-4 leading-10">
+          Vi löser komplexa utmaningar
+        </h1>
         <p class="font-light text-base">
           Vi kombinerar strategi, kod och kultur för att ta fram digitala
           lösningar som möter användarnas behov. Vi utvecklar inte bara appar.
@@ -150,15 +139,20 @@
           digitalisera er affär.
         </p>
       </div>
+      <div class="flex-1 hidden lg:block mx-2">
+        <IteamA />
+      </div>
     </div>
   </div>
 </WithScrollFadeIn>
 
 <WithScrollFadeIn threshold={0.5}>
-  <div class="lg:container lg:mx-auto py-20 px-20">
-    <div class="flex justify-around max-w-lg">
-      <div class="">
-        <h1 class="text-4xl font-medium">Er digitala partner</h1>
+  <div class="container lg:mx-auto my-10 lg:my-32 xl:my-40 px-8 sm:px-32">
+    <div class="flex">
+      <div class="flex-1 flex-grow-1 align-middle sm:py-2">
+        <h1 class="text-4xl font-medium py-4 leading-10">
+          Er digitala partner
+        </h1>
         <p class="font-light text-base">
           Med ett långsiktigt engagemang hjälper vi er att navigera i den
           digitala världen. Vi omvandlar visioner till verklighet, utmanar
@@ -166,10 +160,16 @@
           era kunder älskar att använda.
         </p>
       </div>
-      <div class="px-10" />
+      <div class="px-10 hidden lg:block mx-8">
+        <img
+          class="w-64 h-auto"
+          src="Monday-meeting-4-Lowres.jpg"
+          alt="illustration" />
+      </div>
     </div>
-
   </div>
 </WithScrollFadeIn>
 
-<ContactBanner />
+<ContactBanner
+  text="Nyfiken på vad vi kan göra tillsammans?"
+  ctaText="Hör av dig" />
