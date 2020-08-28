@@ -27,19 +27,32 @@
     <img src="iteam.png" alt="Iteam" class="logo" style="width: 100px;" />
   </a>
 
-  <ul class="p-0 m-0 flex flex-col items-end sm:block">
-    <button
-      on:click={() => toggleMenu()}
-      class="sm:hidden my-5 mx-0 px-0 h-6 w-6 fill-current">
-      <Hamburger />
-    </button>
-
+  <!-- Menu visible on desktop. -->
+  <ul class="p-0 m-0 flex flex-col items-end sm:block hidden sm:block">
     {#each menu as item}
-      <NavItem
-        on:menuSelection={() => toggleMenu()}
-        hidden={menuHidden}
-        {item}
-        {segment} />
+      <NavItem {item} {segment} />
     {/each}
   </ul>
+
+  <!-- Menu visible on mobile. -->
+  <div
+    class="bg-white w-full h-full fixed left-0 top-0 z-40 bg-opacity-95 pr-6"
+    class:hidden={menuHidden}>
+    <div class="relative h-full w-full">
+      <ul
+        class="p-0 m-0 flex flex-col items-end sm:block absolute right-0
+        bottom-0 pb-24">
+        {#each menu as item}
+          <NavItem on:menuSelection={() => toggleMenu()} {item} {segment} />
+        {/each}
+      </ul>
+    </div>
+  </div>
 </nav>
+
+<!-- Mobile nav -->
+<div class="sm:hidden w-12 fixed bottom-0 right-0 z-50 m-6">
+  <div class="bg-green rounded-full p-3" on:click={() => toggleMenu()}>
+    <Hamburger />
+  </div>
+</div>

@@ -23,6 +23,9 @@ module.exports = {
           medium: '#444444',
         },
       },
+      opacity: {
+        '95': '0.95',
+      },
     },
     container: {
       center: true,
