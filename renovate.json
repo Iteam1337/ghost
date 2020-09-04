@@ -1,5 +1,12 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "reviewers": ["alexanderczigler"],
+  "packageRules": [
+    {
+      "automerge": true,
+      "depTypeList": ["devDependencies"],
+      "groupName": "devDependencies (non-major)",
+      "updateTypes": ["patch", "minor"]
+    }
   ]
 }
