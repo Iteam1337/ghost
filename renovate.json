@@ -1,6 +1,12 @@
 {
   "extends": ["config:base"],
-  "automerge": true,
-  "automergeType": "pr-comment",
-  "automergeComment": "chore: r+"
+  "reviewers": ["alexanderczigler"],
+  "packageRules": [
+    {
+      "automerge": true,
+      "depTypeList": ["devDependencies"],
+      "groupName": "devDependencies (non-major)",
+      "updateTypes": ["patch", "minor"]
+    }
+  ]
 }
