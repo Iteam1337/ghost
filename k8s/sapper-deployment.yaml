@@ -2,8 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app: iteam-ghost
-  name: iteam-ghost-sapper
+    app: iteam-sapper
+  name: iteam-sapper
   namespace: iteam-se
 spec:
   progressDeadlineSeconds: 600
@@ -11,7 +11,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: iteam-ghost
+      app: iteam-sapper
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -20,22 +20,22 @@ spec:
   template:
     metadata:
       labels:
-        app: iteam-ghost
+        app: iteam-sapper
     spec:
       containers:
-        image: iteam1337/iteam-ghost-sapper
-        imagePullPolicy: IfNotPresent
-        name: iteam-ghost-sapper
-        ports:
-          - containerPort: 3000
-            name: http
-            protocol: TCP
-        resources:
-          requests:
-            cpu: 300m
-            memory: 512Mi
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
+        - name: iteam-sapper
+          image: iteam1337/iteam-sapper
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 300m
+              memory: 512Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
