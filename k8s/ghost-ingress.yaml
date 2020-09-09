@@ -23,7 +23,7 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: iteam-ghost-sapper
+              serviceName: iteam-sapper
               servicePort: http
             path: /
   tls:
