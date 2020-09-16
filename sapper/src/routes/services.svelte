@@ -7,6 +7,7 @@
   import Typography from '../components/typography/'
   import ContactBanner from '../components/ContactBanner.svelte'
   import WithScrollFadeIn from '../components/WithScrollFadeIn.svelte'
+  import ArrowTextLink from '../components/links/ArrowTextLink.svelte'
 </script>
 
 <!-- Tjänster -->
@@ -45,18 +46,26 @@
         </p>
         <ul class="mt-4">
           <li>
-            <a href="/services/strategy">• Teknisk utvärdering</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Teknisk utvärdering
+            </Links.ArrowTextLink>
           </li>
           <li>
-            <a href="/services/strategy">• Tjänstedesign</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Tjänstedesign
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• Effektkartläggning</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Effektkartläggning
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• Agil coaching</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Agil coaching
+            </Links.ArrowTextLink>
 
           </li>
         </ul>
@@ -76,23 +85,33 @@
         </p>
         <ul class="mt-4">
           <li>
-            <a href="/services/strategy">• Intervjuer</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Intervjuer
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• Användningstest</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Användningstest
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• Målgruppsanalys</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Målgruppsanalys
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• A/B-tesning</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              A/B-tesning
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• Snabb prototyping</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Snabb prototyping
+            </Links.ArrowTextLink>
 
           </li>
         </ul>
@@ -110,15 +129,21 @@
         </p>
         <ul class="mt-4">
           <li>
-            <a href="/services/strategy">• Designsprint</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Designsprint
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• Designstudio</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Designstudio
+            </Links.ArrowTextLink>
 
           </li>
           <li>
-            <a href="/services/strategy">• Designsystem</a>
+            <Links.ArrowTextLink to="/services/strategy">
+              Designsystem
+            </Links.ArrowTextLink>
 
           </li>
 
@@ -138,27 +163,27 @@
         <ul class="mt-4">
           <li>
             <Links.ArrowTextLink to="/services/strategy">
-              • API
+              API
             </Links.ArrowTextLink>
           </li>
           <li>
             <Links.ArrowTextLink to="/services/strategy">
-              • AI
+              AI
             </Links.ArrowTextLink>
           </li>
           <li>
             <Links.ArrowTextLink to="/services/strategy">
-              • Apputveckling
+              Apputveckling
             </Links.ArrowTextLink>
           </li>
           <li>
             <Links.ArrowTextLink to="/services/strategy">
-              • Webbutveckling
+              Webbutveckling
             </Links.ArrowTextLink>
           </li>
           <li>
             <Links.ArrowTextLink to="/services/strategy">
-              • Digital plattform
+              Digital plattform
             </Links.ArrowTextLink>
           </li>
         </ul>
