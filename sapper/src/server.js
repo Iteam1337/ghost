@@ -8,7 +8,7 @@ import * as sapper from '@sapper/server'
 const { PORT, NODE_ENV, GHOST_URL, GHOST_KEY } = process.env
 const dev = NODE_ENV === 'development'
 
-polka() // You can also use Express
+polka()
   .use(
     compression({ threshold: 0 }),
     sirv('static', { dev }),
