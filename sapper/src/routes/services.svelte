@@ -45,15 +45,15 @@
         </li>
         <li>
           <a href="/services/strategy">• Tjänstedesign</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• Effektkartläggning</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• Agil coaching</a>
-          href
+
         </li>
       </ul>
 
@@ -71,23 +71,23 @@
       <ul class="mt-4">
         <li>
           <a href="/services/strategy">• Intervjuer</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• Användningstest</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• Målgruppsanalys</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• A/B-tesning</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• Snabb prototyping</a>
-          href
+
         </li>
       </ul>
 
@@ -104,15 +104,15 @@
       <ul class="mt-4">
         <li>
           <a href="/services/strategy">• Designsprint</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• Designstudio</a>
-          href
+
         </li>
         <li>
           <a href="/services/strategy">• Designsystem</a>
-          href
+
         </li>
 
       </ul>
