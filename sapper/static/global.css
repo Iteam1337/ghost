@@ -11,3 +11,7 @@
 .custom-flex-span-wide {
   flex: 1 49%;
 }
+
+.justify-items-center {
+  justify-items: center;
+}

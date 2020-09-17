@@ -231,14 +231,32 @@
           <div class="w-4/5 ml-auto pl-8 sm:pl-32">
 
             <div>
-              <h1 class="text-4xl font-medium py-4 leading-10">
-                Vi gillar våra kunder
-              </h1>
-              <p class="font-light text-base">
-                Vi vill bidra till en bättre värld på alla sätt vi kan. Därför
-                väljer vi uppdrag med omsorg. Det betyder också att om vi jobbar
-                ihop så tror vi 100% på din tjänst.
-              </p>
+              <div class="mb-6">
+
+                <h1 class="text-4xl font-medium py-4 leading-10">
+                  Vi gillar våra kunder
+                </h1>
+                <p class="font-light text-base">
+                  Vi vill bidra till en bättre värld på alla sätt vi kan. Därför
+                  väljer vi uppdrag med omsorg. Det betyder också att om vi
+                  jobbar ihop så tror vi 100% på din tjänst.
+                </p>
+                <Links.ArrowTextLink to="/case" linkColor="text-white">
+                  Se våra case
+                </Links.ArrowTextLink>
+              </div>
+              <div
+                class="grid grid-cols-3 grid-rows-2 justify-items-center
+                items-center">
+                <img src="trr.png" alt="trr logo" />
+                <img src="taxi_stockholm.png" alt="taxi stockholm logo" />
+                <img src="vimla.png" alt="vimla logo" />
+                <img src="tjejjouren.png" alt="tjejjouren logo" />
+                <img src="nectarine.png" alt="nectarine logo" />
+                <img
+                  src="goteborgs_regionen.png"
+                  alt="göteborgs regionen logo" />
+              </div>
             </div>
           </div>
         </div>
