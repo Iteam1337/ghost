@@ -8,6 +8,7 @@
   import Typography from '../components/typography/'
   import ContactBanner from '../components/ContactBanner.svelte'
   import WithScrollFadeIn from '../components/WithScrollFadeIn.svelte'
+  import SeviceInfo from '../components/SeviceInfo.svelte'
 </script>
 
 <!-- Tjänster -->
@@ -33,163 +34,40 @@
 
   <div class="grid md:grid-cols-2 grid-rows-2 gap-20 px-8 sm:px-32 mb-24">
 
-    <div class="w-full md:w-full">
-      <WithScrollFadeIn>
-        <div class="mb-2">
-          <Strategy />
-        </div>
-        <Typography.H4>Digital strategi</Typography.H4>
-        <p class="text-base font-light">
-          Förtydliga vad som är viktigt. Ert nuläge, er målbild och vad som
-          urskiljer er från era konkurrenter. Definiera nyttan som lösningen ska
-          bidra till.
-        </p>
-        <ul class="mt-4">
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Teknisk utvärdering
-            </Links.ArrowTextLink>
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Tjänstedesign
-            </Links.ArrowTextLink>
+    <SeviceInfo
+      title="Digital strategi"
+      description="Förtydliga vad som är viktigt. Ert nuläge, er målbild och vad
+      som urskiljer er från era konkurrenter. Definiera nyttan som lösningen ska
+      bidra till."
+      links={[' Teknisk utvärdering', 'Tjänstedesign', 'Effektkartläggning', 'Agil coaching']}>
+      <Strategy />
+    </SeviceInfo>
 
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Effektkartläggning
-            </Links.ArrowTextLink>
+    <SeviceInfo
+      title="Research & insikter"
+      description="Vägen för att skapa innovativa tjänster börjar med förståelse
+      för dina kunders behov och teknisk genomförbarhet. Genom kvalitativa och
+      kvantitativa metoder skaffar vi oss ständigt nya insikter."
+      links={['Intervjuer', 'Användningstest', 'Målgruppsanalys', 'A/B-tesning', 'Snabb prototyping']}>
+      <Research />
+    </SeviceInfo>
 
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Agil coaching
-            </Links.ArrowTextLink>
+    <SeviceInfo
+      title="Design"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+      egestas varius sed quis malesuada dui proin gravida."
+      links={['Designsprint', 'Designstudio', 'Designsystem']}>
+      <StandUp />
+    </SeviceInfo>
 
-          </li>
-        </ul>
-      </WithScrollFadeIn>
-    </div>
+    <SeviceInfo
+      title="Teknik & Utveckling"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+      egestas varius sed quis malesuada dui proin gravida."
+      links={['API', 'AI', 'Apputveckling', 'Webbutveckling', 'Digital plattform']}>
+      <FlyinCar />
+    </SeviceInfo>
 
-    <div class="w-full md:w-full">
-      <WithScrollFadeIn>
-        <div class="mb-2">
-          <Research />
-        </div>
-        <Typography.H4>Research & insikter</Typography.H4>
-        <p class="text-base font-light">
-          Vägen för att skapa innovativa tjänster börjar med förståelse för dina
-          kunders behov och teknisk genomförbarhet. Genom kvalitativa och
-          kvantitativa metoder skaffar vi oss ständigt nya insikter.
-        </p>
-        <ul class="mt-4">
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Intervjuer
-            </Links.ArrowTextLink>
-
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Användningstest
-            </Links.ArrowTextLink>
-
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Målgruppsanalys
-            </Links.ArrowTextLink>
-
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              A/B-tesning
-            </Links.ArrowTextLink>
-
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Snabb prototyping
-            </Links.ArrowTextLink>
-
-          </li>
-        </ul>
-      </WithScrollFadeIn>
-    </div>
-    <div class="w-full md:w-full">
-      <WithScrollFadeIn>
-        <div class="mb-2">
-          <StandUp />
-        </div>
-        <Typography.H4>Design</Typography.H4>
-        <p class="text-base font-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas
-          varius sed quis malesuada dui proin gravida.
-        </p>
-        <ul class="mt-4">
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Designsprint
-            </Links.ArrowTextLink>
-
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Designstudio
-            </Links.ArrowTextLink>
-
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Designsystem
-            </Links.ArrowTextLink>
-
-          </li>
-
-        </ul>
-      </WithScrollFadeIn>
-    </div>
-    <div class="w-full md:w-full">
-      <WithScrollFadeIn>
-        <div class="mb-2">
-          <FlyinCar />
-        </div>
-        <Typography.H4>Teknik & Utveckling</Typography.H4>
-        <p class="text-base font-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas
-          varius sed quis malesuada dui proin gravida.
-        </p>
-        <ul class="mt-4">
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              API
-            </Links.ArrowTextLink>
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              AI
-            </Links.ArrowTextLink>
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Apputveckling
-            </Links.ArrowTextLink>
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Webbutveckling
-            </Links.ArrowTextLink>
-          </li>
-          <li>
-            <Links.ArrowTextLink to="/services/strategy">
-              Digital plattform
-            </Links.ArrowTextLink>
-          </li>
-        </ul>
-
-      </WithScrollFadeIn>
-    </div>
   </div>
   <Section.TextWithTwoPictures
     title="Vi är Iteam"
