@@ -203,8 +203,8 @@
 
 </div>
 
-<div class="bg-greenBg py-16">
-  <div class="container px-8 sm:px-32">
+<div class="bg-greenBg py-20">
+  <div class="container px-8 sm:px-32 pb-20">
     <WithScrollFadeIn>
       <div class="flex">
         <div class="flex-1 flex-grow-1 align-middle lg:pb-16">
@@ -222,21 +222,19 @@
     </WithScrollFadeIn>
   </div>
 
-  <div class="container w-5/6 ml-auto mr-0 text-white relative top-0">
+  <div class="container w-5/6 ml-auto mr-0 text-white relative top-0 pb-48">
     <WithScrollFadeIn>
       <div
         class="bg-grey-medium w-5/6 ml-auto pr-8 sm:pr-32 lg:py-16 relative
         top-0">
         <div class="flex flex-row-reverse">
           <div class="w-4/5 ml-auto pl-8 sm:pl-32">
-
             <div>
-              <div class="mb-6">
-
+              <div class="mb-16">
                 <h1 class="text-4xl font-medium py-4 leading-10">
                   Vi gillar våra kunder
                 </h1>
-                <p class="font-light text-base">
+                <p class="font-light text-base pb-4">
                   Vi vill bidra till en bättre värld på alla sätt vi kan. Därför
                   väljer vi uppdrag med omsorg. Det betyder också att om vi
                   jobbar ihop så tror vi 100% på din tjänst.
@@ -247,14 +245,14 @@
               </div>
               <div
                 class="grid grid-cols-3 grid-rows-2 justify-items-center
-                items-center">
-                <img src="trr.png" alt="trr logo" />
-                <img src="taxi_stockholm.png" alt="taxi stockholm logo" />
-                <img src="vimla.png" alt="vimla logo" />
-                <img src="tjejjouren.png" alt="tjejjouren logo" />
-                <img src="nectarine.png" alt="nectarine logo" />
+                items-center gap-8">
+                <img src="trr.svg" alt="trr logo" />
+                <img src="taxi_stockholm.svg" alt="taxi stockholm logo" />
+                <img src="vimla.svg" alt="vimla logo" />
+                <img src="tjejjouren.svg" alt="tjejjouren logo" />
+                <img src="nectarine.svg" alt="nectarine logo" />
                 <img
-                  src="goteborgs_regionen.png"
+                  src="goteborgs_regionen.svg"
                   alt="göteborgs regionen logo" />
               </div>
             </div>
@@ -262,6 +260,10 @@
         </div>
 
       </div>
+      <img
+        class="absolute bottom-0 left-0 w-2/6"
+        src="Radu-Amir-working-Lowres.jpg"
+        alt="co-workers" />
     </WithScrollFadeIn>
 
   </div>
@@ -269,7 +271,7 @@
   <div class="container lg:mx-auto px-8 sm:px-32">
     <WithScrollFadeIn>
       <div class="flex flex-row-reverse">
-        <div class="flex-1 flex-grow-1 align-middle lg:py-16">
+        <div class="flex-1 flex-grow-1 align-middle lg:pb-16">
           <h1 class="text-4xl font-medium py-4 leading-10">I team</h1>
           <p class="font-light text-base">
             Vi jobbar metodiskt för att skapa förståelse för användares behov
