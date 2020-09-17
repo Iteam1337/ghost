@@ -27,6 +27,7 @@ module.exports = {
       opacity: {
         '95': '0.95',
       },
+      screens: { xxl: '1560px' },
     },
     container: {
       center: true,

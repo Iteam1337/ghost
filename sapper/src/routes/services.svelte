@@ -100,8 +100,8 @@
   </div>
 
   <div
-    class="container w-full lg:w-5/6 ml-auto mr-0 text-white relative top-0
-    pb-16 lg:pb-48">
+    class="container w-full lg:w-5/6 ml-auto mr-0 xxl:mr-auto text-white
+    relative top-0 pb-16 lg:pb-48">
     <WithScrollFadeIn>
       <div
         class="bg-grey-medium w-full lg:w-5/6 ml-auto pr-8 sm:pr-32 py-8
@@ -140,7 +140,7 @@
 
       </div>
       <img
-        class="absolute bottom-0 left-0 w-2/6 hidden lg:block"
+        class="absolute bottom-0 left-0 w-2/6 xxl:w-1/4 hidden lg:block"
         src="Radu-Amir-working-Lowres.jpg"
         alt="co-workers" />
     </WithScrollFadeIn>
