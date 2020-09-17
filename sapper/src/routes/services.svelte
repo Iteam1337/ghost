@@ -8,7 +8,6 @@
   import Typography from '../components/typography/'
   import ContactBanner from '../components/ContactBanner.svelte'
   import WithScrollFadeIn from '../components/WithScrollFadeIn.svelte'
-  import ArrowTextLink from '../components/links/ArrowTextLink.svelte'
 </script>
 
 <!-- Tjänster -->
