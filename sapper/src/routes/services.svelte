@@ -4,6 +4,7 @@
   import StandUp from '../assets/illustrations/stand-up.svg'
   import FlyinCar from '../assets/illustrations/flying-car.svg'
   import Links from '../components/links'
+  import Section from '../components/section'
   import Typography from '../components/typography/'
   import ContactBanner from '../components/ContactBanner.svelte'
   import WithScrollFadeIn from '../components/WithScrollFadeIn.svelte'
@@ -191,34 +192,15 @@
       </WithScrollFadeIn>
     </div>
   </div>
+  <Section.TextWithTwoPictures
+    title="Vi är Iteam"
+    text="Vi är en digital byrå med teknik som spetskompetens. Vi är ett tätt
+    sammansvetsat gäng som jobbar med moderna tekniker och metoder. Vi brinner
+    för att hjälpa våra kunder att navigera i det digitala landskapet och dra
+    nytta av digitaliseringens möjligheter."
+    imageOne="Neon-sign-Lowres.jpg"
+    imageTwo="Hopper-Interior-Lowres.jpg" />
 
-  <WithScrollFadeIn>
-    <div class="flex px-8 sm:px-32 mb-24">
-
-      <div class="self-center w-3/4">
-        <h1 class="text-4xl font-medium py-4 leading-10">Vi är Iteam</h1>
-        <p class="font-light text-base">
-          Vi är en digital byrå med teknik som spetskompetens. Vi är ett tätt
-          sammansvetsat gäng som jobbar med moderna tekniker och metoder. Vi
-          brinner för att hjälpa våra kunder att navigera i det digitala
-          landskapet och dra nytta av digitaliseringens möjligheter.
-        </p>
-      </div>
-      <div class="w-2/4 relative top-0 pb-16">
-
-        <img
-          class="h-auto w-3/4 relative top-0"
-          src="TAC-2.jpg"
-          alt="illustration" />
-
-        <img
-          class="h-auto absolute bottom-0 right-0 w-1/2"
-          src="TAC-2.jpg"
-          alt="illustration" />
-
-      </div>
-    </div>
-  </WithScrollFadeIn>
 </div>
 
 <div class="bg-greenBg py-16">
