@@ -32,7 +32,7 @@
     </div>
   </WithScrollFadeIn>
 
-  <div class="grid grid-cols-2 grid-rows-2 gap-20 px-8 sm:px-32 mb-24">
+  <div class="grid md:grid-cols-2 grid-rows-2 gap-20 px-8 sm:px-32 mb-24">
 
     <div class="w-full md:w-full">
       <WithScrollFadeIn>
@@ -222,13 +222,15 @@
     </WithScrollFadeIn>
   </div>
 
-  <div class="container w-5/6 ml-auto mr-0 text-white relative top-0 pb-48">
+  <div
+    class="container w-full lg:w-5/6 ml-auto mr-0 text-white relative top-0
+    pb-16 lg:pb-48">
     <WithScrollFadeIn>
       <div
-        class="bg-grey-medium w-5/6 ml-auto pr-8 sm:pr-32 lg:py-16 relative
-        top-0">
+        class="bg-grey-medium w-full lg:w-5/6 ml-auto pr-8 sm:pr-32 py-8
+        lg:py-16 relative top-0">
         <div class="flex flex-row-reverse">
-          <div class="w-4/5 ml-auto pl-8 sm:pl-32">
+          <div class="w-full lg:w-4/5 ml-auto pl-8 sm:pl-32">
             <div>
               <div class="mb-16">
                 <h1 class="text-4xl font-medium py-4 leading-10">
@@ -261,7 +263,7 @@
 
       </div>
       <img
-        class="absolute bottom-0 left-0 w-2/6"
+        class="absolute bottom-0 left-0 w-2/6 hidden lg:block"
         src="Radu-Amir-working-Lowres.jpg"
         alt="co-workers" />
     </WithScrollFadeIn>
