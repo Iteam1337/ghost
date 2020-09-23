@@ -170,6 +170,4 @@
   </div>
 </WithScrollFadeIn>
 
-<ContactBanner
-  text="Nyfiken på vad vi kan göra tillsammans?"
-  ctaText="Hör av dig" />
+<ContactBanner />
