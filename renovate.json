@@ -5,7 +5,7 @@
     {
       "automerge": true,
       "depTypeList": ["devDependencies"],
-      "groupName": "devDependencies (non-major)",
+      "groupName": "dev-dependencies-non-major",
       "updateTypes": ["patch", "minor"]
     }
   ]
