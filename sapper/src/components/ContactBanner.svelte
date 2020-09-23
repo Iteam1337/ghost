@@ -1,8 +1,8 @@
 <script>
   import ConnectSymbol from '../assets/illustrations/ilustration-collection.svg'
   import WithScrollFadeIn from './WithScrollFadeIn.svelte'
-  export let text
-  export let ctaText
+  export let text = 'Nyfiken på vad vi kan göra tillsammans?'
+  export let ctaText = 'Hör av dig'
 </script>
 
 <div class="bg-grey-medium">
