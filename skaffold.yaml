@@ -4,8 +4,6 @@ metadata:
   name: iteam.se
 build:
   artifacts:
-    - image: iteam1337/iteam-ghost
-      context: ./ghost
     - image: iteam1337/iteam-sapper
       context: ./sapper
 deploy:
