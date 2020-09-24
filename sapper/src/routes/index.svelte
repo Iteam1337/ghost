@@ -13,16 +13,73 @@
   import IteamA from '../assets/illustrations/a.svg'
   import WithScrollFadeIn from '../components/WithScrollFadeIn.svelte'
 
-  export async function preload(_page, session) {
-    return API({ fetch: this.fetch, session }).Posts.ByTags([
-      'erbjudande',
-      'case',
-    ])
-  }
+  // export async function preload(_page, session) {
+  //   return API({ fetch: this.fetch, session }).Posts.ByTags([
+  //     'erbjudande',
+  //     'case',
+  //   ])
+  // }
 </script>
 
 <script>
-  export let posts
+  export let posts = [
+    {
+      title: 'Taxi Stockholm',
+      slug: 'taxi-stockholm',
+      primary_tag: {
+        name: 'Case',
+        slug: 'case',
+      },
+    },
+    {
+      title: 'Tjejjouren Väst',
+      slug: 'tjejjouren-vast',
+      primary_tag: {
+        name: 'Case',
+        slug: 'case',
+      },
+    },
+    {
+      title: 'Vimla',
+      slug: 'vimla',
+      primary_tag: {
+        name: 'Case',
+        slug: 'case',
+      },
+    },
+    {
+      title: 'Predictive Movement',
+      slug: 'predictive-movement',
+      primary_tag: {
+        name: 'Case',
+        slug: 'case',
+      },
+    },
+    {
+      title: 'Mass Predict',
+      slug: 'mass-predict',
+      primary_tag: {
+        name: 'Case',
+        slug: 'case',
+      },
+    },
+    {
+      title: 'Searchat',
+      slug: 'searchat',
+      primary_tag: {
+        name: 'Case',
+        slug: 'case',
+      },
+    },
+    {
+      title: 'Egendata',
+      slug: 'egendata',
+      primary_tag: {
+        name: 'Case',
+        slug: 'case',
+      },
+    },
+  ]
 </script>
 
 <svelte:head>
@@ -32,7 +89,8 @@
 <div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
   <WithScrollFadeIn>
     <div
-      class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
+      class="flex flex-col md:flex-row-reverse justify-between px-8 md:px-16
+        lg:px-32">
       <div class="w-1/2">
         <FeaturedImageIteam />
       </div>
@@ -46,14 +104,13 @@
           Så här går det till
         </Links.ArrowTextLink>
       </div>
-
     </div>
-    <div class="px-8 md:px-16 lg:px-16 pt-32">
+    <div class="px-8 md:px-16 lg:px-32 pt-32">
       <FeaturedPosts {posts} />
     </div>
     <div
       class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-      md:mx-auto space-x-3" />
+        md:mx-auto space-x-3" />
   </WithScrollFadeIn>
 </div>
 
@@ -95,7 +152,6 @@
           title={'Forskning'}
           text={'Lorem ipsum dolor sit meow meow meow.'} />
       </div>
-
     </div>
 
     <a class="border px-16 py-4 rounded-full text-white" href="/services">

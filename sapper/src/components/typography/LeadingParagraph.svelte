@@ -1,3 +1,3 @@
-<p class="font-light text-md tracking-wide mb-2">
+<p class="font-light text-md tracking-wide">
   <slot />
 </p>
