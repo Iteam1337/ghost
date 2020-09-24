@@ -12,15 +12,22 @@ metadata:
   namespace: iteam-se
 spec:
   rules:
-  - host: iteam-se.iteamdev.io
-    http:
-      paths:
-      - backend:
-          serviceName: iteam-ghost
-          servicePort: http
-        path: /
+    - host: iteam-se.iteamdev.io
+      http:
+        paths:
+          - backend:
+              serviceName: iteam-ghost
+              servicePort: http
+            path: /
+    - host: www-iteam-se.iteamdev.io
+      http:
+        paths:
+          - backend:
+              serviceName: iteam-sapper
+              servicePort: http
+            path: /
   tls:
-  - hosts:
-    - iteam-se.iteamdev.io
-    secretName: iteam-ghost-prod-tls
-
+    - hosts:
+        - iteam-se.iteamdev.io
+        - www-iteam-se.iteamdev.io
+      secretName: iteam-ghost-prod-tls

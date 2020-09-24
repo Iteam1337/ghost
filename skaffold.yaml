@@ -4,9 +4,12 @@ metadata:
   name: iteam.se
 build:
   artifacts:
-  - image: iteam1337/iteam-ghost
-    context: ./ghost
+    - image: iteam1337/iteam-ghost
+      context: ./ghost
+    - image: iteam1337/iteam-sapper
+      context: ./sapper
 deploy:
   kubectl:
     manifests:
-    - k8s/ghost*.yaml
+      - k8s/ghost*.yaml
+      - k8s/sapper*.yaml
