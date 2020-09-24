@@ -1,4 +1,9 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+
   purge: ['./src/**/*.svelte'],
   theme: {
     extend: {
@@ -24,7 +29,7 @@ module.exports = {
         },
       },
       opacity: {
-        '95': '0.95',
+        95: '0.95',
       },
     },
     container: {
