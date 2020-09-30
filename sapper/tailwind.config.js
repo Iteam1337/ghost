@@ -17,6 +17,8 @@ module.exports = {
       colors: {
         beige: '#fcfbfb',
         cornflower: '#668cff',
+        'light-blue': '#E8EEFF',
+        'dark-blue': '#4271FF',
         green: '#36F49A',
         grey: {
           dark: '#363636',
@@ -24,7 +26,7 @@ module.exports = {
         },
       },
       opacity: {
-        '95': '0.95',
+        95: '0.95',
       },
     },
     container: {

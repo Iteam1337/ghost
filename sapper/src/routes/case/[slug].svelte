@@ -10,6 +10,7 @@
   export let post
 
   import Typography from '../../components/typography/'
+  import Links from '../../components/links/'
 </script>
 
 <!-- Ett case -->
@@ -22,10 +23,10 @@
     <div class="flex-initial">
       <Typography.H1>{post.title}</Typography.H1>
       <Typography.Paragraph>{post.excerpt}</Typography.Paragraph>
-      <div>
+      <div class="mt-8">
         {#each post.tags as tag}
           {#if tag.name !== 'case'}
-            <Typography.Paragraph>{tag.name}</Typography.Paragraph>
+            <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
           {/if}
         {/each}
       </div>
