@@ -16,6 +16,11 @@
 <!-- Ett case -->
 <svelte:head>
   <title>Case | {post.title}</title>
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
 </svelte:head>
 
 <div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
