@@ -2,17 +2,19 @@
   import { API } from '../../services/api.js'
 
   export async function preload(_page, session) {
-    return API({ fetch: this.fetch, session }).Posts.ByTags(['case'])
+    return API({ fetch: this.fetch, session })
+      .Posts.ByTags(['case'])
+      .then(({ posts }) => ({ posts }))
   }
 </script>
 
 <script>
-  export let posts
-
-  import FeaturedImageIteam from '../../assets/featured-image-iteam.svg'
-  import FeaturedPosts from '../../components/FeaturedPosts.svelte'
-  import Links from '../../components/links'
+  import Layout from '../../components/layout'
+  import Animation from '../../components/animation'
   import Typography from '../../components/typography/'
+  import ContactBanner from '../../components/ContactBanner.svelte'
+  import helpers from '../../utils/helpers.js'
+  export let posts
 </script>
 
 <!-- Case -->
@@ -20,23 +22,48 @@
   <title>Iteam | Case</title>
 </svelte:head>
 
-<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-  <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
-    <div class="w-1/2">
-      <FeaturedImageIteam />
+<Layout.Page>
+  <Animation.WithScrollFadeIn>
+    <div class="flex flex-col px-8 md:px-16 lg:px-32">
+      <div class="max-w-4xl pt-8">
+        <Typography.H1>Våra case</Typography.H1>
+        <Typography.ParagraphMd>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
+          consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
+          in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
+          Vitae, aliquet dui et, velit consequat.
+        </Typography.ParagraphMd>
+      </div>
     </div>
-    <div class="flex-initial max-w-md pt-8">
-      <Typography.H1>Kundcase</Typography.H1>
-      <Typography.BaseParagraph class="font-light text-sm">
-        Här är några exempel på projekt vi har gjort...
-      </Typography.BaseParagraph>
-    </div>
+    <Layout.Content>
+      <div
+        class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3
+          gap-6">
+        {#each posts as post}
+          <Animation.CardHover>
+            <a
+              rel="prefetch"
+              href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
+              <div
+                style="height: 468px;"
+                class="flex flex-col rounded-md p-4 bg-white">
+                <img
+                  class="rounded-md object-cover h-full"
+                  src={post.feature_image}
+                  alt="feature" />
+                <div class="ml-2">
+                  <p class="mt-6 font-medium">{post.title}</p>
+                  <Typography.ParagraphSm spacing={false}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </Typography.ParagraphSm>
+                </div>
+              </div>
+            </a>
+          </Animation.CardHover>
+        {/each}
+      </div>
+    </Layout.Content>
+  </Animation.WithScrollFadeIn>
+</Layout.Page>
 
-  </div>
-  <div class="px-8 md:px-16 lg:px-32 pt-32">
-    <FeaturedPosts {posts} />
-  </div>
-  <div
-    class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-    md:mx-auto space-x-3" />
-</div>
+<ContactBanner />

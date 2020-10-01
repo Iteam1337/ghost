@@ -7,7 +7,7 @@
   import YouTubeIcon from '../assets/youtube_icon.svg'
 </script>
 
-<div class="bg-grey-dark px-16 md:px-32">
+<div class="bg-grey-dark px-16 md:px-32 xl:px-48">
   <p class="text-white py-20 max-w-2xl text-lg m-0">
     Vi är en digitaliseringsbyrå med kontor i Stockholm och Göteborg. Vi är 25
     personer som drivs av tre grundläggande värderingar – att göra något bra,
@@ -19,10 +19,7 @@
         <CityIcon />
         <p class="text-white font-medium tracking-wide">Iteam Stockholm</p>
         <p class="text-white font-light text-sm leading-7">
-          Östermalmsgatan 26A
-          <br />
-          114 26 Stockholm
-          <br />
+          Östermalmsgatan 26A <br /> 114 26 Stockholm <br />
           <a
             href="https://goo.gl/maps/cVxFADSToWkbwCjBA"
             target="_blank"
@@ -35,10 +32,7 @@
         <HarborIcon />
         <p class="text-white font-medium tracking-wide">Iteam Göteborg</p>
         <p class="text-white font-light text-sm leading-7">
-          Järntorgsgatan 12-14
-          <br />
-          413 01 Göteborg
-          <br />
+          Järntorgsgatan 12-14 <br /> 413 01 Göteborg <br />
           <a
             href="https://goo.gl/maps/fDzuuDuUSxU6jLGb8"
             target="_blank"
@@ -70,6 +64,5 @@
         <YouTubeIcon />
       </a>
     </div>
-
   </div>
 </div>
