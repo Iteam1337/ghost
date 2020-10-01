@@ -24,7 +24,7 @@
   </style>
 </svelte:head>
 
-<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+<div class="container pt-10 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24">
   <div class="flex px-8 sm:px-40">
     <div class="flex-initial">
       <div class="mb-8 flex flex-wrap">
@@ -35,10 +35,10 @@
         {/each}
       </div>
       <Typography.H1>{post.title}</Typography.H1>
-      <div class="case">
-        {@html post.html}
-      </div>
     </div>
+  </div>
+  <div class="case pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+    {@html post.html}
   </div>
 </div>
 

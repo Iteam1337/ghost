@@ -16,12 +16,14 @@
   font-weight: 500;
   font-size: 2rem;
   margin-top: 4rem;
+  padding: 0 2rem;
 }
 
 .case blockquote {
   padding: 3rem 0;
   font-weight: 500;
   font-size: 1.5rem;
+  padding: 0 2rem;
 }
 
 .case p:first-of-type {
@@ -33,6 +35,7 @@
   font-size: 1rem;
   font-weight: 300;
   font-style: italic;
+  padding: 0 2rem;
 }
 
 .case figure {
@@ -40,8 +43,21 @@
   margin-top: 4rem;
 }
 
+.case figure img {
+  margin: auto;
+}
+
 .case p {
   padding: 0.5rem 0;
   font-weight: 300;
   font-size: 1rem;
+  padding: 0 2rem;
+}
+
+@media (min-width: 640px) {
+  .case h3,
+  .case p,
+  .case blockquote {
+    padding: 0 10rem;
+  }
 }
