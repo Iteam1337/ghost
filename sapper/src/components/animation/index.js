@@ -1,3 +1,4 @@
-import CardHoover from './CardHoover.svelte'
+import CardHover from './CardHover.svelte'
+import WithScrollFadeIn from './WithScrollFadeIn.svelte'
 
-export default { CardHoover }
+export default { CardHover, WithScrollFadeIn }

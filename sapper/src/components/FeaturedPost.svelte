@@ -4,7 +4,7 @@
   export let post
 </script>
 
-<Animation.CardHoover>
+<Animation.CardHover>
   <div
     class={`bg-white p-4 rounded-md custom-flex-span-${post.primary_tag.slug === 'erbjudande' ? 'wide' : 'narrow'}`}
     style="height: 468px;">
@@ -31,4 +31,4 @@
       </div>
     </a>
   </div>
-</Animation.CardHoover>
+</Animation.CardHover>

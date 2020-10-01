@@ -1,5 +1,6 @@
 <script>
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
+  import Layout from '../components/layout'
   import Typography from '../components/typography/'
 </script>
 
@@ -8,7 +9,7 @@
   <title>Iteam | Tjänster</title>
 </svelte:head>
 
-<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+<Layout.Page>
   <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
     <div class="w-1/2">
       <FeaturedImageIteam />
@@ -19,10 +20,9 @@
         Lorem ipsum...
       </Typography.BaseParagraph>
     </div>
-
   </div>
-  <div class="px-8 md:px-16 lg:px-32 pt-32">Dolor sit amet.</div>
+  <Layout.Content>Dolor sit amet.</Layout.Content>
   <div
     class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-    md:mx-auto space-x-3" />
-</div>
+      md:mx-auto space-x-3" />
+</Layout.Page>

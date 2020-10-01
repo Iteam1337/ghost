@@ -11,83 +11,27 @@
   import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
   import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
   import IteamA from '../assets/illustrations/a.svg'
-  import WithScrollFadeIn from '../components/WithScrollFadeIn.svelte'
+  import Layout from '../components/layout'
 
-  // export async function preload(_page, session) {
-  //   return API({ fetch: this.fetch, session }).Posts.ByTags([
-  //     'erbjudande',
-  //     'case',
-  //   ])
-  // }
+  import Animation from '../components/animation'
+
+  export async function preload(_page, session) {
+    return API({ fetch: this.fetch, session })
+      .Posts.ByTags(['erbjudande', 'case'])
+      .then(({ posts }) => ({ posts }))
+  }
 </script>
 
 <script>
-  export let posts = [
-    {
-      title: 'Taxi Stockholm',
-      slug: 'taxi-stockholm',
-      primary_tag: {
-        name: 'Case',
-        slug: 'case',
-      },
-    },
-    {
-      title: 'Tjejjouren Väst',
-      slug: 'tjejjouren-vast',
-      primary_tag: {
-        name: 'Case',
-        slug: 'case',
-      },
-    },
-    {
-      title: 'Vimla',
-      slug: 'vimla',
-      primary_tag: {
-        name: 'Case',
-        slug: 'case',
-      },
-    },
-    {
-      title: 'Predictive Movement',
-      slug: 'predictive-movement',
-      primary_tag: {
-        name: 'Case',
-        slug: 'case',
-      },
-    },
-    {
-      title: 'Mass Predict',
-      slug: 'mass-predict',
-      primary_tag: {
-        name: 'Case',
-        slug: 'case',
-      },
-    },
-    {
-      title: 'Searchat',
-      slug: 'searchat',
-      primary_tag: {
-        name: 'Case',
-        slug: 'case',
-      },
-    },
-    {
-      title: 'Egendata',
-      slug: 'egendata',
-      primary_tag: {
-        name: 'Case',
-        slug: 'case',
-      },
-    },
-  ]
+  export let posts
 </script>
 
 <svelte:head>
   <title>Iteam - There is a Better Way</title>
 </svelte:head>
 
-<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-  <WithScrollFadeIn>
+<Layout.Page>
+  <Animation.WithScrollFadeIn>
     <div
       class="flex flex-col md:flex-row-reverse justify-between px-8 md:px-16
         lg:px-32">
@@ -96,7 +40,7 @@
       </div>
       <div class="flex-initial max-w-md pt-8">
         <Typography.H1>Kod, kultur och strategi</Typography.H1>
-        <Typography.BaseParagraph class="font-light text-sm">
+        <Typography.BaseParagraph>
           Genom agilitet, användarfokus och i nära samarbete med våra kunder
           skapar vi digital innovation.
         </Typography.BaseParagraph>
@@ -105,19 +49,16 @@
         </Links.ArrowTextLink>
       </div>
     </div>
-    <div class="px-8 md:px-16 lg:px-32 pt-32">
+    <Layout.Content>
       <FeaturedPosts {posts} />
-    </div>
-    <div
-      class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-        md:mx-auto space-x-3" />
-  </WithScrollFadeIn>
-</div>
+    </Layout.Content>
+  </Animation.WithScrollFadeIn>
+</Layout.Page>
 
 <!-- Tjänster -->
 <div
   class="bg-grey-dark w-screen text-center text-white py-20 sm:px-32 lg:px-20">
-  <WithScrollFadeIn>
+  <Animation.WithScrollFadeIn>
     <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
     <p class="text-base font-light tracking-wider my-4 mx-6 lg:mx-20 lg:px-16">
       Vi erbjuder dig ett självgående team som utvecklar din produkt. Man säga
@@ -157,11 +98,11 @@
     <a class="border px-16 py-4 rounded-full text-white" href="/services">
       Alla tjänster
     </a>
-  </WithScrollFadeIn>
+  </Animation.WithScrollFadeIn>
 </div>
 
 <!-- Blocks -->
-<WithScrollFadeIn threshold={0.5}>
+<Animation.WithScrollFadeIn threshold={0.5}>
   <div class="container lg:mx-auto my-10 lg:my-32 xl:my-40 px-8 sm:px-32">
     <div class="flex">
       <div class="flex-1 flex-grow-1 align-middle sm:py-2">
@@ -178,9 +119,9 @@
       </div>
     </div>
   </div>
-</WithScrollFadeIn>
+</Animation.WithScrollFadeIn>
 
-<WithScrollFadeIn threshold={0.5}>
+<Animation.WithScrollFadeIn threshold={0.5}>
   <div class="container lg:mx-auto px-8 sm:px-32">
     <div class="flex flex-row-reverse">
       <div class="flex-1 flex-grow-1 align-middle lg:py-16">
@@ -200,9 +141,9 @@
       </div>
     </div>
   </div>
-</WithScrollFadeIn>
+</Animation.WithScrollFadeIn>
 
-<WithScrollFadeIn threshold={0.5}>
+<Animation.WithScrollFadeIn threshold={0.5}>
   <div class="container lg:mx-auto my-10 lg:my-32 xl:my-40 px-8 sm:px-32">
     <div class="flex">
       <div class="flex-1 flex-grow-1 align-middle sm:py-2">
@@ -224,6 +165,6 @@
       </div>
     </div>
   </div>
-</WithScrollFadeIn>
+</Animation.WithScrollFadeIn>
 
 <ContactBanner />
