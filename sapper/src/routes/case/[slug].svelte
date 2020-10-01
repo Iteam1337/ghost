@@ -14,7 +14,6 @@
 
   export let post
   export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
-  console.log(post.tags)
 </script>
 
 <!-- Ett case -->

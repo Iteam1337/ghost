@@ -35,9 +35,9 @@
             <img src="sales.png" alt="sales person" />
             <div class="mt-4">
               <p class="font-medium">Jonna Hjelm</p>
-              <p class="font-thin">Försäljningsansvarig</p>
-              <p class="font-thin">072-975 53 66</p>
-              <p class="font-thin">jonna.hjern@iteam.se</p>
+              <p class="font-thin">
+                Försäljningsansvarig <br /> 072-975 53 66 <br /> jonna.hjern@iteam.se
+              </p>
             </div>
           </div>
         {/if}
