@@ -13,7 +13,7 @@
     <div
       class="flex flex-col md:flex-row justify-center items-center text-white
         w-screen py-20 md:py-32">
-      <div class="w-screen sm:w-4/5 md:w-1/2 pb-8 px-10 md:px-0">
+      <div class="w-screen sm:w-4/5 md:w-1/2 xl:w-1/3 pb-8 px-10 md:px-0">
         <h2 class="text-3xl font-medium tracking-wide">{title}</h2>
         <Typography.Paragraph>{text}</Typography.Paragraph>
         <div class="mt-10">
@@ -25,8 +25,8 @@
         </div>
       </div>
       <div
-        class="w-screen md:w-1/3 lg:w-1/4 flex justify-end sm:justify-center
-          md:ml-8 mt-6 md:mt-0 px-16 md:px-0">
+        class="w-screen md:w-1/3 lg:w-1/4 flex justify-center md:ml-8 mt-6
+          md:mt-0 px-16 md:px-0">
         {#if context === 'basic'}
           <ConnectSymbol />
         {:else}
