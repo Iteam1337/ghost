@@ -7,11 +7,12 @@
 </script>
 
 <script>
-  export let post
-
   import Typography from '../../components/typography/'
   import Links from '../../components/links/'
   import ContactBanner from '../../components/ContactBanner.svelte'
+
+  export let post
+  export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
 </script>
 
 <!-- Ett case -->
@@ -29,7 +30,7 @@
     <div class="flex-initial">
       <div class="mb-8 flex flex-wrap">
         {#each post.tags as tag}
-          {#if tag.name !== 'case'}
+          {#if tag.name !== 'case' && tag.visibility === 'public'}
             <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
           {/if}
         {/each}
@@ -39,6 +40,14 @@
   </div>
   <div class="case pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24">
     {@html post.html}
+
+    {#if post.html.includes('Tekniker')}
+      <div class="px-0 sm:px-32 flex flex-wrap">
+        {#each filteredTags as tag}
+          <img src={`${tag.name.substr(1)}.svg`} alt={tag.name} />
+        {/each}
+      </div>
+    {/if}
   </div>
 </div>
 
