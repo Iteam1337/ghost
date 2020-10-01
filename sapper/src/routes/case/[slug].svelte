@@ -26,16 +26,15 @@
 <div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
   <div class="flex px-8 sm:px-40">
     <div class="flex-initial">
-      <Typography.H1>{post.title}</Typography.H1>
-      <Typography.Paragraph>{post.excerpt}</Typography.Paragraph>
-      <div class="mt-8 flex flex-wrap">
+      <div class="mb-8 flex flex-wrap">
         {#each post.tags as tag}
           {#if tag.name !== 'case'}
             <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
           {/if}
         {/each}
       </div>
-      <div class="case mt-32">
+      <Typography.H1>{post.title}</Typography.H1>
+      <div class="case">
         {@html post.html}
       </div>
     </div>
