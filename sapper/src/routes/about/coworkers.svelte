@@ -8,11 +8,8 @@
 
 <script>
   export let pages
-
-  import helpers from '../../utils/helpers'
-
+  import Layout from '../../components/layout'
   import Typography from '../../components/typography/'
-  import FeaturedPosts from '../../components/FeaturedPosts.svelte'
   import Links from '../../components/links'
   import FeaturedImageIteam from '../../assets/featured-image-iteam.svg'
 </script>
@@ -22,16 +19,16 @@
   <title>Iteam | Medarbetare</title>
 </svelte:head>
 
-<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+<Layout.Page>
   <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
     <div class="w-1/2">
       <FeaturedImageIteam />
     </div>
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Medarbetare</Typography.H1>
-      <Typography.BaseParagraph class="font-light text-sm">
+      <Typography.ParagraphSm>
         Här är vi som jobbar på Iteam.
-      </Typography.BaseParagraph>
+      </Typography.ParagraphSm>
       <Links.ArrowTextLink to="/career">
         Vill du se ditt ansikte här?
       </Links.ArrowTextLink>
@@ -42,7 +39,7 @@
     {#each pages as coworker}
       <div
         class="transform hover:shadow-hover transition duration-500 ease-in
-        hover:bg-white p-4 rounded-md my-2 mx-2 w-full sm:w-2/5 xl:w-1/5 ">
+          hover:bg-white p-4 rounded-md my-2 mx-2 w-full sm:w-2/5 xl:w-1/5">
         <a rel="prefetch" href={`/about/coworker/${coworker.slug}`}>
           <div class="h-full pb-4">
             <div class="relative" style="height: 90%;">
@@ -60,4 +57,4 @@
       </div>
     {/each}
   </div>
-</div>
+</Layout.Page>

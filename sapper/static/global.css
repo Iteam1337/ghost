@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply font-body;
+}
+
 .custom-flex-span-narrow {
   flex: 1 1 calc((100% / 3) - 5rem);
 }

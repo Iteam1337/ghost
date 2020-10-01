@@ -1,7 +1,8 @@
 <script>
   import ConnectSymbol from '../assets/illustrations/ilustration-collection.svg'
   import Typography from './typography/'
-  import WithScrollFadeIn from './WithScrollFadeIn.svelte'
+  import Animation from './animation'
+
   export let title = 'Nyfiken på vad vi kan göra tillsammans?'
   export let text = ''
   export let ctaText = 'Hör av dig'
@@ -9,7 +10,7 @@
 </script>
 
 <div class="bg-grey-medium">
-  <WithScrollFadeIn threshold={0.5}>
+  <Animation.WithScrollFadeIn threshold={0.5}>
     <div
       class="flex flex-col md:flex-row justify-center items-center text-white
         w-screen py-20 md:py-32">
@@ -42,5 +43,5 @@
         {/if}
       </div>
     </div>
-  </WithScrollFadeIn>
+  </Animation.WithScrollFadeIn>
 </div>

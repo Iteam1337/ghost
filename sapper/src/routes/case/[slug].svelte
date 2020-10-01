@@ -10,6 +10,7 @@
   import Typography from '../../components/typography/'
   import Links from '../../components/links/'
   import ContactBanner from '../../components/ContactBanner.svelte'
+  import Layout from '../../components/layout'
 
   export let post
   export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
@@ -26,7 +27,7 @@
   </style>
 </svelte:head>
 
-<div class="container pt-10 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24">
+<Layout.Page>
   <div class="flex px-8 sm:px-40">
     <div class="flex-initial">
       <div class="mb-8 flex flex-wrap">
@@ -50,7 +51,7 @@
       </div>
     {/if}
   </div>
-</div>
+</Layout.Page>
 
 <ContactBanner
   title="Har du en liknande utmaning?"
