@@ -11,6 +11,7 @@
 
   import Typography from '../../components/typography/'
   import Links from '../../components/links/'
+  import ContactBanner from '../../components/ContactBanner.svelte'
 </script>
 
 <!-- Ett case -->
@@ -40,3 +41,8 @@
     </div>
   </div>
 </div>
+
+<ContactBanner
+  title="Har du en liknande utmaning?"
+  text="Vi är redo att hjälpa era att ta det första steget mot att förverkliga er digitala vision. Kontakta oss så berättar vi mer."
+  context="sale" />
