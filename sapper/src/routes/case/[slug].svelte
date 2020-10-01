@@ -41,10 +41,10 @@
   <div class="case pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24">
     {@html post.html}
 
-    {#if post.html.includes('Tekniker')}
+    {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
       <div class="px-0 sm:px-32 flex flex-wrap">
         {#each filteredTags as tag}
-          <img src={`${tag.name.substr(1)}.svg`} alt={tag.name} />
+          <img src={tag.feature_image} alt={tag.name} />
         {/each}
       </div>
     {/if}
