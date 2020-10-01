@@ -2,7 +2,7 @@
   import FeaturedImageIteam from '../../assets/featured-image-iteam.svg'
   import Links from '../../components/links'
   import Typography from '../../components/typography/'
-  import Layout from '../_layout.svelte'
+  import Layout from '../../components/layout'
 </script>
 
 <!-- Om oss -->
@@ -17,9 +17,7 @@
     </div>
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Om oss</Typography.H1>
-      <Typography.BaseParagraph class="font-light text-sm">
-        Lorem ipsum...
-      </Typography.BaseParagraph>
+      <Typography.BaseParagraph>Lorem ipsum...</Typography.BaseParagraph>
       <Links.ArrowTextLink to="/about/coworkers">
         Här är vi som jobbar på Iteam
       </Links.ArrowTextLink>

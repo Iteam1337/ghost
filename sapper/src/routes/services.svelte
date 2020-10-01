@@ -16,9 +16,7 @@
     </div>
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Tjänster</Typography.H1>
-      <Typography.BaseParagraph class="font-light text-sm">
-        Lorem ipsum...
-      </Typography.BaseParagraph>
+      <Typography.BaseParagraph>Lorem ipsum...</Typography.BaseParagraph>
     </div>
   </div>
   <Layout.Content>Dolor sit amet.</Layout.Content>
