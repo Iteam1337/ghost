@@ -44,8 +44,13 @@
             <a
               rel="prefetch"
               href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
-              <div style="height: 468px;" class="flex flex-col rounded-md p-4">
-                <div class="bg-gray-400 h-full rounded-md relative" />
+              <div
+                style="height: 468px;"
+                class="flex flex-col rounded-md p-4 bg-white">
+                <img
+                  class="rounded-md object-cover h-full"
+                  src={post.feature_image}
+                  alt="feature" />
                 <div class="ml-2">
                   <p class="mt-6 font-medium">{post.title}</p>
                   <Typography.BaseParagraph spacing={false}>
