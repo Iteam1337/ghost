@@ -30,7 +30,7 @@
     <div class="flex-initial">
       <div class="mb-8 flex flex-wrap">
         {#each post.tags as tag}
-          {#if tag.name !== 'case' && tag.visibility === 'public'}
+          {#if tag.name !== 'Case' && tag.visibility === 'public'}
             <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
           {/if}
         {/each}
