@@ -15,7 +15,7 @@
         w-screen py-20 md:py-32">
       <div class="w-screen sm:w-4/5 md:w-1/2 xl:w-1/3 pb-8 px-10 md:px-0">
         <h2 class="text-3xl font-medium tracking-wide">{title}</h2>
-        <Typography.Paragraph>{text}</Typography.Paragraph>
+        <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
         <div class="mt-10">
           <a
             class="bg-cornflower text-white py-2 px-10 rounded-full"
