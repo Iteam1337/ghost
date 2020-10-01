@@ -26,9 +26,9 @@
     </div>
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Medarbetare</Typography.H1>
-      <Typography.BaseParagraph>
+      <Typography.ParagraphSm>
         Här är vi som jobbar på Iteam.
-      </Typography.BaseParagraph>
+      </Typography.ParagraphSm>
       <Links.ArrowTextLink to="/career">
         Vill du se ditt ansikte här?
       </Links.ArrowTextLink>

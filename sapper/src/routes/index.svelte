@@ -40,10 +40,10 @@
       </div>
       <div class="flex-initial max-w-md pt-8">
         <Typography.H1>Kod, kultur och strategi</Typography.H1>
-        <Typography.BaseParagraph>
+        <Typography.ParagraphSm>
           Genom agilitet, användarfokus och i nära samarbete med våra kunder
           skapar vi digital innovation.
-        </Typography.BaseParagraph>
+        </Typography.ParagraphSm>
         <Links.ArrowTextLink to="/about">
           Så här går det till
         </Links.ArrowTextLink>

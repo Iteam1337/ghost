@@ -17,7 +17,7 @@
     </div>
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>Om oss</Typography.H1>
-      <Typography.BaseParagraph>Lorem ipsum...</Typography.BaseParagraph>
+      <Typography.ParagraphSm>Lorem ipsum...</Typography.ParagraphSm>
       <Links.ArrowTextLink to="/about/coworkers">
         Här är vi som jobbar på Iteam
       </Links.ArrowTextLink>

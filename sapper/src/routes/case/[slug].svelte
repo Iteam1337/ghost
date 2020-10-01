@@ -23,7 +23,7 @@
     <div class="w-1/2"><img src={post.feature_image} alt={post.title} /></div>
     <div class="flex-initial max-w-md pt-8">
       <Typography.H1>{post.title}</Typography.H1>
-      <Typography.BaseParagraph>{post.excerpt}</Typography.BaseParagraph>
+      <Typography.ParagraphSm>{post.excerpt}</Typography.ParagraphSm>
     </div>
   </div>
   <Layout.Content>

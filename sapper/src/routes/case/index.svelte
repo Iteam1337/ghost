@@ -27,12 +27,12 @@
     <div class="flex flex-col px-8 md:px-16 lg:px-32">
       <div class="max-w-4xl pt-8">
         <Typography.H1>Våra case</Typography.H1>
-        <Typography.LeadingParagraph>
+        <Typography.ParagraphMd>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
           consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
           in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
           Vitae, aliquet dui et, velit consequat.
-        </Typography.LeadingParagraph>
+        </Typography.ParagraphMd>
       </div>
     </div>
     <Layout.Content>
@@ -53,9 +53,9 @@
                   alt="feature" />
                 <div class="ml-2">
                   <p class="mt-6 font-medium">{post.title}</p>
-                  <Typography.BaseParagraph spacing={false}>
+                  <Typography.ParagraphSm spacing={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Typography.BaseParagraph>
+                  </Typography.ParagraphSm>
                 </div>
               </div>
             </a>
