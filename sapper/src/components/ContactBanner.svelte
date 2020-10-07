@@ -19,7 +19,7 @@
         <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
         <div class="mt-10">
           <a
-            class="bg-cornflower text-white py-2 px-10 rounded-full"
+            class="bg-blue-cornflower text-white py-2 px-10 rounded-full"
             href="/contact">
             {ctaText}
           </a>

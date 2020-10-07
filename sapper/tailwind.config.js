@@ -21,9 +21,11 @@ module.exports = {
       },
       colors: {
         beige: '#fcfbfb',
-        cornflower: '#668cff',
-        'light-blue': '#E8EEFF',
-        'dark-blue': '#4271FF',
+        blue: {
+          light: '#E8EEFF',
+          cornflower: '#668cff',
+          dark: '#4271FF',
+        },
         green: '#36F49A',
         grey: {
           dark: '#363636',
