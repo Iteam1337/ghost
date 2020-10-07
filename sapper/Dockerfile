@@ -3,7 +3,7 @@ FROM node:12 AS builder
 WORKDIR /app
 
 COPY package*json ./
-RUN npm ci
+RUN npm ci --no-optional
 
 COPY . .
 
@@ -16,6 +16,6 @@ WORKDIR /app
 COPY --from=0 /app/ .
 
 RUN rm -fr node_modules
-RUN npm install
+RUN npm install production --no-optional
 
 CMD npm start
