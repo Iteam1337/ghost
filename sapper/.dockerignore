@@ -1,0 +1,7 @@
+.dockerignore
+Dockerfile
+*.md
+.git
+.envrc
+node_modules
+__sapper__

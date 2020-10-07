@@ -1,11 +1,16 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+
   purge: ['./src/**/*.svelte'],
   theme: {
     extend: {
       boxShadow: {
-        featured:
-          '0 0px 17px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
         hover:
+          '0 0px 17px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
+        featured:
           '0 0px 17px 0px rgba(0, 0, 0, 0.05), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
       },
       margin: {
@@ -16,7 +21,11 @@ module.exports = {
       },
       colors: {
         beige: '#fcfbfb',
-        cornflower: '#668cff',
+        blue: {
+          light: '#E8EEFF',
+          cornflower: '#668cff',
+          dark: '#4271FF',
+        },
         green: '#36F49A',
         grey: {
           dark: '#363636',
@@ -24,7 +33,7 @@ module.exports = {
         },
       },
       opacity: {
-        '95': '0.95',
+        95: '0.95',
       },
     },
     container: {

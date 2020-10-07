@@ -75,7 +75,7 @@ export const API = (context) => ({
     BySlug: async (slug) => {
       const {
         posts: [post],
-      } = await get(context, `/posts/slug/${slug}/`)
+      } = await get(context, `/posts/slug/${slug}&include=tags`)
 
       return { post }
     },
