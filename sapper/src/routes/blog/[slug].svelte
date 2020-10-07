@@ -1,64 +1,57 @@
 <script context="module">
-	export async function preload({ params, query }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
-		const res = await this.fetch(`blog/${params.slug}.json`);
-		const data = await res.json();
+  import { API } from '../../services/api.js'
 
-		if (res.status === 200) {
-			return { post: data };
-		} else {
-			this.error(res.status, data.message);
-		}
-	}
+  export async function preload({ params: { slug } }, session) {
+    return API({ fetch: this.fetch, session }).Post.BySlug(slug)
+  }
 </script>
 
 <script>
-	export let post;
+  import Typography from '../../components/typography/'
+  import Layout from '../../components/layout'
+  import moment from 'moment'
+
+  export let post
+  console.log(post)
+  const bio = post.primary_author.bio.split('\n').map((i) => i)
+  console.log('bio', bio)
 </script>
 
-<style>
-	/*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
-	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
-	}
-
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
-
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
-
-	.content :global(ul) {
-		line-height: 1.5;
-	}
-
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
-	}
-</style>
-
 <svelte:head>
-	<title>{post.title}</title>
+  <title>Blog | {post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<Layout.Page>
+  <div class="flex flex-col px-8 sm:px-32">
+    <div class="flex w-full items-center">
+      <img
+        src={post.primary_author.profile_image}
+        alt="author"
+        class="rounded-full w-10 mr-3" />
+      <Typography.ParagraphSm bold={true} spacing={false}>
+        {post.primary_author.name}
+      </Typography.ParagraphSm>
+      <Typography.ParagraphSm spacing={false}>
+        &nbsp;•&nbsp;{moment(post.published_at).format('DD MMMM YYYY')}
+      </Typography.ParagraphSm>
+    </div>
+    <div class="flex-initial pt-8">
+      <Typography.H1>{post.title}</Typography.H1>
+    </div>
+  </div>
+  <Layout.Content>
+    {@html post.html}
+  </Layout.Content>
+  <Layout.Content>
+    <Typography.ParagraphSm bold={true} spacing={false}>
+      {post.primary_author.name}
+    </Typography.ParagraphSm>
+    <Typography.ParagraphSm>
+      {#each bio as line}{line}<br />{/each}
+    </Typography.ParagraphSm>
+  </Layout.Content>
 
-<div class='content'>
-	{@html post.html}
-</div>
+  <div
+    class="flex flex-wrap justify-center my-20 px-20 items-center md:container
+      md:mx-auto space-x-3" />
+</Layout.Page>
