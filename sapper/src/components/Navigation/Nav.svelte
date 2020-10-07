@@ -14,8 +14,8 @@
     { text: 'Tjänster', to: 'services' },
     { text: 'Om oss', to: 'about' },
     { text: 'Karriär', to: 'career' },
-    { text: 'Kontakt', to: 'contact' },
     { text: 'Blogg', to: 'blog' },
+    { text: 'Kontakta oss 👋', to: 'contact' },
   ]
 </script>
 

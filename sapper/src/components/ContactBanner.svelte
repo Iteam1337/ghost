@@ -1,30 +1,32 @@
 <script>
   import ConnectSymbol from '../assets/illustrations/ilustration-collection.svg'
-  import WithScrollFadeIn from './WithScrollFadeIn.svelte'
-  export let text
-  export let ctaText
+  import Animation from './animation'
+  export let text = 'Nyfiken på vad vi kan göra tillsammans?'
+  export let ctaText = 'Hör av dig'
 </script>
 
 <div class="bg-grey-medium">
-  <WithScrollFadeIn threshold={0.5}>
-    <div
-      class="flex flex-col md:flex-row justify-center items-center text-white
-      w-screen py-20 md:py-32">
-      <div class="w-screen sm:w-4/5 md:w-1/4 pb-8 px-10 md:px-0">
-        <h2 class="text-3xl font-medium tracking-wide mb-10">{text}</h2>
-        <a
-          class="bg-cornflower text-white py-2 px-10 rounded-full"
-          href="/contact">
-          {ctaText}
-        </a>
-      </div>
+  <Animation.WithScrollFadeIn threshold={0.5}>
+    <div class="container px-8 md:px-16 lg:px-32">
       <div
-        class="w-screen md:w-1/3 lg:w-1/4 flex justify-center md:ml-8 mt-6
-        md:mt-0 px-16 md:px-0">
-
-        <ConnectSymbol />
+        class="flex flex-col md:flex-row items-center justify-between text-white
+          py-20 md:py-32">
+        <div class="pb-8">
+          <h2 class="text-3xl w-full lg:w-2/3 font-medium tracking-wide mb-10">
+            {text}
+          </h2>
+          <a
+            class="bg-cornflower text-white py-2 px-10 rounded-full"
+            href="/contact">
+            {ctaText}
+          </a>
+        </div>
+        <div
+          class="ml-8 sm:w-full md:w-1/3 flex justify-center mt-6 md:mt-0 px-16
+            md:px-0">
+          <ConnectSymbol />
+        </div>
       </div>
-
     </div>
-  </WithScrollFadeIn>
+  </Animation.WithScrollFadeIn>
 </div>
