@@ -10,48 +10,60 @@
   import Typography from '../../components/typography/'
   import Layout from '../../components/layout'
   import moment from 'moment'
-
+  import ContactBanner from '../../components/ContactBanner.svelte'
+  import helpers from '../../utils/helpers'
   export let post
-  console.log(post)
-  const bio = post.primary_author.bio.split('\n').map((i) => i)
-  console.log('bio', bio)
+
+  const bio = [] || post.primary_author.bio.split('\n').map((i) => i)
 </script>
 
 <svelte:head>
   <title>Blog | {post.title}</title>
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
 </svelte:head>
 
 <Layout.Page>
-  <div class="flex flex-col px-8 sm:px-32">
-    <div class="flex w-full items-center">
-      <img
-        src={post.primary_author.profile_image}
-        alt="author"
-        class="rounded-full w-10 mr-3" />
-      <Typography.ParagraphSm bold={true} spacing={false}>
-        {post.primary_author.name}
-      </Typography.ParagraphSm>
-      <Typography.ParagraphSm spacing={false}>
-        &nbsp;•&nbsp;{moment(post.published_at).format('DD MMMM YYYY')}
-      </Typography.ParagraphSm>
-    </div>
-    <div class="flex-initial pt-8">
+  <div class="flex px-8 sm:px-40">
+    <div class="flex-initial">
       <Typography.H1>{post.title}</Typography.H1>
+      <Typography.ParagraphLg>
+        {helpers.splitHTMLOnFirstParagraph(post.html)[0]}
+      </Typography.ParagraphLg>
+      <div class="flex w-full items-center mt-8">
+        <img
+          src={post.primary_author.profile_image}
+          alt="author"
+          class="rounded-full w-10 mr-3" />
+        <Typography.ParagraphSm bold={true} spacing={false}>
+          {post.primary_author.name}
+        </Typography.ParagraphSm>
+        <Typography.ParagraphSm spacing={false}>
+          &nbsp;•&nbsp;{moment(post.published_at).format('DD MMMM YYYY')}
+        </Typography.ParagraphSm>
+      </div>
     </div>
   </div>
-  <Layout.Content>
-    {@html post.html}
-  </Layout.Content>
-  <Layout.Content>
-    <Typography.ParagraphSm bold={true} spacing={false}>
-      {post.primary_author.name}
-    </Typography.ParagraphSm>
-    <Typography.ParagraphSm>
-      {#each bio as line}{line}<br />{/each}
-    </Typography.ParagraphSm>
-  </Layout.Content>
 
-  <div
-    class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-      md:mx-auto space-x-3" />
+  <Layout.Post type="blog">
+    {@html helpers.splitHTMLOnFirstParagraph(post.html)[1]}
+  </Layout.Post>
+
+  <div class="px-8 md:px-16 lg:px-32">
+    <div class="px-2 sm:px-8">
+      <Typography.H4>{post.primary_author.name}</Typography.H4>
+      <Typography.ParagraphSm>
+        {#each bio as line}
+          {#if line.includes('@')}
+            <a href="www.iteam.se" class="underline">{line}</a>
+          {:else}{line}<br />{/if}
+        {/each}
+      </Typography.ParagraphSm>
+    </div>
+  </div>
 </Layout.Page>
+
+<ContactBanner />

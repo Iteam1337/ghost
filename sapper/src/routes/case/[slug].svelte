@@ -11,6 +11,8 @@
   import Links from '../../components/links/'
   import ContactBanner from '../../components/ContactBanner.svelte'
   import Layout from '../../components/layout'
+  import ParagraphLg from '../../components/typography/ParagraphLg.svelte'
+  import helpers from '../../utils/helpers.js'
 
   export let post
   export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
@@ -29,18 +31,21 @@
 <Layout.Page>
   <div class="flex px-8 sm:px-40">
     <div class="flex-initial">
-      <div class="mb-8 flex flex-wrap">
+      <Typography.H1>{post.title}</Typography.H1>
+      <Typography.ParagraphLg>
+        {helpers.splitHTMLOnFirstParagraph(post.html)[0]}
+      </Typography.ParagraphLg>
+      <div class="flex flex-wrap mt-8">
         {#each post.tags as tag}
           {#if tag.slug !== 'case' && tag.visibility === 'public'}
             <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
           {/if}
         {/each}
       </div>
-      <Typography.H1>{post.title}</Typography.H1>
     </div>
   </div>
   <Layout.Post type="case">
-    {@html post.html}
+    {@html helpers.splitHTMLOnFirstParagraph(post.html)[1]}
     {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
       <div class="px-0 sm:px-32 flex flex-wrap">
         {#each filteredTags as tag}
