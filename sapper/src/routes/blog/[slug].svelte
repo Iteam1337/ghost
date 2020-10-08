@@ -14,7 +14,7 @@
   import helpers from '../../utils/helpers'
   export let post
 
-  const bio = [] || post.primary_author.bio.split('\n').map((i) => i)
+  const bio = post.primary_author.bio?.split('\n') ?? []
 </script>
 
 <svelte:head>
@@ -59,7 +59,7 @@
       <Typography.ParagraphSm>
         {#each bio as line}
           {#if line.includes('@')}
-            <a href="www.iteam.se" class="underline">{line}</a>
+            <a href={`mailto:${line}`} class="underline">{line}</a>
           {:else}{line}<br />{/if}
         {/each}
       </Typography.ParagraphSm>
