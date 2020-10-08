@@ -54,8 +54,7 @@
 
 <ContactBlock
   title="Har du en liknande utmaning?"
-  text="Vi är redo att hjälpa era att ta det första steget mot att förverkliga er digitala vision. Kontakta oss så berättar vi mer."
-  context="sale">
+  text="Vi är redo att hjälpa era att ta det första steget mot att förverkliga er digitala vision. Kontakta oss så berättar vi mer.">
   <div class="self-start flex flex-col flex-shrink-0 md:pt-8">
     <img src="sales.png" alt="sales person" />
     <div class="mt-4">
