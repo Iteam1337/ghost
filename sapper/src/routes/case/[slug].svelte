@@ -32,7 +32,7 @@
     <div class="flex-initial">
       <Typography.H1>{post.title}</Typography.H1>
       <Typography.ParagraphLg>
-        {helpers.splitHTMLOnFirstParagraph(post.html)[0]}
+        {helpers.getIngressFromHTMLBlob(post.html)}
       </Typography.ParagraphLg>
       <div class="flex flex-wrap mt-8">
         {#each post.tags as tag}
@@ -44,7 +44,7 @@
     </div>
   </div>
   <Layout.Post type="case">
-    {@html helpers.splitHTMLOnFirstParagraph(post.html)[1]}
+    {@html helpers.getHTMLBlobWithoutIngress(post.html)}
     {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
       <div class="px-0 sm:px-32 flex flex-wrap">
         {#each filteredTags as tag}

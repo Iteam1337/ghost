@@ -10,7 +10,7 @@
   import Typography from '../../components/typography/'
   import Layout from '../../components/layout'
   import moment from 'moment'
-  import ContactBanner from '../../components/ContactBanner.svelte'
+  import ContactBlock from '../../components/contact/'
   import helpers from '../../utils/helpers'
   export let post
 
@@ -31,19 +31,18 @@
     <div class="flex-initial">
       <Typography.H1>{post.title}</Typography.H1>
       <Typography.ParagraphLg>
-        {helpers.splitHTMLOnFirstParagraph(post.html)[0]}
+        {helpers.getIngressFromHTMLBlob(post.html)}
       </Typography.ParagraphLg>
       <div class="flex w-full items-center mt-8 flex-wrap">
         <img
           src={post.primary_author.profile_image}
           alt="author"
           class="rounded-full w-8 sm:w-10 mr-3" />
-        <div class="flex flex-row">
-          <Typography.ParagraphSm bold={true} spacing={false}>
-            {post.primary_author.name}
-          </Typography.ParagraphSm>
+        <div class="flex items-baseline">
+          <Typography.H4>{post.primary_author.name}</Typography.H4>
+          &nbsp;
           <Typography.ParagraphSm spacing={false}>
-            &nbsp;•&nbsp;{moment(post.published_at).format('DD MMMM YYYY')}
+            • {moment(post.published_at).format('DD MMMM YYYY')}
           </Typography.ParagraphSm>
         </div>
       </div>
@@ -51,7 +50,7 @@
   </div>
 
   <Layout.Post type="blog">
-    {@html helpers.splitHTMLOnFirstParagraph(post.html)[1]}
+    {@html helpers.getHTMLBlobWithoutIngress(post.html)}
   </Layout.Post>
 
   <div class="px-8 md:px-16 lg:px-32">
@@ -68,4 +67,4 @@
   </div>
 </Layout.Page>
 
-<ContactBanner />
+<ContactBlock.Default />

@@ -7,11 +7,16 @@ const getRouteFromPostTag = (tag) => {
   }
 }
 
-const splitHTMLOnFirstParagraph = (post) => {
-  const first = post.match(/<p>(.*?)<\/p>/)
-  const rest = post.replace(first[0], '')
+const getIngressFromHTMLBlob = (post) => {
+  const [, ingress] = post.match(/<p>(.*?)<\/p>/)
 
-  return [first[1], rest]
+  return ingress
 }
 
-export default { getRouteFromPostTag, splitHTMLOnFirstParagraph }
+const getHTMLBlobWithoutIngress = (post) => post.replace(/<p>(.*?)<\/p>/, '')
+
+export default {
+  getRouteFromPostTag,
+  getIngressFromHTMLBlob,
+  getHTMLBlobWithoutIngress,
+}
