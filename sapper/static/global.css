@@ -30,11 +30,6 @@ body {
   padding: 0 2rem;
 }
 
-.post p:first-of-type {
-  font-weight: 200;
-  font-size: 1.5rem;
-}
-
 .post blockquote p {
   font-size: 1rem;
   font-weight: 300;
