@@ -12,8 +12,9 @@
   import Layout from '../../components/layout'
   import Animation from '../../components/animation'
   import Typography from '../../components/typography/'
-  import ContactBanner from '../../components/ContactBanner.svelte'
+  import ContactBlock from '../../components/ContactBlock.svelte'
   import helpers from '../../utils/helpers.js'
+  import ConnectSymbol from '../../assets/illustrations/ilustration-collection.svg'
   export let posts
 </script>
 
@@ -66,4 +67,6 @@
   </Animation.WithScrollFadeIn>
 </Layout.Page>
 
-<ContactBanner />
+<ContactBlock>
+  <ConnectSymbol />
+</ContactBlock>

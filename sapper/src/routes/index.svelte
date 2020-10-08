@@ -1,7 +1,7 @@
 <script context="module">
   import { API } from '../services/api.js'
   import Typography from '../components/typography/'
-  import ContactBanner from '../components/ContactBanner.svelte'
+  import ContactBlock from '../components/ContactBlock.svelte'
   import FeaturedPosts from '../components/FeaturedPosts.svelte'
   import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
@@ -167,4 +167,4 @@
   </div>
 </Animation.WithScrollFadeIn>
 
-<ContactBanner />
+<ContactBlock />
