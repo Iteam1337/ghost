@@ -33,17 +33,19 @@
       <Typography.ParagraphLg>
         {helpers.splitHTMLOnFirstParagraph(post.html)[0]}
       </Typography.ParagraphLg>
-      <div class="flex w-full items-center mt-8">
+      <div class="flex w-full items-center mt-8 flex-wrap">
         <img
           src={post.primary_author.profile_image}
           alt="author"
-          class="rounded-full w-10 mr-3" />
-        <Typography.ParagraphSm bold={true} spacing={false}>
-          {post.primary_author.name}
-        </Typography.ParagraphSm>
-        <Typography.ParagraphSm spacing={false}>
-          &nbsp;•&nbsp;{moment(post.published_at).format('DD MMMM YYYY')}
-        </Typography.ParagraphSm>
+          class="rounded-full w-8 sm:w-10 mr-3" />
+        <div class="flex flex-row">
+          <Typography.ParagraphSm bold={true} spacing={false}>
+            {post.primary_author.name}
+          </Typography.ParagraphSm>
+          <Typography.ParagraphSm spacing={false}>
+            &nbsp;•&nbsp;{moment(post.published_at).format('DD MMMM YYYY')}
+          </Typography.ParagraphSm>
+        </div>
       </div>
     </div>
   </div>

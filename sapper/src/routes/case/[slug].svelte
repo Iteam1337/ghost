@@ -11,7 +11,6 @@
   import Links from '../../components/links/'
   import ContactBanner from '../../components/ContactBanner.svelte'
   import Layout from '../../components/layout'
-  import ParagraphLg from '../../components/typography/ParagraphLg.svelte'
   import helpers from '../../utils/helpers.js'
 
   export let post
