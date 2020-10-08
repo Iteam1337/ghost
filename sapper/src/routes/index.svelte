@@ -2,7 +2,7 @@
   import { API } from '../services/api.js'
   import Typography from '../components/typography/'
   import ContactBlock from '../components/contact'
-  import FeaturedPosts from '../components/FeaturedPosts.svelte'
+  import FeaturedPost from '../components/FeaturedPost.svelte'
   import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
   import Card from '../components/Card.svelte'
@@ -17,7 +17,7 @@
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session })
-      .Posts.ByTags(['erbjudande', 'case'])
+      .Posts.ByTags(['blog', 'case'])
       .then(({ posts }) => ({ posts }))
   }
 </script>
@@ -50,7 +50,11 @@
       </div>
     </div>
     <Layout.Content>
-      <FeaturedPosts {posts} />
+      <div class="flex flex-col lg:flex-row lg:flex-wrap" style="gap: 1rem;">
+        {#each posts as post}
+          <FeaturedPost {post} />
+        {/each}
+      </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
 </Layout.Page>

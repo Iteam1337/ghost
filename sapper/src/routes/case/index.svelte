@@ -50,7 +50,7 @@
                 class="flex flex-col rounded-md p-4 bg-white">
                 <img
                   class="rounded-md object-cover h-full"
-                  src={post.feature_image}
+                  src={'https://www.k9ofmine.com/wp-content/uploads/2018/10/black-dog-names.jpg'}
                   alt="feature" />
                 <div class="ml-2">
                   <p class="mt-6 font-medium">{post.title}</p>
