@@ -16,26 +16,26 @@ body {
   flex: 1 49%;
 }
 
-.case h3 {
+.post h3 {
   font-weight: 500;
   font-size: 2rem;
   margin-top: 4rem;
   padding: 0 2rem;
 }
 
-.case blockquote {
+.post blockquote {
   padding: 3rem 0;
   font-weight: 500;
   font-size: 1.5rem;
   padding: 0 2rem;
 }
 
-.case p:first-of-type {
+.post p:first-of-type {
   font-weight: 200;
   font-size: 1.5rem;
 }
 
-.case blockquote p {
+.post blockquote p {
   font-size: 1rem;
   font-weight: 300;
   font-style: italic;
@@ -47,25 +47,32 @@ body {
   margin-top: 4rem;
 }
 
-.case p a {
+.blog figure {
+  margin: 4rem 0;
+}
+
+.post p a {
   text-decoration: underline;
 }
 
-.case figure img {
+.post figure img {
   margin: auto;
 }
 
-.case p {
-  padding: 0.5rem 0;
+.blog figure img {
+  margin: auto;
+}
+
+.post p {
+  padding: 0.5rem 2rem;
   font-weight: 300;
   font-size: 1rem;
-  padding: 0 2rem;
 }
 
 @media (min-width: 640px) {
-  .case h3,
-  .case p,
-  .case blockquote {
+  .post h3,
+  .post p,
+  .post blockquote {
     padding: 0 10rem;
   }
 }

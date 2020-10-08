@@ -39,9 +39,8 @@
       <Typography.H1>{post.title}</Typography.H1>
     </div>
   </div>
-  <div class="case pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24">
+  <Layout.Post type="case">
     {@html post.html}
-
     {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
       <div class="px-0 sm:px-32 flex flex-wrap">
         {#each filteredTags as tag}
@@ -49,7 +48,7 @@
         {/each}
       </div>
     {/if}
-  </div>
+  </Layout.Post>
 </Layout.Page>
 
 <ContactBanner
