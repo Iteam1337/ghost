@@ -12,8 +12,9 @@
   import Layout from '../../components/layout'
   import Animation from '../../components/animation'
   import Typography from '../../components/typography/'
-  import ContactBanner from '../../components/ContactBanner.svelte'
+  import ContactBlock from '../../components/contact'
   import helpers from '../../utils/helpers.js'
+
   export let posts
 </script>
 
@@ -66,4 +67,4 @@
   </Animation.WithScrollFadeIn>
 </Layout.Page>
 
-<ContactBanner />
+<ContactBlock.Default />
