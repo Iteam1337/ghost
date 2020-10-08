@@ -1,6 +1,6 @@
 <script>
-  import Typography from './typography/'
-  import Animation from './animation'
+  import Typography from '../typography'
+  import Animation from '../animation'
 
   export let title = 'Nyfiken på vad vi kan göra tillsammans?'
   export let text = ''
