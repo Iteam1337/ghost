@@ -7,7 +7,7 @@
   import YouTubeIcon from '../assets/youtube_icon.svg'
 </script>
 
-<div class="bg-grey-dark px-16 md:px-32">
+<div class="bg-grey-dark px-16 md:px-32 xl:px-48">
   <p class="text-white py-20 max-w-2xl text-lg m-0">
     Vi är en digitaliseringsbyrå med kontor i Stockholm och Göteborg. Vi är 25
     personer som drivs av tre grundläggande värderingar – att göra något bra,
@@ -16,13 +16,12 @@
   <div class="flex items-start md:items-end flex-col md:flex-row">
     <div class="w-2/3 flex flex-col md:flex-row py-10">
       <div>
-        <CityIcon />
+        <div class="mb-4">
+          <CityIcon />
+        </div>
         <p class="text-white font-medium tracking-wide">Iteam Stockholm</p>
         <p class="text-white font-light text-sm leading-7">
-          Östermalmsgatan 26A
-          <br />
-          114 26 Stockholm
-          <br />
+          Östermalmsgatan 26A <br /> 114 26 Stockholm <br />
           <a
             href="https://goo.gl/maps/cVxFADSToWkbwCjBA"
             target="_blank"
@@ -30,21 +29,35 @@
             Google Maps
           </a>
         </p>
+        <p class="text-white font-light text-sm leading-7 mt-3">
+          <a href="tel:08267090">08-26 70 90</a>
+        </p>
+        <p class="text-white font-light text-sm leading-7">
+          <a class="underline" href="mailto:info@iteam.se">info@iteam.se</a>
+        </p>
       </div>
       <div class="pt-20 md:pt-0 md:px-20">
-        <HarborIcon />
+        <div class="mb-4">
+          <HarborIcon />
+        </div>
         <p class="text-white font-medium tracking-wide">Iteam Göteborg</p>
         <p class="text-white font-light text-sm leading-7">
-          Järntorgsgatan 12-14
-          <br />
-          413 01 Göteborg
-          <br />
+          Järntorgsgatan 12-14 <br /> 413 01 Göteborg <br />
           <a
             href="https://goo.gl/maps/fDzuuDuUSxU6jLGb8"
             target="_blank"
             class="underline">
             Google Maps
           </a>
+        </p>
+
+        <p class="text-white font-light text-sm leading-7 mt-3">
+          <a href="tel:0734029112">073-402 91 12</a>
+        </p>
+        <p class="text-white font-light text-sm leading-7">
+          <a
+            class="underline"
+            href="mailto:johanna.grahn@iteam.se">johanna.grahn@iteam.se</a>
         </p>
 
         <div />
@@ -70,6 +83,5 @@
         <YouTubeIcon />
       </a>
     </div>
-
   </div>
 </div>

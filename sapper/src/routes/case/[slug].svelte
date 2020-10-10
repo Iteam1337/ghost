@@ -7,33 +7,49 @@
 </script>
 
 <script>
-  export let post
-
   import Typography from '../../components/typography/'
+  import Links from '../../components/links/'
+  import ContactBlock from '../../components/contact'
+  import Layout from '../../components/layout'
+
+  export let post
+  export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
 </script>
 
 <!-- Ett case -->
 <svelte:head>
   <title>Case | {post.title}</title>
+  <style>
+    body {
+      background-color: white;
+    }
+  </style>
 </svelte:head>
 
-<div class="container py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-  <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
-    <div class="w-1/2">
-      <img src={post.feature_image} alt={post.title} />
-    </div>
-    <div class="flex-initial max-w-md pt-8">
+<Layout.Page>
+  <div class="flex px-8 sm:px-40">
+    <div class="flex-initial">
+      <div class="mb-8 flex flex-wrap">
+        {#each post.tags as tag}
+          {#if tag.slug !== 'case' && tag.visibility === 'public'}
+            <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
+          {/if}
+        {/each}
+      </div>
       <Typography.H1>{post.title}</Typography.H1>
-      <Typography.BaseParagraph class="font-light text-sm">
-        {post.excerpt}
-      </Typography.BaseParagraph>
     </div>
-
   </div>
-  <div class="px-8 md:px-16 lg:px-32 pt-32">
+  <div class="case pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24">
     {@html post.html}
+
+    {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
+      <div class="px-0 sm:px-32 flex flex-wrap">
+        {#each filteredTags as tag}
+          <img src={tag.feature_image} alt={tag.name} />
+        {/each}
+      </div>
+    {/if}
   </div>
-  <div
-    class="flex flex-wrap justify-center my-20 px-20 items-center md:container
-    md:mx-auto space-x-3" />
-</div>
+</Layout.Page>
+
+<ContactBlock.Challenge />
