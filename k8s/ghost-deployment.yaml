@@ -56,10 +56,10 @@ spec:
               value: christian.landgren@iteam.se
             - name: BLOG_TITLE
               value: Iteam
-          image: docker.io/bitnami/ghost:3.33.0-debian-10-r9
+          image: docker.io/bitnami/ghost:3.35.5-debian-10-r1
           imagePullPolicy: IfNotPresent
           name: iteam-ghost
-          command: ["sleep", "3600"]
+          #command: ["sleep", "3600"]
           ports:
             - containerPort: 2368
               name: http
@@ -71,7 +71,7 @@ spec:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
-            - mountPath: /bitnami/ghost
+            - mountPath: /bitnami
               name: iteam-ghost
       dnsPolicy: ClusterFirst
       restartPolicy: Always
@@ -79,6 +79,7 @@ spec:
       securityContext:
         fsGroup: 1001
         runAsUser: 1001
+        runAsGroup: 1001
       terminationGracePeriodSeconds: 30
       volumes:
         - name: iteam-ghost
