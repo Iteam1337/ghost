@@ -73,6 +73,8 @@ spec:
           volumeMounts:
             - mountPath: /bitnami
               name: iteam-ghost
+      nodeSelector:
+        name: k8s3
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
