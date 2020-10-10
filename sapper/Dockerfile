@@ -16,6 +16,6 @@ WORKDIR /app
 COPY --from=0 /app/ .
 
 RUN rm -fr node_modules
-RUN npm install production --no-optional
+RUN npm install --production --no-optional
 
 CMD npm start
