@@ -14,7 +14,7 @@
         class="flex flex-col md:flex-row items-center text-white py-20 md:py-32
           justify-between">
         <div class="mb-12 md:mb-0">
-          <h2 class="text-3xl w-full lg:w-2/3 font-medium tracking-wide mb-10">
+          <h2 class="text-4xl w-full lg:w-2/3 font-medium tracking-wide mb-10">
             {title}
           </h2>
           <div class="lg:w-2/3">
