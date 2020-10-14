@@ -7,15 +7,9 @@ metadata:
   namespace: iteam-se
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 8Gi
   storageClassName: microk8s-hostpath
   volumeMode: Filesystem
-status:
-  accessModes:
-  - ReadWriteOnce
-  capacity:
-    storage: 8Gi
-  phase: Bound
