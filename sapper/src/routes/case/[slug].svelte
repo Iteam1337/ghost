@@ -11,6 +11,7 @@
   import Links from '../../components/links/'
   import ContactBlock from '../../components/contact'
   import Layout from '../../components/layout'
+  import helpers from '../../utils/helpers.js'
 
   export let post
   export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
@@ -29,19 +30,21 @@
 <Layout.Page>
   <div class="flex px-8 sm:px-40">
     <div class="flex-initial">
-      <div class="mb-8 flex flex-wrap">
+      <Typography.H1>{post.title}</Typography.H1>
+      <Typography.ParagraphLg>
+        {helpers.getIngressFromHTMLBlob(post.html)}
+      </Typography.ParagraphLg>
+      <div class="flex flex-wrap mt-8">
         {#each post.tags as tag}
           {#if tag.slug !== 'case' && tag.visibility === 'public'}
             <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
           {/if}
         {/each}
       </div>
-      <Typography.H1>{post.title}</Typography.H1>
     </div>
   </div>
-  <div class="case pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24">
-    {@html post.html}
-
+  <Layout.Post type="case">
+    {@html helpers.getHTMLBlobWithoutIngress(post.html)}
     {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
       <div class="px-0 sm:px-32 flex flex-wrap">
         {#each filteredTags as tag}
@@ -49,7 +52,7 @@
         {/each}
       </div>
     {/if}
-  </div>
+  </Layout.Post>
 </Layout.Page>
 
 <ContactBlock.Challenge />
