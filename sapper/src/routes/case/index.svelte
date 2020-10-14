@@ -53,7 +53,7 @@
                   src={post.feature_image}
                   alt="feature" />
                 <div class="ml-2">
-                  <p class="mt-6 font-medium">{post.title}</p>
+                  <p class="mt-6 text-lg font-medium">{post.title}</p>
                   <Typography.ParagraphSm spacing={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Typography.ParagraphSm>
