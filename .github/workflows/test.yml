@@ -18,8 +18,10 @@ jobs:
         with:
           node-version: 14
       - run: node -v
+
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
