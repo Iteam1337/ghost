@@ -52,8 +52,8 @@
                   class="rounded-md object-cover h-full"
                   src={post.feature_image}
                   alt="feature" />
-                <div class="ml-2">
-                  <p class="mt-6 text-xl font-medium">{post.title}</p>
+                <div class="ml-2 mt-6">
+                  <Typography.H3>{post.title}</Typography.H3>
                   <Typography.ParagraphMd spacing={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Typography.ParagraphMd>
