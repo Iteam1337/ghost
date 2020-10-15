@@ -4,7 +4,7 @@
   import Typography from '../components/typography/'
 </script>
 
-<div class="bg-grey-medium rounded-lg my-2 mx-2 px-2 " style="width: 170px;">
+<div class="bg-grey-medium rounded-lg px-2" style="width: 200px;">
   <div class="flex justify-center pb-4 pt-6 h-24">
     <svelte:component this={symbol} />
   </div>

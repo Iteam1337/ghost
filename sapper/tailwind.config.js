@@ -7,6 +7,9 @@ module.exports = {
   purge: ['./src/**/*.svelte'],
   theme: {
     extend: {
+      screens: {
+        xxl: '1600px',
+      },
       boxShadow: {
         hover:
           '0 0px 17px 0px rgba(0, 0, 0, 0.1), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
@@ -14,8 +17,8 @@ module.exports = {
           '0 0px 17px 0px rgba(0, 0, 0, 0.05), 0 0px 0px 0px rgba(0, 0, 0, 0.07)',
       },
       flex: {
-        customwide: '1 49%',
-        customnarrow: ' 1 1 calc((100% / 3) - 5rem)',
+        customwide: '1 48%',
+        customnarrow: '1 1 calc((100% / 3) - 5rem)',
       },
       margin: {
         heading: '0 0 0.3em 0;',

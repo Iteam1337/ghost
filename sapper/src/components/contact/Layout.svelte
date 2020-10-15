@@ -1,5 +1,6 @@
 <script>
   import Typography from '../typography'
+  import Buttons from '../buttons'
   import Animation from '../animation'
 
   export let title = 'Nyfiken på vad vi kan göra tillsammans?'
@@ -21,10 +22,8 @@
             <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
           </div>
           <div class="mt-10">
-            <a
-              class="bg-blue-cornflower text-white py-2 px-10 rounded-full"
-              href="/contact">
-              {ctaText}
+            <a href="/contact">
+              <Buttons.Default>{ctaText}</Buttons.Default>
             </a>
           </div>
         </div>

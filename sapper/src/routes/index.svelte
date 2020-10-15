@@ -12,6 +12,7 @@
   import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
   import IteamA from '../assets/illustrations/a.svg'
   import Layout from '../components/layout'
+  import Buttons from '../components/buttons'
 
   import Animation from '../components/animation'
 
@@ -61,17 +62,19 @@
 
 <!-- Tjänster -->
 <div
-  class="bg-grey-dark w-screen text-center text-white py-20 sm:px-32 lg:px-20">
+  class="bg-grey-dark text-center text-white py-20 sm:px-32 lg:px-20">
   <Animation.WithScrollFadeIn>
     <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
-    <p class="text-base font-light tracking-wider my-4 mx-6 lg:mx-20 lg:px-16">
-      Vi erbjuder dig ett självgående team som utvecklar din produkt. Man säga
-      att du hyr din egen startup. Det inspirerar din organisation att tänka på
-      nya sätt och leder till en bättre affär.
-    </p>
+    <div class="mt-4 inline-block lg:w-1/2 text-center">
+      <Typography.ParagraphMd>
+        Vi erbjuder dig ett självgående team som utvecklar din produkt. Man säga
+        att du hyr din egen startup. Det inspirerar din organisation att tänka på
+        nya sätt och leder till en bättre affär.
+      </Typography.ParagraphMd>
+    </div>
 
     <div class="container mb-8 mt-16">
-      <div class="flex flex-wrap justify-center px-8 md:px-12">
+      <div class="flex flex-wrap justify-center px-8 md:px-12 gap-4">
         <Card
           symbol={BeakerSymbol}
           title={'User research'}
@@ -98,10 +101,13 @@
           text={'Lorem ipsum dolor sit meow meow meow.'} />
       </div>
     </div>
-
-    <a class="border px-16 py-4 rounded-full text-white" href="/services">
-      Alla tjänster
-    </a>
+    <div class="mt-12">
+      <a href="/services">
+        <Buttons.Transparent>
+          Alla tjänster
+        </Buttons.Transparent>
+      </a>
+    </div>
   </Animation.WithScrollFadeIn>
 </div>
 
