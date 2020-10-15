@@ -32,27 +32,33 @@
 
 <Layout.Page>
   <Animation.WithScrollFadeIn>
-    <div
-      class="flex flex-col md:flex-row-reverse justify-between px-8 md:px-16
-        lg:px-32">
-      <div class="w-1/2">
-        <FeaturedImageIteam />
-      </div>
-      <div class="flex-initial max-w-md pt-8">
-        <Typography.H1>Kod, kultur och strategi</Typography.H1>
-        <Typography.ParagraphMd>
-          Genom agilitet, användarfokus och i nära samarbete med våra kunder
-          skapar vi digital innovation.
-        </Typography.ParagraphMd>
-        <div class="mt-8">
-          <a href="/contact">
-            <Animation.ButtonHover>
-              <Buttons.Default>Starta ett projekt</Buttons.Default>
-            </Animation.ButtonHover>
-          </a>
+    <div class="pt-8 mx-2 md:mx-10 lg:mx-20">
+      <div
+        class="flex flex-col lg:flex-row justify-between px-8 md:px-16
+        lg:px-32 w-full">
+        <div>
+          <div class="flex-initial max-w-md pt-8">
+            <Typography.H1>Kod, kultur och strategi</Typography.H1>
+            <Typography.ParagraphMd>
+              Genom agilitet, användarfokus och i nära samarbete med våra kunder
+              skapar vi digital innovation.
+            </Typography.ParagraphMd>
+
+            <div class="mt-8">
+              <a href="/contact">
+                <Animation.ButtonHover>
+                  <Buttons.Default>Starta ett projekt</Buttons.Default>
+                </Animation.ButtonHover>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-w-xl self-center mt-8 lg:mt-0">
+          <FeaturedImageIteam />
         </div>
       </div>
     </div>
+
     <Layout.Content>
       <div class="flex flex-col lg:flex-row lg:flex-wrap" style="gap: 1rem;">
         {#each posts as post}
