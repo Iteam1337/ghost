@@ -19,7 +19,8 @@
               alt="feature" />
             <div class="absolute" style="bottom: 1rem; left: 1rem;">
               {#each post.tags as tag}
-                <div class="inline-block bg-white rounded-md px-2 py-1 mr-1">
+                <div
+                  class="inline-block bg-white rounded-md px-2 py-1 mr-1 mb-1">
                   <p class="font-medium text-xs">{tag.name}</p>
                 </div>
               {/each}

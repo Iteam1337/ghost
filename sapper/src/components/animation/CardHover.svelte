@@ -12,6 +12,6 @@
   on:touchend={() => (active = false)}
   on:mouseenter={handleHover}
   on:mouseleave={handleHover}
-  class="inline-block transform transition duration-150 ease-in {active ? 'shadow-hover' : 'shadow-featured'}">
+  class="inline-block transform transition duration-150 ease-in w-full {active ? 'shadow-hover' : 'shadow-featured'}">
   <slot />
 </div>
