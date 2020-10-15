@@ -26,7 +26,7 @@
 <Layout.Page>
   <Animation.WithScrollFadeIn>
     <div class="flex flex-col px-8 md:px-16 lg:px-32">
-      <div class="max-w-4xl pt-8">
+      <div class="max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
         <Typography.H1>Våra case</Typography.H1>
         <Typography.ParagraphMd>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
@@ -52,11 +52,11 @@
                   class="rounded-md object-cover h-full"
                   src={'https://www.k9ofmine.com/wp-content/uploads/2018/10/black-dog-names.jpg'}
                   alt="feature" />
-                <div class="ml-2">
-                  <p class="mt-6 font-medium">{post.title}</p>
-                  <Typography.ParagraphSm spacing={false}>
+                <div class="ml-2 mt-6">
+                  <Typography.H3>{post.title}</Typography.H3>
+                  <Typography.ParagraphMd spacing={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Typography.ParagraphSm>
+                  </Typography.ParagraphMd>
                 </div>
               </div>
             </a>

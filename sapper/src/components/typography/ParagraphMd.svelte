@@ -1,3 +1,3 @@
-<p class="font-light tracking-wide">
+<p class="font-light text-xl tracking-wide">
   <slot />
 </p>
