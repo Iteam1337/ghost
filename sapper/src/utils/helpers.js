@@ -7,4 +7,16 @@ const getRouteFromPostTag = (tag) => {
   }
 }
 
-export default { getRouteFromPostTag }
+const getIngressFromHTMLBlob = (post) => {
+  const [, ingress] = post.match(/<p>(.*?)<\/p>/)
+
+  return ingress
+}
+
+const getHTMLBlobWithoutIngress = (post) => post.replace(/<p>(.*?)<\/p>/, '')
+
+export default {
+  getRouteFromPostTag,
+  getIngressFromHTMLBlob,
+  getHTMLBlobWithoutIngress,
+}

@@ -1,0 +1,8 @@
+apiVersion: skaffold/v2alpha4
+kind: Config
+metadata:
+  name: iteam.se
+deploy:
+  kubectl:
+    manifests:
+      - k8s/once/*.yaml

@@ -13,6 +13,11 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: node -v
       - name: Checkout
         uses: actions/checkout@v2
       - name: Cypress run
@@ -22,13 +27,14 @@ jobs:
           working-directory: sapper
           start: npm run dev
           wait-on: "http://localhost:3000"
+          tag: node-14
 
   build:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
