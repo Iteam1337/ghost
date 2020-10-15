@@ -4,6 +4,6 @@
 </script>
 
 <button
-  class={`${background} ${textColor} px-16 py-4 rounded-full tracking-wide`}>
+  class={`${background} ${textColor} px-12 py-3 rounded-full tracking-wide`}>
   <slot />
 </button>

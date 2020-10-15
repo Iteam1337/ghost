@@ -3,7 +3,6 @@
   import Typography from '../components/typography/'
   import ContactBlock from '../components/contact'
   import FeaturedPost from '../components/FeaturedPost.svelte'
-  import Links from '../components/links'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
   import Card from '../components/Card.svelte'
   import BeakerSymbol from '../assets/illustrations/beakers.svg'
@@ -41,13 +40,17 @@
       </div>
       <div class="flex-initial max-w-md pt-8">
         <Typography.H1>Kod, kultur och strategi</Typography.H1>
-        <Typography.ParagraphSm>
+        <Typography.ParagraphMd>
           Genom agilitet, användarfokus och i nära samarbete med våra kunder
           skapar vi digital innovation.
-        </Typography.ParagraphSm>
-        <Links.ArrowTextLink to="/about">
-          Så här går det till
-        </Links.ArrowTextLink>
+        </Typography.ParagraphMd>
+        <div class="mt-8">
+          <a href="/contact">
+            <Animation.ButtonHover>
+              <Buttons.Default>Starta ett projekt</Buttons.Default>
+            </Animation.ButtonHover>
+          </a>
+        </div>
       </div>
     </div>
     <Layout.Content>
@@ -102,11 +105,13 @@
       </div>
     </div>
     <div class="mt-12">
+      <Animation.ButtonHover transparentButton>
       <a href="/services">
-        <Buttons.Transparent>
-          Alla tjänster
-        </Buttons.Transparent>
-      </a>
+          <Buttons.Transparent>
+            Alla tjänster
+          </Buttons.Transparent>
+        </a>
+      </Animation.ButtonHover>
     </div>
   </Animation.WithScrollFadeIn>
 </div>

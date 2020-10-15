@@ -22,9 +22,11 @@
             <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
           </div>
           <div class="mt-10">
-            <a href="/contact">
-              <Buttons.Default>{ctaText}</Buttons.Default>
-            </a>
+            <Animation.ButtonHover>
+              <a href="/contact">
+                <Buttons.Default>{ctaText}</Buttons.Default>
+              </a>
+            </Animation.ButtonHover>
           </div>
         </div>
         <slot />
