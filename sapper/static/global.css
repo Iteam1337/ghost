@@ -65,7 +65,8 @@ body {
 
 .post h3,
 .post p,
-.post blockquote {
+.post blockquote,
+.post ul {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
@@ -76,7 +77,8 @@ body {
 @media (min-width: 768px) {
   .post h3,
   .post p,
-  .post blockquote {
+  .post blockquote,
+  .post ul {
     padding: 0 4rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -86,7 +88,8 @@ body {
 @media (min-width: 1024px) {
   .post h3,
   .post p,
-  .post blockquote {
+  .post blockquote,
+  .post ul {
     padding: 0 8rem;
     margin-left: 5rem;
     margin-right: 5rem;
