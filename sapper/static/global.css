@@ -20,14 +20,12 @@ body {
   font-weight: 500;
   font-size: 2rem;
   margin-top: 4rem;
-  padding: 0 2rem;
 }
 
 .post blockquote {
   padding: 3rem 0;
   font-weight: 500;
   font-size: 1.5rem;
-  padding: 0 2rem;
 }
 
 .post blockquote p {
@@ -67,16 +65,45 @@ body {
 }
 
 .post p {
-  padding: 0.5rem 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-weight: 300;
   font-size: 1rem;
 }
 
-@media (min-width: 640px) {
+.post figcaption,
+.post h3,
+.post p,
+.post blockquote,
+.post ul {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .post figcaption,
   .post h3,
   .post p,
   .post blockquote,
-  .post figcaption {
-    padding: 0 10rem;
+  .post ul {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .post figcaption,
+  .post h3,
+  .post p,
+  .post blockquote,
+  .post ul {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
   }
 }
