@@ -28,12 +28,12 @@
     <div class="flex flex-col px-8 md:px-16 lg:px-32">
       <div class="max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
         <Typography.H1>Våra case</Typography.H1>
-        <Typography.ParagraphMd>
+        <Typography.ParagraphLg>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
           consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
           in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
           Vitae, aliquet dui et, velit consequat.
-        </Typography.ParagraphMd>
+        </Typography.ParagraphLg>
       </div>
     </div>
     <Layout.Content>

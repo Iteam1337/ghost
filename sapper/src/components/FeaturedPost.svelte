@@ -1,6 +1,7 @@
 <script>
   import helpers from '../utils/helpers'
   import Animation from './animation'
+  import Typography from './typography'
   export let post
 </script>
 
@@ -25,7 +26,7 @@
             {/each} -->
           </div>
           <div class="ml-2">
-            <p class="mt-4 font-medium">{post.title}</p>
+            <Typography.H3>{post.title}</Typography.H3>
           </div>
         </div>
       </div>

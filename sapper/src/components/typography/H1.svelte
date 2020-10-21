@@ -1,3 +1,3 @@
-<h1 class="m-heading font-medium text-4xl leading-tight">
+<h1 class="m-heading font-medium text-h1 leading-tight">
   <slot />
 </h1>

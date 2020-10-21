@@ -16,11 +16,18 @@ body {
   flex: 1 49%;
 }
 
+.post h2,
 .post h3 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-top: 4rem;
   padding: 0 2rem;
+}
+
+.post p {
+  padding: 0.5rem 2rem;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 .post blockquote {
@@ -58,16 +65,19 @@ body {
   margin: auto;
 }
 
-.post p {
-  padding: 0.5rem 2rem;
-  font-weight: 300;
-  font-size: 1rem;
-}
-
 @media (min-width: 640px) {
   .post h3,
   .post p,
   .post blockquote {
     padding: 0 10rem;
+  }
+
+  .post p {
+    font-size: 1.25rem;
+  }
+
+  .post h3,
+  .post h2 {
+    font-size: 2.1rem;
   }
 }
