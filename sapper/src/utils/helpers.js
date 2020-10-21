@@ -4,6 +4,8 @@ const getRouteFromPostTag = (tag) => {
       return 'services'
     case 'case':
       return 'case'
+    case 'blog':
+      return 'blog'
   }
 }
 
