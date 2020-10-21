@@ -44,14 +44,15 @@ body {
 }
 
 .post li {
-  padding: 0.5rem 0;
+  margin-top: 0.75rem;
   font-weight: 300;
   font-size: 1rem;
 }
 
 .case figure {
   background-color: #fcfbfb;
-  margin-top: 4rem;
+  margin: 4rem 0;
+  padding: 4rem 0;
 }
 
 .blog figure {
@@ -72,26 +73,36 @@ body {
 
 @media (min-width: 640px) {
   .post h3,
+  .post h2,
   .post p {
-    padding: 1rem 10rem;
+    padding: 0 10rem;
+  }
+
+  .post h3,
+  .post h2 {
+    margin: 1.5 0 0;
   }
 
   .post blockquote {
-    padding: 4rem 12rem;
+    padding: 0 12rem;
+    margin: 4rem 0;
     font-size: 1.5rem;
   }
 
-  .post p,
-  .post li {
+  .post p {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
     font-size: 1.25rem;
   }
 
   .post ul {
     padding: 0 12rem;
+    margin-bottom: 2.5rem;
   }
 
   .post li {
-    padding: 0.5rem 0;
+    margin-top: 1rem;
+    font-size: 1.25rem;
   }
 
   .post h3,
