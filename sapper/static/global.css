@@ -30,10 +30,11 @@ body {
 }
 
 .post blockquote {
-  padding: 3rem 3rem;
+  padding: 0.5rem 2rem;
   font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
+  margin: 1.5rem 1.5rem;
 }
 
 .post ul {
@@ -106,6 +107,12 @@ body {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
+
+  .post blockquote {
+    margin: 2rem 3rem;
+    padding: 0 4rem;
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -113,7 +120,6 @@ body {
   .post h3,
   .post h2,
   .post p,
-  .post blockquote,
   .post ul {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -127,8 +133,8 @@ body {
   }
 
   .post blockquote {
-    padding: 0 12rem;
-    margin: 4rem 0;
+    margin: 4rem 5.5rem;
+    padding: 0 8rem;
     font-size: 1.5rem;
   }
 
@@ -139,7 +145,6 @@ body {
   }
 
   .post ul {
-    padding: 0 12rem;
     margin-bottom: 2.5rem;
   }
 
