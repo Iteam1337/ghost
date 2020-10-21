@@ -38,6 +38,17 @@ body {
   font-style: italic;
 }
 
+.post ul {
+  padding: 0 4rem;
+  list-style: disc;
+}
+
+.post li {
+  padding: 0.5rem 0;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
 .case figure {
   background-color: #fcfbfb;
   margin-top: 4rem;
@@ -62,7 +73,7 @@ body {
 @media (min-width: 640px) {
   .post h3,
   .post p {
-    padding: 0 10rem;
+    padding: 1rem 10rem;
   }
 
   .post blockquote {
@@ -70,8 +81,17 @@ body {
     font-size: 1.5rem;
   }
 
-  .post p {
+  .post p,
+  .post li {
     font-size: 1.25rem;
+  }
+
+  .post ul {
+    padding: 0 12rem;
+  }
+
+  .post li {
+    padding: 0.5rem 0;
   }
 
   .post h3,
