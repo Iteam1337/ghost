@@ -46,6 +46,14 @@ body {
   margin: 4rem 0;
 }
 
+.post figcaption {
+  padding: 0.5rem 2rem;
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
 .post p a {
   text-decoration: underline;
 }
@@ -67,7 +75,8 @@ body {
 @media (min-width: 640px) {
   .post h3,
   .post p,
-  .post blockquote {
+  .post blockquote,
+  .post figcaption {
     padding: 0 10rem;
   }
 }

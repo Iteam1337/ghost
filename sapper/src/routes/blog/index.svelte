@@ -9,28 +9,55 @@
 </script>
 
 <script>
+  import Layout from '../../components/layout'
+  import Animation from '../../components/animation'
+  import Typography from '../../components/typography/'
+  import ContactBlock from '../../components/contact'
+  import helpers from '../../utils/helpers.js'
+
   export let posts
 </script>
-
-<style>
-  ul {
-    margin: 0 0 1em 0;
-    line-height: 1.5;
-  }
-</style>
 
 <svelte:head>
   <title>Iteam | Blog</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<Layout.Page>
+  <Animation.WithScrollFadeIn>
+    <div class="flex flex-col px-8 md:px-16 lg:px-32">
+      <div class="max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
+        <Typography.H1>Artiklar</Typography.H1>
+        <Typography.ParagraphMd>
+          Vi delar med oss av våra insikter och lärdomar om hur vi skapar tjänster som gör skillnad.
+        </Typography.ParagraphMd>
+      </div>
+    </div>
+    <Layout.Content>
+      <div
+        class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3
+          gap-6">
+        {#each posts as post}
+          <Animation.CardHover>
+            <a
+              rel="prefetch"
+              href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
+              <div
+                style="height: 407px;"
+                class="flex flex-col rounded-md p-4 bg-white">
+                <img
+                  class="rounded-md object-cover h-full"
+                  src={post.feature_image}
+                  alt="feature" />
+                <div class="ml-2 mt-6">
+                  <Typography.H3>{post.title}</Typography.H3>
+                </div>
+              </div>
+            </a>
+          </Animation.CardHover>
+        {/each}
+      </div>
+    </Layout.Content>
+  </Animation.WithScrollFadeIn>
+</Layout.Page>
 
-<ul>
-  {#each posts as post}
-    <!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-    <li><a rel="prefetch" href="blog/{post.slug}">{post.title}</a></li>
-  {/each}
-</ul>
+<ContactBlock.Default />
