@@ -63,7 +63,6 @@ body {
   font-size: 1rem;
 }
 
-.post div,
 .post h3,
 .post p,
 .post blockquote,
@@ -74,12 +73,7 @@ body {
   margin-right: 0.5rem;
 }
 
-.post div {
-  flex-direction: inherit;
-}
-
 @media (min-width: 768px) {
-  .post div,
   .post h3,
   .post p,
   .post blockquote,
@@ -92,7 +86,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .post div,
   .post h3,
   .post p,
   .post blockquote,
