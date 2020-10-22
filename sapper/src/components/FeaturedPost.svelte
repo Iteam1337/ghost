@@ -2,6 +2,7 @@
   import helpers from '../utils/helpers'
   import Animation from './animation'
   export let post
+
 </script>
 
 <div
@@ -15,7 +16,7 @@
           <div class="relative" style="height: 90%;">
             <img
               class={`rounded-md object-cover h-full ${post.primary_tag.slug === 'erbjudande' ? 'w-full' : 'w-full'}`}
-              src={'https://www.k9ofmine.com/wp-content/uploads/2018/10/black-dog-names.jpg'}
+              src={post.feature_image}
               alt="feature" />
             <div class="absolute" style="bottom: 1rem; left: 1rem;">
               {#each post.tags as tag}
