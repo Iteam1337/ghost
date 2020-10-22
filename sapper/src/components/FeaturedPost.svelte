@@ -15,7 +15,7 @@
         <div class="h-full">
           <div class="relative" style="height: 90%;">
             <img
-              class={`rounded-md object-cover h-full ${post.primary_tag.slug === 'erbjudande' ? 'w-full' : 'w-full'}`}
+              class="rounded-md object-cover h-full w-full"
               src={post.feature_image}
               alt="feature" />
             <div class="absolute" style="bottom: 1rem; left: 1rem;">
