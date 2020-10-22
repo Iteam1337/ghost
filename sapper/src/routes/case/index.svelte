@@ -52,7 +52,7 @@
                   <img
                     class="rounded-md object-cover h-full"
                     src={post.feature_image}
-                    alt="feature" />
+                    alt="featured case graphic" />
                   <div class="ml-2 mt-6">
                     <Typography.H3>{post.title}</Typography.H3>
                     <Typography.ParagraphMd>
