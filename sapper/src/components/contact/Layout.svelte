@@ -1,6 +1,7 @@
 <script>
   import Typography from '../typography'
   import Animation from '../animation'
+  import Button from '../Button.svelte'
 
   export let title = 'Nyfiken på vad vi kan göra tillsammans?'
   export let text = ''
@@ -21,11 +22,7 @@
             <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
           </div>
           <div class="mt-10">
-            <a
-              class="bg-blue-cornflower text-white py-5 px-20 rounded-full"
-              href="/contact">
-              {ctaText}
-            </a>
+            <Button link={'/contact'} text={ctaText} />
           </div>
         </div>
         <slot />
