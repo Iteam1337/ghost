@@ -19,7 +19,7 @@
 
 <!-- Ett case -->
 <svelte:head>
-  <title>Case | {post.title}</title><style ✂prettier:content✂="CiAgICBib2R5IHsKICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7CiAgICB9CiAg"></style></svelte:head>
+  <title>Case | {post.title}</title></svelte:head>
 
 <Layout.Page>
   <div class="flex px-8 sm:px-40">

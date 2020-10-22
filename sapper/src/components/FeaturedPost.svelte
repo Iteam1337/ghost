@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class={`bg-white rounded-md ${post.primary_tag.slug === 'blog' ? 'md:flex-customnarrow lg:flex-customwide' : 'lg:flex-customwide xl:flex-customnarrow'}`}>
+  class={`bg-white rounded-md ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide xl:flex-customnarrow'}`}>
   <Animation.CardHover>
     <div class="p-4" style="height: 468px;">
       <a
@@ -20,7 +20,7 @@
             <div class="absolute" style="bottom: 1rem; left: 1rem;">
               {#each post.tags as tag}
                 <div
-                  class="inline-block bg-white rounded-md px-2 py-1 mr-1 mb-1">
+                  class="inline-block bg-white rounded-md px-2 py-1 mr-2 mb-2">
                   <p class="font-medium text-xs">{tag.name}</p>
                 </div>
               {/each}

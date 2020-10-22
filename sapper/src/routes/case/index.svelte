@@ -24,19 +24,25 @@
 </svelte:head>
 
 <Layout.Page>
+  <div
+      class="flex flex-col lg:flex-row justify-between w-full max-w-screen-lg mx-auto px-8 md:px-24">
+      
   <Animation.WithScrollFadeIn>
     <div class="flex flex-col px-8 md:px-16 lg:px-32">
-      <div class="max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
+      <Layout.Text>
         <Typography.H1>Våra case</Typography.H1>
-        <Typography.ParagraphMd>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
-          consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
-          in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
-          Vitae, aliquet dui et, velit consequat.
-        </Typography.ParagraphMd>
-      </div>
+        <div class="max-w-4xl">
+          <Typography.ParagraphMd>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
+            consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
+            in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
+            Vitae, aliquet dui et, velit consequat.
+          </Typography.ParagraphMd>
+        </div>
+      </Layout.Text>
     </div>
     <Layout.Content>
+      
       <div
         class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3
           gap-6">
@@ -54,7 +60,7 @@
                   alt="feature" />
                 <div class="ml-2 mt-6">
                   <Typography.H3>{post.title}</Typography.H3>
-                  <Typography.ParagraphMd spacing={false}>
+                  <Typography.ParagraphMd>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Typography.ParagraphMd>
                 </div>
@@ -65,6 +71,7 @@
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
+</div>
 </Layout.Page>
 
 <ContactBlock.Default />

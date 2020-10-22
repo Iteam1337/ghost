@@ -1,6 +1,6 @@
 <script>
   let active = false
-  let transparentButton = false
+  export let transparentButton = false
 
   const handleHover = (e) => {
     e.preventDefault()
