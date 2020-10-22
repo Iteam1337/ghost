@@ -12,6 +12,8 @@
   import moment from 'moment'
   import ContactBlock from '../../components/contact/'
   import helpers from '../../utils/helpers'
+  import Animation from '../../components/animation/'
+
   export let post
 
   const bio = post.primary_author.bio?.split('\n') ?? []
@@ -26,9 +28,12 @@
   </style>
 </svelte:head>
 
+
 <Layout.Page>
-  <div class="flex px-8 sm:px-40">
-    <div class="flex-initial">
+  <Animation.WithScrollFadeIn>
+  
+  <Layout.Content>
+    <div class="sm:px-24">
       <Typography.H1>{post.title}</Typography.H1>
       <Typography.ParagraphLg>
         {helpers.getIngressFromHTMLBlob(post.html)}
@@ -47,16 +52,17 @@
         </div>
       </div>
     </div>
-  </div>
+  </Layout.Content>
+  </Animation.WithScrollFadeIn>
 
   <Layout.Post type="blog">
-    {@html helpers.getHTMLBlobWithoutIngress(post.html)}
-  </Layout.Post>
-
-  <div class="px-8 md:px-16 lg:px-32">
-    <div class="px-2 sm:px-8">
+    <div class="sm:px-24">
+      {@html helpers.getHTMLBlobWithoutIngress(post.html)}
+    </div>
+  
+    <div class="px-2 sm:px-8 mt-24">
       <Typography.H4>{post.primary_author.name}</Typography.H4>
-      <Typography.ParagraphSm>
+      <Typography.ParagraphSm spacing={false}>
         {#each bio as line}
           {#if line.includes('@')}
             <a href={`mailto:${line}`} class="underline">{line}</a>
@@ -65,7 +71,9 @@
         {/each}
       </Typography.ParagraphSm>
     </div>
-  </div>
+  </Layout.Post>
+
+  
 </Layout.Page>
 
 <ContactBlock.Default />

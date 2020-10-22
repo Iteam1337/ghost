@@ -8,7 +8,7 @@
   export let ctaText = 'Hör av dig'
 </script>
 
-<div class="bg-grey-medium w-full ">
+<div class="bg-grey-medium w-full px-8">
   <div class="max-w-screen-lg mx-auto">
     <Animation.WithScrollFadeIn threshold={0.5}>
       <div class="container">
