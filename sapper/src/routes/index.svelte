@@ -55,7 +55,9 @@
     </Layout.Content>
 
     <Layout.Content>
-      <div class="flex flex-col md:flex-row md:flex-wrap " style="gap: 1rem;">
+      <div
+        class="flex flex-col md:flex-row md:flex-wrap md:px-8 lg:px-0"
+        style="gap: 1rem;">
         {#each posts as post}
           <FeaturedPost {post} />
         {/each}

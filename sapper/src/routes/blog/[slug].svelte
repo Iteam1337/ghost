@@ -28,11 +28,10 @@
   </style>
 </svelte:head>
 
-
 <Layout.Page>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
-      <div class="sm:px-24">
+      <div class="sm:px-16 md:px-24">
         <Typography.H1>{post.title}</Typography.H1>
         <Typography.ParagraphLg>
           {helpers.getIngressFromHTMLBlob(post.html)}
@@ -46,7 +45,8 @@
             <Typography.H4>{post.primary_author.name}</Typography.H4>
             &nbsp;
             <Typography.ParagraphSm spacing={false}>
-              • {moment(post.published_at).format('DD MMMM YYYY')}
+              •
+              {moment(post.published_at).format('DD MMMM YYYY')}
             </Typography.ParagraphSm>
           </div>
         </div>
@@ -58,8 +58,9 @@
     <div class="sm:px-24">
       {@html helpers.getHTMLBlobWithoutIngress(post.html)}
     </div>
-  
-    <div class="px-2 sm:px-8 mt-24">
+  </Layout.Post>
+  <div class="px-8 md:px-0 max-w-screen-lg mx-auto w-full">
+    <div class="mt-24 sm:px-16 md:px-24">
       <Typography.H4>{post.primary_author.name}</Typography.H4>
       <Typography.ParagraphSm spacing={false}>
         {#each bio as line}
@@ -70,7 +71,7 @@
         {/each}
       </Typography.ParagraphSm>
     </div>
-  </Layout.Post>  
+  </div>
 </Layout.Page>
 
 <ContactBlock.Default />

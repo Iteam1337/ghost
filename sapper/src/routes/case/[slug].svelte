@@ -21,34 +21,34 @@
 <!-- Ett case -->
 <svelte:head>
   <title>Case | {post.title}</title></svelte:head>
-  <Animation.WithScrollFadeIn>
+<Animation.WithScrollFadeIn>
   <Layout.Page>
     <Layout.Content>
-      <div class="sm:px-24">
+      <div class="sm:px-16 md:px-24">
         <Typography.H1>{post.title}</Typography.H1>
         <Typography.ParagraphLg>
           {helpers.getIngressFromHTMLBlob(post.html)}
         </Typography.ParagraphLg>
         <div class="flex flex-wrap mt-8">
           {#each post.tags as tag}
-          {#if tag.slug !== 'case' && tag.visibility === 'public'}
-            <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
-          {/if}
+            {#if tag.slug !== 'case' && tag.visibility === 'public'}
+              <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
+            {/if}
           {/each}
         </div>
       </div>
     </Layout.Content>
     <Layout.Post type="case">
-      <div class="sm:px-24">
-        {@html helpers.getHTMLBlobWithoutIngress(post.html)}
-        {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
+      {@html helpers.getHTMLBlobWithoutIngress(post.html)}
+      {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
+        <div class="sm:px-16">
           <div class="flex flex-wrap max-w-4xl">
             {#each filteredTags as tag}
               <img src={tag.feature_image} alt={tag.name} />
             {/each}
           </div>
-        {/if}
-      </div>
+        </div>
+      {/if}
     </Layout.Post>
   </Layout.Page>
 </Animation.WithScrollFadeIn>

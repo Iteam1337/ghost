@@ -23,17 +23,22 @@ body {
   margin-top: 4rem;
 }
 
+.post p {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
 .post blockquote {
   padding: 0.5rem 2rem;
   font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
+  margin: 1.5rem 1.5rem;
 }
 
 .post ul {
   padding: 0 4rem;
   list-style: disc;
-  margin-bottom: 1rem;
 }
 
 .post li {
@@ -44,8 +49,9 @@ body {
 
 .case figure {
   background-color: #fcfbfb;
-  margin: 4rem 0;
   padding: 4rem 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .blog figure {
@@ -58,6 +64,12 @@ body {
   font-size: 0.95rem;
   margin-top: 0.5rem;
   text-align: center;
+}
+
+.post > *:not(figure) {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post p a {
@@ -73,16 +85,34 @@ body {
 }
 
 .post p {
-  font-weight: 300;
-  font-size: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-weight: 300;
   font-size: 1rem;
 }
 
-@media (min-width: 768px) {
+.post figcaption,
+.post h3,
+.post p,
+.post blockquote,
+.post ul {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 640px) {
+  .post figcaption,
+  .post h3,
+  .post p,
+  .post blockquote,
+  .post ul {
+    padding-left: 5.75rem;
+    padding-right: 5.75rem;
+  }
+
   .post blockquote {
+    margin: 2rem 3rem;
+    padding: 0 4rem;
     font-size: 1.5rem;
   }
 }
@@ -93,9 +123,15 @@ body {
     margin: 1.5 0 0;
   }
 
+  .post blockquote {
+    margin: 4rem auto;
+    padding: 0 8rem;
+    font-size: 1.5rem;
+  }
+
   .post p {
     margin-top: 1rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
     font-size: 1.25rem;
   }
 
