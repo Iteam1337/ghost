@@ -24,7 +24,7 @@ module.exports = {
         heading: '0 0 0.3em 0;',
       },
       fontSize: {
-        h1: '2em',
+        h1: '2.5em',
       },
       colors: {
         beige: '#fcfbfb',

@@ -1,6 +1,7 @@
 <script>
   import helpers from '../utils/helpers'
   import Animation from './animation'
+  import Typography from './typography'
   export let post
 
 </script>
@@ -12,7 +13,7 @@
       <a
         rel="prefetch"
         href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
-        <div class="h-full pb-4">
+        <div class="h-full">
           <div class="relative" style="height: 90%;">
             <img
               class={`rounded-md object-cover h-full ${post.primary_tag.slug === 'erbjudande' ? 'w-full' : 'w-full'}`}
@@ -26,8 +27,8 @@
                 </div>
               {/each}
             </div>
-            <div class="ml-2">
-              <p class="mt-4 font-medium">{post.title}</p>
+            <div class="ml-2 mt-4">
+              <Typography.H3>{post.title}</Typography.H3>
             </div>
           </div>
         </div>

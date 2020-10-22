@@ -22,8 +22,8 @@
   <title>Case | {post.title}</title></svelte:head>
 
 <Layout.Page>
-  <div class="flex px-8 sm:px-40">
-    <div class="flex-initial">
+  <div class="flex flex-col px-8 md:px-16 lg:px-32">
+    <div class="max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
       <Typography.H1>{post.title}</Typography.H1>
       <Typography.ParagraphLg>
         {helpers.getIngressFromHTMLBlob(post.html)}
@@ -40,10 +40,12 @@
   <Layout.Post type="case">
     {@html helpers.getHTMLBlobWithoutIngress(post.html)}
     {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
-      <div class="px-0 sm:px-32 flex flex-wrap">
-        {#each filteredTags as tag}
-          <img src={tag.feature_image} alt={tag.name} />
-        {/each}
+      <div class="px-8 md:px-16 lg:px-32">
+        <div class="flex flex-wrap max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
+          {#each filteredTags as tag}
+            <img src={tag.feature_image} alt={tag.name} />
+          {/each}
+        </div>
       </div>
     {/if}
   </Layout.Post>

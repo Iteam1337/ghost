@@ -60,6 +60,7 @@
         {#each bio as line}
           {#if line.includes('@')}
             <a href={`mailto:${line}`} class="underline">{line}</a>
+            <br />
           {:else}{line}<br />{/if}
         {/each}
       </Typography.ParagraphSm>

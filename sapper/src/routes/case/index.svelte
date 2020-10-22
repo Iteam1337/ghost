@@ -29,20 +29,18 @@
       <div class="w-full md:px-24">
           <Typography.H1>Våra case</Typography.H1>
           <div class="max-w-4xl">
-            <Typography.ParagraphMd>
+            <Typography.ParagraphLg>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
               consectetur imperdiet nulla. Diam ullamcorper mauris ipsum
               facilisis in natoque. Eget amet ante non, mauris aenean diam vel,
               diam nec. Vitae, aliquet dui et, velit consequat.
-            </Typography.ParagraphMd>
+            </Typography.ParagraphLg>
           </div>
-
       </div>
     </Layout.Content>
       <Layout.Content>
         <div
-          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3
-          gap-6">
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {#each posts as post}
             <Animation.CardHover>
               <a

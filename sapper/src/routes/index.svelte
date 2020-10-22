@@ -36,10 +36,10 @@
       class="flex flex-col lg:flex-row justify-between w-full md:px-24">
       <div class="max-w-xl">
         <Typography.H1>Kod, kultur och strategi</Typography.H1>
-        <Typography.ParagraphMd>
+        <Typography.ParagraphLg>
           Genom agilitet, användarfokus och i nära samarbete med våra kunder
           skapar vi digital innovation.
-        </Typography.ParagraphMd>
+        </Typography.ParagraphLg>
 
         <div class="mt-8">
           <a href="/contact">
