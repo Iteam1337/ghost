@@ -1,3 +1,3 @@
-<div class="py-16 ">
+<div class="py-16">
   <slot />
 </div>

@@ -32,28 +32,28 @@
 <Layout.Page>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
-    <div
-      class="flex flex-col lg:flex-row justify-between w-full md:px-24">
-      <div class="max-w-xl">
-        <Typography.H1>Kod, kultur och strategi</Typography.H1>
-        <Typography.ParagraphLg>
-          Genom agilitet, användarfokus och i nära samarbete med våra kunder
-          skapar vi digital innovation.
-        </Typography.ParagraphLg>
+      <div
+        class="flex flex-col lg:flex-row justify-between w-full md:px-24">
+        <div class="max-w-xl">
+          <Typography.H1>Kod, kultur och strategi</Typography.H1>
+          <Typography.ParagraphLg>
+            Genom agilitet, användarfokus och i nära samarbete med våra kunder
+            skapar vi digital innovation.
+          </Typography.ParagraphLg>
 
-        <div class="mt-8">
-          <a href="/contact">
-            <Animation.ButtonHover>
-              <Buttons.Default>Starta ett projekt</Buttons.Default>
-            </Animation.ButtonHover>
-          </a>
+          <div class="mt-8">
+            <a href="/contact">
+              <Animation.ButtonHover>
+                <Buttons.Default>Starta ett projekt</Buttons.Default>
+              </Animation.ButtonHover>
+            </a>
+          </div>
+        </div>
+        <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
+          <FeaturedImageIteam />
         </div>
       </div>
-      <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
-        <FeaturedImageIteam />
-      </div>
-    </div>
-  </Layout.Content>
+    </Layout.Content>
 
     <Layout.Content>
       <div

@@ -23,23 +23,17 @@ body {
   margin-top: 4rem;
 }
 
-.post p {
-  padding: 0.5rem 2rem;
-  font-weight: 300;
-  font-size: 1rem;
-}
-
 .post blockquote {
   padding: 0.5rem 2rem;
   font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
-  margin: 1.5rem 1.5rem;
 }
 
 .post ul {
   padding: 0 4rem;
   list-style: disc;
+  margin-bottom: 1rem;
 }
 
 .post li {
@@ -79,68 +73,29 @@ body {
 }
 
 .post p {
+  font-weight: 300;
+  font-size: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-weight: 300;
   font-size: 1rem;
 }
 
-.post figcaption,
-.post h3,
-.post p,
-.post blockquote,
-.post ul {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 @media (min-width: 768px) {
-  .post figcaption,
-  .post h3,
-  .post p,
-  .post blockquote,
-  .post ul {
-    padding-left: 4rem;
-    padding-right: 4rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
-
   .post blockquote {
-    margin: 2rem 3rem;
-    padding: 0 4rem;
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .post figcaption,
-  .post h3,
-  .post h2,
-  .post p,
-  .post ul {
-    padding-left: 8rem;
-    padding-right: 8rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-
   .post h3,
   .post h2 {
     margin: 1.5 0 0;
   }
 
-  .post blockquote {
-    margin: 4rem 5.5rem;
-    padding: 0 8rem;
-    font-size: 1.5rem;
-  }
-
   .post p {
     margin-top: 1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.75rem;
     font-size: 1.25rem;
   }
 
