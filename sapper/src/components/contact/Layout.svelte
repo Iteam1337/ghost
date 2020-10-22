@@ -22,7 +22,7 @@
           </div>
           <div class="mt-10">
             <a
-              class="bg-blue-cornflower text-white py-2 px-10 rounded-full"
+              class="bg-blue-cornflower text-white py-5 px-20 rounded-full"
               href="/contact">
               {ctaText}
             </a>
