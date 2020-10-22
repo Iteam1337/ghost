@@ -31,28 +31,27 @@
 
 <Layout.Page>
   <Animation.WithScrollFadeIn>
-  
-  <Layout.Content>
-    <div class="sm:px-24">
-      <Typography.H1>{post.title}</Typography.H1>
-      <Typography.ParagraphLg>
-        {helpers.getIngressFromHTMLBlob(post.html)}
-      </Typography.ParagraphLg>
-      <div class="flex w-full items-center mt-8 flex-wrap">
-        <img
-          src={post.primary_author.profile_image}
-          alt="author"
-          class="rounded-full w-8 sm:w-10 mr-3" />
-        <div class="flex items-baseline">
-          <Typography.H4>{post.primary_author.name}</Typography.H4>
-          &nbsp;
-          <Typography.ParagraphSm spacing={false}>
-            • {moment(post.published_at).format('DD MMMM YYYY')}
-          </Typography.ParagraphSm>
+    <Layout.Content>
+      <div class="sm:px-24">
+        <Typography.H1>{post.title}</Typography.H1>
+        <Typography.ParagraphLg>
+          {helpers.getIngressFromHTMLBlob(post.html)}
+        </Typography.ParagraphLg>
+        <div class="flex w-full items-center mt-8 flex-wrap">
+          <img
+            src={post.primary_author.profile_image}
+            alt="author"
+            class="rounded-full w-8 sm:w-10 mr-3" />
+          <div class="flex items-baseline">
+            <Typography.H4>{post.primary_author.name}</Typography.H4>
+            &nbsp;
+            <Typography.ParagraphSm spacing={false}>
+              • {moment(post.published_at).format('DD MMMM YYYY')}
+            </Typography.ParagraphSm>
+          </div>
         </div>
       </div>
-    </div>
-  </Layout.Content>
+    </Layout.Content>
   </Animation.WithScrollFadeIn>
 
   <Layout.Post type="blog">
@@ -71,9 +70,7 @@
         {/each}
       </Typography.ParagraphSm>
     </div>
-  </Layout.Post>
-
-  
+  </Layout.Post>  
 </Layout.Page>
 
 <ContactBlock.Default />
