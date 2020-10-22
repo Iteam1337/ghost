@@ -45,7 +45,7 @@
   </div>
   <Layout.Post type="case">
     {@html helpers.getHTMLBlobWithoutIngress(post.html)}
-    {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
+    {#if filteredTags.length}
       <div class="px-8 md:px-16 lg:px-32">
         <div class="flex flex-wrap max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
           {#each filteredTags as tag}
