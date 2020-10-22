@@ -3,7 +3,6 @@
   import Animation from './animation'
   import Typography from './typography'
   export let post
-
 </script>
 
 <div

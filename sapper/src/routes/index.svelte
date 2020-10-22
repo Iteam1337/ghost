@@ -32,8 +32,7 @@
 <Layout.Page>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
-      <div
-        class="flex flex-col lg:flex-row justify-between w-full md:px-24">
+      <div class="flex flex-col lg:flex-row justify-between w-full md:px-24">
         <div class="max-w-xl">
           <Typography.H1>Kod, kultur och strategi</Typography.H1>
           <Typography.ParagraphLg>
@@ -56,9 +55,7 @@
     </Layout.Content>
 
     <Layout.Content>
-      <div
-        class="flex flex-col md:flex-row md:flex-wrap "
-        style="gap: 1rem;">
+      <div class="flex flex-col md:flex-row md:flex-wrap " style="gap: 1rem;">
         {#each posts as post}
           <FeaturedPost {post} />
         {/each}
