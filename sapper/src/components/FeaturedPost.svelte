@@ -19,13 +19,13 @@
             src={post.feature_image}
             alt="feature" />
           <div class="absolute" style="bottom: 1rem; left: 1rem;">
-            <!-- {#each post.tags as tag}
-              <div class="inline-block bg-white rounded-md px-2 py-1 mr-1">
-                <p class="font-medium text-xs">{tag.name}</p>
-              </div>
-            {/each} -->
+            <div class="inline-block bg-white rounded-md px-2 py-1 mr-1">
+              <p class="font-medium text-xs capitalize">
+                {post.primary_tag.slug}
+              </p>
+            </div>
           </div>
-          <div class="ml-2">
+          <div class="p-1 pt-5">
             <Typography.H3>{post.title}</Typography.H3>
           </div>
         </div>
