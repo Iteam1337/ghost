@@ -121,9 +121,9 @@
 </div>
 
 <!-- Blocks -->
-<div class="max-w-screen-lg mx-auto px-8 md:px-0">
+<div class="max-w-screen-lg mx-auto px-8 md:px-24 lg:px-0">
   <Animation.WithScrollFadeIn threshold={0.5}>
-    <div class=" lg:mx-auto my-10 lg:my-32 xl:my-40">
+    <div class=" lg:mx-auto my-10 lg:my-32">
       <div class="flex justify-between">
         <div class="align-middle sm:py-2 max-w-lg">
           <h1 class="text-4xl font-medium py-6 leading-10">Vi är en digital byrå med teknik som spetskompetens</h1>

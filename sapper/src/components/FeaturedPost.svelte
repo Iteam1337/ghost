@@ -7,7 +7,7 @@
 </script>
 
 <div
-  class={`bg-white rounded-md ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide xl:flex-customnarrow'}`}>
+  class={`bg-white rounded-md ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
   <Animation.CardHover>
     <div class="p-4" style="height: 468px;">
       <a
