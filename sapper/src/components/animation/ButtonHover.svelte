@@ -1,5 +1,6 @@
 <script>
   let active = false
+  export let transparentButton = false
 
   const handleHover = (e) => {
     e.preventDefault()
@@ -12,6 +13,6 @@
   on:touchend={() => (active = false)}
   on:mouseenter={handleHover}
   on:mouseleave={handleHover}
-  class="inline-block transform transition duration-150 ease-in w-full {active ? 'shadow-hover' : 'shadow-featured'}">
+  class="inline ease-in {active ? (transparentButton ? 'opacity-75' : 'opacity-95') : 'opacity-100'}">
   <slot />
 </div>

@@ -24,7 +24,6 @@ body {
 }
 
 .post p {
-  padding: 0.5rem 2rem;
   font-weight: 300;
   font-size: 1rem;
 }
@@ -50,8 +49,9 @@ body {
 
 .case figure {
   background-color: #fcfbfb;
-  margin: 4rem 0;
   padding: 4rem 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .blog figure {
@@ -64,6 +64,12 @@ body {
   font-size: 0.95rem;
   margin-top: 0.5rem;
   text-align: center;
+}
+
+.post > *:not(figure) {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post p a {
@@ -92,20 +98,16 @@ body {
 .post ul {
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .post figcaption,
   .post h3,
   .post p,
   .post blockquote,
   .post ul {
-    padding-left: 4rem;
-    padding-right: 4rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    padding-left: 5.75rem;
+    padding-right: 5.75rem;
   }
 
   .post blockquote {
@@ -116,24 +118,13 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .post figcaption,
-  .post h3,
-  .post h2,
-  .post p,
-  .post ul {
-    padding-left: 8rem;
-    padding-right: 8rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-
   .post h3,
   .post h2 {
     margin: 1.5 0 0;
   }
 
   .post blockquote {
-    margin: 4rem 5.5rem;
+    margin: 4rem auto;
     padding: 0 8rem;
     font-size: 1.5rem;
   }
