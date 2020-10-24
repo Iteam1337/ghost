@@ -26,9 +26,11 @@
   <Animation.WithScrollFadeIn>
     <div class="flex flex-col px-8 md:px-16 lg:px-32">
       <div class="max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
-        <Typography.H1>Artiklar</Typography.H1>
+        <Typography.H1>Artiklar & nyheter</Typography.H1>
         <Typography.ParagraphMd>
-          Vi delar med oss av våra insikter och lärdomar om hur vi skapar tjänster som gör skillnad.
+          Vi gillar att experimentera. Vi laborerar med ny teknik,
+          omvärldsbevakar och delar vårt lärande med varandra och våra kunder.
+          Vår kunskap är din kunskap.
         </Typography.ParagraphMd>
       </div>
     </div>
@@ -43,9 +45,9 @@
               href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
               <div
                 style="height: 407px;"
-                class="flex flex-col rounded-md p-4 bg-white">
+                class="flex flex-col rounded p-3 bg-white">
                 <img
-                  class="rounded-md object-cover h-full"
+                  class="rounded object-cover h-full"
                   src={post.feature_image}
                   alt="feature" />
                 <div class="ml-2 mt-6">
