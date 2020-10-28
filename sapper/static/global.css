@@ -78,6 +78,7 @@ body {
 
 .post figure img {
   margin: auto;
+  width: 80%;
 }
 
 .blog figure img {
