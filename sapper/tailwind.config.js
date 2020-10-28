@@ -31,6 +31,7 @@ module.exports = {
         blue: {
           light: '#E8EEFF',
           cornflower: '#668cff',
+          marine: '#081754',
           dark: '#4271FF',
         },
         green: '#36F49A',
