@@ -37,6 +37,7 @@ module.exports = {
         grey: {
           dark: '#363636',
           medium: '#444444',
+          cod: '#1C1B1B'
         },
       },
       opacity: {

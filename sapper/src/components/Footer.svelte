@@ -7,7 +7,7 @@
   import YouTubeIcon from '../assets/youtube_icon.svg'
 </script>
 
-<div class="bg-grey-dark px-16 md:px-32 xl:px-48">
+<div class="bg-grey-cod px-16 md:px-32 xl:px-48">
   <p class="text-white py-20 max-w-2xl text-lg m-0">
     Vi är en digitaliseringsbyrå med kontor i Stockholm och Göteborg. Vi är 25
     personer som drivs av tre grundläggande värderingar – att göra något bra,
