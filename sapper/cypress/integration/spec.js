@@ -8,7 +8,7 @@ describe('Sapper template app', () => {
   })
 
   it('navigates to /blog', () => {
-    cy.get('nav a').contains('Blogg').click()
+    cy.get('nav a').contains('Aktuellt').click()
     cy.url().should('include', '/blog')
   })
 })
