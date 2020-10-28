@@ -16,30 +16,42 @@ body {
   flex: 1 49%;
 }
 
+.post h2,
 .post h3 {
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin-top: 4rem;
-  padding: 0 2rem;
+}
+
+.post p {
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 .post blockquote {
-  padding: 3rem 0;
-  font-weight: 500;
-  font-size: 1.5rem;
-  padding: 0 2rem;
-}
-
-.post blockquote p {
-  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
   font-weight: 300;
   font-style: italic;
-  padding: 0 2rem;
+  margin: 1.5rem 1.5rem;
+}
+
+.post ul {
+  padding: 0 4rem;
+  list-style: disc;
+}
+
+.post li {
+  margin-top: 0.75rem;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 .case figure {
   background-color: #fcfbfb;
+  padding: 4rem 0;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .blog figure {
@@ -52,6 +64,12 @@ body {
   font-size: 0.95rem;
   margin-top: 0.5rem;
   text-align: center;
+}
+
+.post > *:not(figure) {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post p a {
@@ -67,16 +85,67 @@ body {
 }
 
 .post p {
-  padding: 0.5rem 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-weight: 300;
   font-size: 1rem;
 }
 
+.post figcaption,
+.post h3,
+.post p,
+.post blockquote,
+.post ul {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 @media (min-width: 640px) {
+  .post figcaption,
   .post h3,
   .post p,
   .post blockquote,
-  .post figcaption {
-    padding: 0 10rem;
+  .post ul {
+    padding-left: 5.75rem;
+    padding-right: 5.75rem;
+  }
+
+  .post blockquote {
+    margin: 2rem 3rem;
+    padding: 0 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .post h3,
+  .post h2 {
+    margin: 1.5 0 0;
+  }
+
+  .post blockquote {
+    margin: 4rem auto;
+    padding: 0 8rem;
+    font-size: 1.5rem;
+  }
+
+  .post p {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .post ul {
+    margin-bottom: 2.5rem;
+  }
+
+  .post li {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .post h3,
+  .post h2 {
+    font-size: 2.1rem;
   }
 }

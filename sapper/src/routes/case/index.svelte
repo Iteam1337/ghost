@@ -25,21 +25,22 @@
 
 <Layout.Page>
   <Animation.WithScrollFadeIn>
-    <div class="flex flex-col px-8 md:px-16 lg:px-32">
-      <div class="max-w-4xl pt-8 mx-2 md:mx-10 lg:mx-20">
+    <Layout.Content>
+      <div class="w-full md:px-24">
         <Typography.H1>Våra case</Typography.H1>
-        <Typography.ParagraphMd>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
-          consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
-          in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
-          Vitae, aliquet dui et, velit consequat.
-        </Typography.ParagraphMd>
+        <div class="max-w-4xl">
+          <Typography.ParagraphLg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
+            consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
+            in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
+            Vitae, aliquet dui et, velit consequat.
+          </Typography.ParagraphLg>
+        </div>
       </div>
-    </div>
+    </Layout.Content>
     <Layout.Content>
       <div
-        class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3
-          gap-6">
+        class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-8 lg:px-0">
         {#each posts as post}
           <Animation.CardHover>
             <a
@@ -51,10 +52,10 @@
                 <img
                   class="rounded-md object-cover h-full"
                   src={post.feature_image}
-                  alt="feature" />
+                  alt="featured case graphic" />
                 <div class="ml-2 mt-6">
                   <Typography.H3>{post.title}</Typography.H3>
-                  <Typography.ParagraphMd spacing={false}>
+                  <Typography.ParagraphMd>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </Typography.ParagraphMd>
                 </div>
