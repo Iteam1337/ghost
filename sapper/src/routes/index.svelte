@@ -3,7 +3,6 @@
   import Typography from '../components/typography/'
   import ContactBlock from '../components/contact'
   import FeaturedPost from '../components/FeaturedPost.svelte'
-  import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
   import FeaturedImageCraneIteam from '../assets/featured_image_crane.svg'
   import Card from '../components/Card.svelte'
   import BeakerSymbol from '../assets/illustrations/beakers.svg'
