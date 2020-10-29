@@ -1,7 +1,7 @@
 <script>
   import NavItem from './NavItem.svelte'
-  import Hamburger from '../../assets/hamburger.svelte'
-  import Close from '../../assets/close.svelte'
+  import Hamburger from '../../assets/hamburger.svg'
+  import Close from '../../assets/close.svg'
 
   export let segment
 
@@ -27,6 +27,7 @@
       aria-current={segment === undefined ? 'page' : undefined}
       href=".">
       <img
+        on:click={toggleMenu}
         src={!segment ? 'iteam-white.png' : 'iteam.png'}
         alt="Iteam"
         class="logo"
@@ -52,11 +53,13 @@
         </ul>
       </div>
     </div>
-    <div class="md:hidden h-8 w-8 z-50" on:click={() => toggleMenu()}>
+    <div
+      class={`md:hidden h-8 w-8 z-50 text-${segment ? 'black' : 'white'}`}
+      on:click={() => toggleMenu()}>
       {#if menuHidden}
-        <Hamburger stroke={!segment && 'white'} />
+        <Hamburger />
       {:else}
-        <Close fill={!segment && 'white'} />
+        <Close />
       {/if}
     </div>
   </nav>
