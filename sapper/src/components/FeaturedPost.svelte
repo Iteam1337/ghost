@@ -6,22 +6,21 @@
 </script>
 
 <div
-  class={`bg-white rounded-md ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
+  class={`bg-white rounded ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
   <Animation.CardHover>
-    <div class="p-4" style="height: 468px;">
+    <div class="p-3" style="height: 468px;">
       <a
         rel="prefetch"
         href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
         <div class="h-full">
           <div class="relative" style="height: 90%;">
             <img
-              class="rounded-md object-cover h-full w-full"
+              class="rounded object-cover h-full w-full"
               src={post.feature_image}
               alt="feature" />
             <div class="absolute" style="bottom: 1rem; left: 1rem;">
               {#each post.tags as tag}
-                <div
-                  class="inline-block bg-white rounded-md px-2 py-1 mr-2 mb-2">
+                <div class="inline-block bg-white rounded px-2 py-1 mr-2 mb-2">
                   <p class="font-medium text-xs">{tag.name}</p>
                 </div>
               {/each}

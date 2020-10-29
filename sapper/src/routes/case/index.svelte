@@ -30,10 +30,10 @@
         <Typography.H1>Våra case</Typography.H1>
         <div class="max-w-4xl">
           <Typography.ParagraphLg>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
-            consectetur imperdiet nulla. Diam ullamcorper mauris ipsum facilisis
-            in natoque. Eget amet ante non, mauris aenean diam vel, diam nec.
-            Vitae, aliquet dui et, velit consequat.
+            Under 25 år har vi hjälpt våra kunder att skapa värde. Vi har jobbat
+            med en stor variation av kunder, från stora varumärken och
+            myndigheter till innovativa startups. Här är några av våra
+            samarbeten.
           </Typography.ParagraphLg>
         </div>
       </div>
@@ -48,16 +48,14 @@
               href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
               <div
                 style="height: 468px;"
-                class="flex flex-col rounded-md p-4 bg-white">
+                class="flex flex-col rounded p-3 bg-white">
                 <img
-                  class="rounded-md object-cover h-full"
+                  class="rounded object-cover h-full"
                   src={post.feature_image}
                   alt="featured case graphic" />
                 <div class="ml-2 mt-6">
+                  <Typography.ParagraphMd>Kundnamn</Typography.ParagraphMd>
                   <Typography.H3>{post.title}</Typography.H3>
-                  <Typography.ParagraphMd>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </Typography.ParagraphMd>
                 </div>
               </div>
             </a>
