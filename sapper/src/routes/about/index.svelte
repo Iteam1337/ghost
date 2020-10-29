@@ -70,61 +70,66 @@
       </div>
     </Layout.Content>
     <Layout.Content>
-      <div
-        class="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-6 px-8">
-        <img
-          class="h-auto object-cover md:mb-32"
-          src="Kitchen-Monday-meeting-Lowres.png"
-          alt="beautiful kitchen" />
-        <img
-          class="h-auto object-cover md:mt-32"
-          src="Hopper-Interior-Lowres.png"
-          alt="nice room" />
+      <div class="mb-12 sm:mt-12 sm:mb-24">
+        <div
+          class="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-6 px-8">
+          <img
+            class="h-auto object-cover md:mb-32"
+            src="Kitchen-Monday-meeting-Lowres.png"
+            alt="beautiful kitchen" />
+          <img
+            class="h-auto object-cover md:mt-32"
+            src="Hopper-Interior-Lowres.png"
+            alt="nice room" />
+        </div>
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
   <Animation.WithScrollFadeIn>
-    <div class="bg-grey-dark text-white py-20 px-8 lg:px-20">
+    <div class="bg-grey-dark text-white py-20 px-8 lg:px-32">
       <Layout.Content>
-        <div class="pb-16">
-          <div class="grid grid-rows justify-center gap-4">
-            {#each items as item}
-              <div class="grid md:grid-cols-3 md:gap-8">
-                <div class="md:col-span-1">
-                  <Typography.ParagraphLg>{item.title}</Typography.ParagraphLg>
-                </div>
-                <div class="md:col-span-2">
-                  <Typography.ParagraphSm>{item.body}</Typography.ParagraphSm>
-                </div>
+        <div class="grid grid-rows justify-center gap-24 lg:mb-12">
+          {#each items as item}
+            <div class="grid md:grid-cols-3 md:gap-16">
+              <div class="md:col-span-1 ">
+                <h3
+                  class="m-heading font-medium sm:text-lg lg:text-2xl leading-tight tracking-wide mb-0">
+                  {item.title}
+                </h3>
               </div>
-            {/each}
-          </div>
+              <div class="md:col-span-2 lg:max-w-xl">
+                <Typography.ParagraphMd>{item.body}</Typography.ParagraphMd>
+              </div>
+            </div>
+          {/each}
         </div>
       </Layout.Content>
     </div>
   </Animation.WithScrollFadeIn>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
-      <div class="text-center">
-        <Typography.H2>Vi som jobbar här</Typography.H2>
-      </div>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {#each coworkers as coworker}
-          <div>
-            <img class="object-cover" src={coworker.image} alt="feature" />
-            <p class="mt-4 font-medium">{coworker.title}</p>
-            <p class="font-light mt-4">{coworker.role}</p>
-            <p class="font-light">
-              <a href="tel:{coworker.phone}">{coworker.phone}</a>
-            </p>
-            <p class="font-light text-sm leading-7">
-              <a
-                class="underline"
-                href="mailto:{coworker.email}">{coworker.email}</a>
-            </p>
-          </div>
-        {/each}
+      <div class="sm:mt-12">
+        <div class="text-center ">
+          <Typography.H2>Vi som jobbar här</Typography.H2>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 my-12">
+          {#each coworkers as coworker}
+            <div>
+              <img class="object-cover" src={coworker.image} alt="feature" />
+              <p class="mt-4 font-medium">{coworker.title}</p>
+              <p class="font-light">{coworker.role}</p>
+              <p class="font-light">
+                <a href="tel:{coworker.phone}">{coworker.phone}</a>
+              </p>
+              <p class="font-light text-sm leading-7">
+                <a
+                  class="underline"
+                  href="mailto:{coworker.email}">{coworker.email}</a>
+              </p>
+            </div>
+          {/each}
+        </div>
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
