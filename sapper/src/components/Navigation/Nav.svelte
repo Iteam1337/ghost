@@ -21,7 +21,7 @@
 
 <div class={!segment && 'bg-grey-cod text-white'}>
   <nav
-    class="px-8 flex justify-between lg:max-w-screen-xl mx-auto items-center">
+    class="px-8 flex justify-between lg:max-w-screen-xxl mx-auto items-center">
     <a
       class="py-5 z-50"
       aria-current={segment === undefined ? 'page' : undefined}
