@@ -18,7 +18,7 @@
   ]
 </script>
 
-<nav class="px-8 flex justify-between lg:max-w-screen-xl mx-auto">
+<nav class="px-8 flex justify-between lg:max-w-screen-xxl mx-auto">
   <a
     class="py-5"
     aria-current={segment === undefined ? 'page' : undefined}
