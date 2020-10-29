@@ -7,6 +7,10 @@ module.exports = {
   purge: ['./src/**/*.svelte'],
   theme: {
     extend: {
+      spacing: {
+        card: '600px',
+        cardSm: '468px',
+      },
       screens: {
         xxl: '1600px',
       },

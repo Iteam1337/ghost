@@ -117,12 +117,12 @@
 </div>
 
 <!-- Blocks -->
-<div class="max-w-screen-lg mx-auto px-8 md:px-24 lg:px-0">
+<div class="max-w-screen-xl mx-auto px-8 xl:px-0 py-24">
+  <div class="flex flex-col gap-16">
   <Animation.WithScrollFadeIn threshold={0.5}>
-    <div class=" lg:mx-auto my-10 lg:my-32">
-      <div class="flex justify-between">
-        <div class="align-middle sm:py-2 max-w-lg">
-          <h1 class="text-4xl font-medium py-6 leading-10">
+      <div class="flex justify-between items-center gap-8">
+        <div class="align-middle max-w-md lg:max-w-lg">
+          <h1 class="text-4xl font-medium mb-6 leading-10">
             Vi är en digital byrå med teknik som spetskompetens
           </h1>
           <Typography.ParagraphMd>
@@ -132,20 +132,18 @@
             möjligheter.
           </Typography.ParagraphMd>
         </div>
-        <div class="hidden lg:block">
+        <div class="hidden md:block max-w-xl">
           <img class="h-auto" src="TAC-2.jpg" alt="illustration" />
         </div>
       </div>
-    </div>
   </Animation.WithScrollFadeIn>
-
   <Animation.WithScrollFadeIn threshold={0.5}>
-    <div class="flex justify-between">
-      <div class="hidden lg:block">
+    <div class="flex justify-between items-center gap-8">
+      <div class="hidden md:block max-w-xl">
         <IteamA />
       </div>
-      <div class="max-w-lg lg:pt-12">
-        <h1 class="text-4xl font-medium py-6 leading-10">
+      <div class="max-w-md lg:max-w-lg">
+        <h1 class="text-4xl font-medium mb-6 leading-10 ">
           Vi löser komplexa utmaningar
         </h1>
         <Typography.ParagraphMd>
@@ -158,30 +156,28 @@
       </div>
     </div>
   </Animation.WithScrollFadeIn>
-
   <Animation.WithScrollFadeIn threshold={0.5}>
-    <div class=" lg:mx-auto my-10 lg:my-32 xl:my-40">
-      <div class="flex justify-between">
-        <div class="align-middle sm:py-2 max-w-lg">
-          <h1 class="text-4xl font-medium py-6 leading-10">
-            Er digitala partner
-          </h1>
-          <Typography.ParagraphMd>
-            Med ett långsiktigt engagemang hjälper vi er att navigera i den
-            digitala världen. Vi omvandlar visioner till verklighet, utmanar
-            föråldrade metoder och tillsammans utvecklar vi digitala tjänster
-            som era kunder älskar att använda.
-          </Typography.ParagraphMd>
-        </div>
-        <div class="hidden lg:block">
-          <img
-            class="ml-auto w-4/5"
-            src="Monday-meeting-4-Lowres.jpg"
-            alt="illustration" />
-        </div>
+    <div class="flex justify-between items-center gap-8">
+      <div class="align-middle max-w-md lg:max-w-lg">
+        <h1 class="text-4xl font-medium mb-6 leading-10">
+          Er digitala partner
+        </h1>
+        <Typography.ParagraphMd>
+          Med ett långsiktigt engagemang hjälper vi er att navigera i den
+          digitala världen. Vi omvandlar visioner till verklighet, utmanar
+          föråldrade metoder och tillsammans utvecklar vi digitala tjänster
+          som era kunder älskar att använda.
+        </Typography.ParagraphMd>
+      </div>
+      <div class="hidden md:block max-w-xl">
+        <img
+          class="ml-auto"
+          src="Monday-meeting-4-Lowres.jpg"
+          alt="illustration" />
       </div>
     </div>
   </Animation.WithScrollFadeIn>
+</div>
 </div>
 
 <ContactBlock.Default />

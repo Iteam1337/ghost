@@ -8,7 +8,7 @@
 <div
   class={`bg-white rounded ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
   <Animation.CardHover>
-    <div class="p-3" style="height: 468px;">
+    <div class="p-3 h-cardSm lg:h-card">
       <a
         rel="prefetch"
         href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
