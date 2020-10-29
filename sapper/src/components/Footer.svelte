@@ -8,7 +8,7 @@
   import Layout from './layout'
 </script>
 
-<div class="bg-grey-dark">
+<div class="bg-grey-cod">
   <Layout.Container>
     <div class="flex flex-col justify-between w-full">
       <div class="flex items-start md:items-end flex-col md:flex-row">
