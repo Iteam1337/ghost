@@ -4,6 +4,7 @@
   import ContactBlock from '../components/contact'
   import FeaturedPost from '../components/FeaturedPost.svelte'
   import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
+  import FeaturedImageCraneIteam from '../assets/featured_image_crane.svg'
   import Card from '../components/Card.svelte'
   import BeakerSymbol from '../assets/illustrations/beakers.svg'
   import EmojiSymbol from '../assets/illustrations/emoji.svg'
@@ -34,7 +35,7 @@
     <div class="bg-grey-cod pb-16">
       <Layout.Content>
         <div
-          class="flex flex-col text-white lg:flex-row justify-between w-full md:px-24">
+          class="flex flex-col text-white md:px-8 lg:px-0 lg:flex-row justify-between w-full">
           <div class="max-w-xl">
             <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
             <Typography.ParagraphLg>
@@ -51,7 +52,7 @@
             </div>
           </div>
           <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
-            <FeaturedImageIteam />
+            <FeaturedImageCraneIteam />
           </div>
         </div>
       </Layout.Content>
