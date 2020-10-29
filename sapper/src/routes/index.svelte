@@ -53,14 +53,15 @@
         </div>
       </div>
     </Layout.Content>
-
     <Layout.Content>
-      <div
-        class="flex flex-col md:flex-row md:flex-wrap md:px-8 lg:px-0"
-        style="gap: 1rem;">
-        {#each posts as post}
-          <FeaturedPost {post} />
-        {/each}
+      <div class="py-6">
+        <div
+          class="flex flex-col md:flex-row md:flex-wrap md:px-8 lg:px-0"
+          style="gap: 1rem;">
+          {#each posts as post}
+            <FeaturedPost {post} />
+          {/each}
+        </div>
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
