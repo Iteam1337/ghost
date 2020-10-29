@@ -12,7 +12,8 @@
   }
 </style>
 
-<li class="text-black px-2 py-4 font-medium block float-left pl-6 sm:block">
+<li
+  class="{segment && 'text-black'} px-2 py-4 font-medium block float-left pl-6 sm:block">
   <a
     aria-current={segment === item.to ? 'page' : undefined}
     href={item.to}

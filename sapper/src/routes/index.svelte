@@ -3,7 +3,7 @@
   import Typography from '../components/typography/'
   import ContactBlock from '../components/contact'
   import FeaturedPost from '../components/FeaturedPost.svelte'
-  import FeaturedImageIteam from '../assets/featured-image-iteam.svg'
+  import FeaturedImageCraneIteam from '../assets/featured_image_crane.svg'
   import Card from '../components/Card.svelte'
   import BeakerSymbol from '../assets/illustrations/beakers.svg'
   import EmojiSymbol from '../assets/illustrations/emoji.svg'
@@ -29,10 +29,11 @@
   <title>Iteam - There is a Better Way</title>
 </svelte:head>
 
-<Layout.Page>
-  <Animation.WithScrollFadeIn>
+<div class="pb-16">
+  <div class="bg-grey-cod pb-16 pt-4">
     <Layout.Content>
-      <div class="flex flex-col lg:flex-row justify-between w-full md:px-24">
+      <div
+        class="flex flex-col text-white md:px-8 lg:px-0 lg:flex-row justify-between w-full">
         <div class="max-w-xl">
           <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
           <Typography.ParagraphLg>
@@ -41,18 +42,20 @@
           </Typography.ParagraphLg>
 
           <div class="mt-8">
-            <a href="/contact">
+            <a href="/case">
               <Animation.ButtonHover>
-                <Buttons.Default>Starta ett projekt</Buttons.Default>
+                <Buttons.Default>Se våra case</Buttons.Default>
               </Animation.ButtonHover>
             </a>
           </div>
         </div>
         <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
-          <FeaturedImageIteam />
+          <FeaturedImageCraneIteam />
         </div>
       </div>
     </Layout.Content>
+  </div>
+  <Animation.WithScrollFadeIn>
     <Layout.Content>
       <div class="py-6">
         <div class="flex flex-col md:flex-row md:flex-wrap gap-6">
@@ -63,7 +66,7 @@
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
-</Layout.Page>
+</div>
 
 <!-- Tjänster -->
 <div class="bg-grey-dark text-center text-white py-20 px-8 lg:px-20">
@@ -119,22 +122,22 @@
 <div class="max-w-screen-xl mx-auto px-8 xl:px-0 py-24">
   <div class="flex flex-col gap-16">
     <Animation.WithScrollFadeIn threshold={0.5}>
-        <div class="flex justify-between items-center gap-8">
-          <div class="align-middle max-w-md lg:max-w-lg">
-            <h1 class="text-4xl font-medium mb-6 leading-10">
-              Vi är en digital byrå med teknik som spetskompetens
-            </h1>
-            <Typography.ParagraphMd>
-              Vi är ett tätt sammansvetsat gäng som jobbar med moderna tekniker
-              och metoder. Vi brinner för att hjälpa våra kunder att navigera i
-              det digitala landskapet och dra nytta av digitaliseringens
-              möjligheter.
-            </Typography.ParagraphMd>
-          </div>
-          <div class="hidden md:block max-w-xl">
-            <img class="h-auto" src="TAC-2.jpg" alt="illustration" />
-          </div>
+      <div class="flex justify-between items-center gap-8">
+        <div class="align-middle max-w-md lg:max-w-lg">
+          <h1 class="text-4xl font-medium mb-6 leading-10">
+            Vi är en digital byrå med teknik som spetskompetens
+          </h1>
+          <Typography.ParagraphMd>
+            Vi är ett tätt sammansvetsat gäng som jobbar med moderna tekniker
+            och metoder. Vi brinner för att hjälpa våra kunder att navigera i
+            det digitala landskapet och dra nytta av digitaliseringens
+            möjligheter.
+          </Typography.ParagraphMd>
         </div>
+        <div class="hidden md:block max-w-xl">
+          <img class="h-auto" src="TAC-2.jpg" alt="illustration" />
+        </div>
+      </div>
     </Animation.WithScrollFadeIn>
     <Animation.WithScrollFadeIn threshold={0.5}>
       <div class="flex justify-between items-center gap-8">
@@ -148,9 +151,9 @@
           <Typography.ParagraphMd>
             Vi kombinerar strategi, kod och kultur för att ta fram digitala
             lösningar som möter användarnas behov. Vi utvecklar inte bara appar.
-            Vi tar ett helhetligt perspektiv på din affär för att skapa förändring
-            på riktigt. Vi leder förändringsarbetet och hjälper er att
-            digitalisera er affär.
+            Vi tar ett helhetligt perspektiv på din affär för att skapa
+            förändring på riktigt. Vi leder förändringsarbetet och hjälper er
+            att digitalisera er affär.
           </Typography.ParagraphMd>
         </div>
       </div>
