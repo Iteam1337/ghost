@@ -39,6 +39,7 @@ module.exports = {
           dark: '#363636',
           medium: '#444444',
         },
+        sand: '#F5F1ED',
       },
       opacity: {
         95: '0.95',
@@ -50,6 +51,10 @@ module.exports = {
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
       body: ['Roboto', 'sans-serif'],
+    },
+    textColor: {
+      white: '#fff',
+      superblue: '#002FEE',
     },
   },
   variants: {},

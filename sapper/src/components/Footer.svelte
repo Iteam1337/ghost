@@ -11,11 +11,6 @@
 <div class="bg-grey-dark">
   <Layout.Container>
     <div class="flex flex-col justify-between w-full">
-      <p class="text-white py-20 max-w-2xl text-lg m-0">
-        Vi är en digitaliseringsbyrå med kontor i Stockholm och Göteborg. Vi är
-        25 personer som drivs av tre grundläggande värderingar – att göra något
-        bra, att ha kul och att skapa värde.
-      </p>
       <div class="flex items-start md:items-end flex-col md:flex-row">
         <div class="w-2/3 flex flex-col md:flex-row py-10">
           <div>
