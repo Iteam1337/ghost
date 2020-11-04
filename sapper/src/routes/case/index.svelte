@@ -16,6 +16,19 @@
   import helpers from '../../utils/helpers.js'
 
   export let posts
+
+  const parsedPosts = posts.map((p) => {
+    let parsed
+
+    try {
+      parsed = JSON.parse(p.excerpt)
+    } catch (error) {}
+
+    return {
+      ...p,
+      parsedExcerpt: parsed,
+    }
+  })
 </script>
 
 <!-- Case -->
@@ -23,7 +36,7 @@
   <title>Iteam | Case</title>
 </svelte:head>
 
-<Layout.Page>
+<Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
       <div class="w-full md:px-24">
@@ -40,22 +53,28 @@
     </Layout.Content>
     <Layout.Content>
       <div class="py-6">
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {#each posts as post}
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+          {#each parsedPosts as post}
             <Animation.CardHover>
               <a
+                class="flex flex-col p-3 bg-white"
                 rel="prefetch"
                 href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
-                <div
-                  style="height: 468px;"
-                  class="flex flex-col rounded p-3 bg-white">
-                  <img
-                    class="rounded object-cover h-full"
-                    src={post.feature_image}
-                    alt="featured case graphic" />
+                <div class="bg-white">
+                  <div
+                    class="rounded bg-cover bg-center"
+                    style="padding-bottom: 60%; background-image: url({post.feature_image})"
+                    title="featured case graphic" />
+
                   <div class="ml-2 mt-6">
-                    <Typography.ParagraphMd>Kundnamn</Typography.ParagraphMd>
-                    <Typography.H3>{post.title}</Typography.H3>
+                    <Typography.ParagraphMd>
+                      {post.parsedExcerpt ? post.parsedExcerpt.customer : post.title}
+                    </Typography.ParagraphMd>
+                    {#if post.parsedExcerpt}
+                      <Typography.H3>
+                        {post.parsedExcerpt.excerpt}
+                      </Typography.H3>
+                    {/if}
                   </div>
                 </div>
               </a>
@@ -65,6 +84,6 @@
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
-</Layout.Page>
+</Layout.Base>
 
 <ContactBlock.Default />

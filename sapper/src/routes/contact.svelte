@@ -9,7 +9,7 @@
   <title>Kontakt</title>
 </svelte:head>
 
-<Layout.Page>
+<Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
       <div class="w-full md:px-24">
@@ -21,7 +21,7 @@
             att skapa värde.
           </Typography.ParagraphMd>
         </div>
-        <div class="md:px-24 py-12">
+        <div class="md:px-24 py-12 max-w-2xl">
           <div>
             <div class="text-blue-cornflower">
               <Typography.H2>Nya samarbeten</Typography.H2>
@@ -71,4 +71,4 @@
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
-</Layout.Page>
+</Layout.Base>
