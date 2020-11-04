@@ -8,7 +8,7 @@
   import Layout from './layout'
 </script>
 
-<div class="bg-grey-dark pt-8 pb-24">
+<div class="bg-grey-cod pt-8 pb-24">
   <Layout.Content>
     <div class="flex items-start md:items-end flex-col md:flex-row">
       <div class="w-2/3 flex flex-col sm:flex-row gap-8">
