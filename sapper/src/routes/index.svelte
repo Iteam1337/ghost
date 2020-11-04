@@ -34,7 +34,7 @@
     <Layout.Base>
       <Layout.Content>
         <div
-          class="flex flex-col text-white lg:flex-row justify-between w-full">
+          class="flex flex-col-reverse text-white lg:flex-row justify-between w-full">
           <div class="max-w-xl">
             <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
             <Typography.ParagraphLg>
