@@ -60,7 +60,7 @@
   <title>Iteam | Om oss</title>
 </svelte:head>
 
-<div class="pt-16">
+<Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
       <div class="w-full md:px-24">
@@ -182,4 +182,4 @@
     </div>
   </Animation.WithScrollFadeIn>
   <ContactBlock.Default />
-</div>
+</Layout.Base>

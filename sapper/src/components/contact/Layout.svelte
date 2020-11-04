@@ -11,8 +11,8 @@
 
 <Animation.WithScrollFadeIn threshold={0.5}>
   <div class="bg-grey-medium">
-    <Layout.Content>
-      <div class="py-8">
+    <Layout.Base>
+      <Layout.Content>
         <div
           class="flex flex-col md:flex-row items-center text-white justify-between pb-16">
           <div class="mb-12 md:mb-0">
@@ -34,7 +34,7 @@
           <slot />
         </div>
         <slot />
-      </div>
-    </Layout.Content>
+      </Layout.Content>
+    </Layout.Base>
   </div>
 </Animation.WithScrollFadeIn>
