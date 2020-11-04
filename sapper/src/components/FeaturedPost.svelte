@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class={`bg-white rounded ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
+  class={`bg-white rounded ${post.primary_tag.slug === 'case' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
   <Animation.CardHover>
     <div class="p-3 h-cardSm lg:h-card">
       <a
