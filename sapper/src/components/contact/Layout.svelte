@@ -33,7 +33,6 @@
           </div>
           <slot />
         </div>
-        <slot />
       </Layout.Content>
     </Layout.Base>
   </div>
