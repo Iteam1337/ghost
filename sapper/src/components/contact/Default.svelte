@@ -4,7 +4,7 @@
 </script>
 
 <Layout>
-  <div class="w-full sm:w-2/3 xl:w-2/5">
+  <div class="w-full md:w-4/5">
     <ConnectSymbol />
   </div>
 </Layout>

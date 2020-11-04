@@ -27,7 +27,7 @@
       aria-current={segment === undefined ? 'page' : undefined}
       href=".">
       <img
-        on:click={toggleMenu}
+        on:click={!menuHidden && toggleMenu}
         src={!segment ? 'iteam-white.png' : 'iteam.png'}
         alt="Iteam"
         class="logo"
