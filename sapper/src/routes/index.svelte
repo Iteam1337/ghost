@@ -110,13 +110,13 @@
           text={'Lorem ipsum dolor sit meow meow meow.'} />
       </div>
     </div>
-    <div class="mt-12">
+    <!-- <div class="mt-12">
       <Animation.ButtonHover transparentButton>
         <a href="/services">
           <Buttons.Transparent>Alla tjänster</Buttons.Transparent>
         </a>
       </Animation.ButtonHover>
-    </div>
+    </div> -->
   </Animation.WithScrollFadeIn>
 </div>
 

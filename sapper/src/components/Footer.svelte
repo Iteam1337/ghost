@@ -8,7 +8,7 @@
   import Layout from './layout'
 </script>
 
-<div class="bg-grey-dark pt-8 pb-24">
+<div class="bg-grey-cod pt-8 pb-24">
   <Layout.Base>
     <Layout.Content>
       <div class="flex items-start md:items-end flex-col md:flex-row">
@@ -67,8 +67,7 @@
             <div />
           </div>
         </div>
-        <div
-          class="pt-20 md:pt-0 md:py-20 w-auto md:w-1/3 flex justify-end text-white">
+        <div class="pt-20 md:pt-0 w-auto md:w-1/3 flex justify-end text-white">
           <a href="https://www.facebook.com/iteam1337/" target="_blank">
             <FacebookIcon />
           </a>

@@ -29,12 +29,14 @@ module.exports = {
       },
       fontSize: {
         h1: '2.5em',
+        h2: '24px'
       },
       colors: {
         beige: '#fcfbfb',
         blue: {
           light: '#E8EEFF',
           cornflower: '#668cff',
+          marine: '#081754',
           dark: '#4271FF',
         },
         green: '#36F49A',
@@ -43,6 +45,7 @@ module.exports = {
           medium: '#444444',
           cod: '#1C1B1B'
         },
+        sand: '#F5F1ED',
       },
       opacity: {
         95: '0.95',
@@ -54,6 +57,10 @@ module.exports = {
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
       body: ['Roboto', 'sans-serif'],
+    },
+    textColor: {
+      white: '#fff',
+      superblue: '#002FEE',
     },
   },
   variants: {},
