@@ -30,41 +30,43 @@
 </svelte:head>
 
 <div class="pb-16">
-  <div class="bg-grey-cod pb-16 pt-4">
-    <Layout.Content>
-      <div
-        class="flex flex-col text-white md:px-8 lg:px-0 lg:flex-row justify-between w-full">
-        <div class="max-w-xl">
-          <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
-          <Typography.ParagraphLg>
-            Genom agilitet, användarfokus och i nära samarbete med våra kunder
-            skapar vi digital innovation.
-          </Typography.ParagraphLg>
+  <div class="bg-grey-cod pb-16">
+    <Layout.Base>
+      <Layout.Content>
+        <div
+          class="flex flex-col text-white lg:flex-row justify-between w-full">
+          <div class="max-w-xl">
+            <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
+            <Typography.ParagraphLg>
+              Genom agilitet, användarfokus och i nära samarbete med våra kunder
+              skapar vi digital innovation.
+            </Typography.ParagraphLg>
 
-          <div class="mt-8">
-            <a href="/case">
-              <Animation.ButtonHover>
-                <Buttons.Default>Se våra case</Buttons.Default>
-              </Animation.ButtonHover>
-            </a>
+            <div class="mt-8">
+              <a href="/case">
+                <Animation.ButtonHover>
+                  <Buttons.Default>Se våra case</Buttons.Default>
+                </Animation.ButtonHover>
+              </a>
+            </div>
+          </div>
+          <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
+            <FeaturedImageCraneIteam />
           </div>
         </div>
-        <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
-          <FeaturedImageCraneIteam />
-        </div>
-      </div>
-    </Layout.Content>
+      </Layout.Content>
+    </Layout.Base>
   </div>
   <Animation.WithScrollFadeIn>
-    <Layout.Content>
-      <div class="py-6">
+    <Layout.Base>
+      <Layout.Content>
         <div class="flex flex-col md:flex-row md:flex-wrap gap-6">
           {#each posts as post}
             <FeaturedPost {post} />
           {/each}
         </div>
-      </div>
-    </Layout.Content>
+      </Layout.Content>
+    </Layout.Base>
   </Animation.WithScrollFadeIn>
 </div>
 
@@ -119,7 +121,8 @@
 </div>
 
 <!-- Blocks -->
-<div class="max-w-screen-xl mx-auto px-8 xl:px-0 py-24">
+<Layout.Base>
+<Layout.Content>
   <div class="flex flex-col gap-16">
     <Animation.WithScrollFadeIn threshold={0.5}>
       <div class="flex justify-between items-center gap-8">
@@ -180,6 +183,8 @@
       </div>
     </Animation.WithScrollFadeIn>
   </div>
-</div>
+
+</Layout.Content>
+</Layout.Base>
 
 <ContactBlock.Default />

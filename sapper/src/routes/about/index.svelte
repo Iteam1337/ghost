@@ -10,11 +10,10 @@
   <title>Iteam | Om oss</title>
 </svelte:head>
 
-<Layout.Page>
+<Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
-      <div
-      class="flex flex-col lg:flex-row justify-between w-full md:px-24">
+      <div class="flex flex-col lg:flex-row justify-between w-full md:px-24">
         <div class="flex-initial max-w-md">
           <Typography.H1>Om oss</Typography.H1>
           <Typography.ParagraphMd>Lorem ipsum...</Typography.ParagraphMd>
@@ -28,4 +27,4 @@
       class="flex flex-wrap justify-center my-20 px-20 items-center md:container
       md:mx-auto space-x-3" />
   </Animation.WithScrollFadeIn>
-</Layout.Page>
+</Layout.Base>

@@ -22,7 +22,7 @@
   <title>Iteam | Blog</title>
 </svelte:head>
 
-<Layout.Page>
+<Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
       <div class="flex flex-col lg:flex-row justify-between w-full md:px-24">
@@ -63,6 +63,6 @@
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
-</Layout.Page>
+</Layout.Base>
 
 <ContactBlock.Default />
