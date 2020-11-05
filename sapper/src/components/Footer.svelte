@@ -1,11 +1,8 @@
 <script>
   import CityIcon from '../assets/city_icon.svg'
-  import FacebookIcon from '../assets/facebook_icon.svg'
   import HarborIcon from '../assets/harbor_icon.svg'
-  import InstagramIcon from '../assets/instagram_icon.svg'
-  import LinkedinIcon from '../assets/linkedin_icon.svg'
-  import YouTubeIcon from '../assets/youtube_icon.svg'
   import Layout from './layout'
+  import SocialMedia from './SocialMedia.svelte'
 </script>
 
 <div class="bg-grey-cod pt-8 pb-24">
@@ -68,27 +65,7 @@
           </div>
         </div>
         <div class="pt-20 md:pt-0 w-auto md:w-1/3 flex justify-end text-white">
-          <a href="https://www.facebook.com/iteam1337/" target="_blank">
-            <FacebookIcon />
-          </a>
-          <a
-            href="https://instagram.com/iteam1337"
-            target="_blank"
-            class="ml-4">
-            <InstagramIcon />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/270569/"
-            target="_blank"
-            class="ml-4">
-            <LinkedinIcon />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCU2TdLZ7p0jEuuGUxaod4lw"
-            target="_blank"
-            class="ml-4">
-            <YouTubeIcon />
-          </a>
+          <SocialMedia />
         </div>
       </div>
     </Layout.Content>

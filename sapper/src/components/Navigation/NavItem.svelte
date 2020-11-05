@@ -1,5 +1,8 @@
 <script>
-  export let item, segment
+  export let item
+  export let segment = ''
+
+  export let ariaBorderColor = 'white'
 
   import { createEventDispatcher } from 'svelte'
   const dispatch = createEventDispatcher()
@@ -8,13 +11,14 @@
 <style>
   [aria-current] {
     padding-bottom: 0.3rem;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--color);
   }
 </style>
 
 <li
-  class="{segment && 'text-black'} px-2 py-4 font-medium block float-left pl-6 sm:block">
+  class="{segment && 'text-black'} px-2 py-4 font-medium text-2xl md:text-base block float-left pl-6 sm:block">
   <a
+    style="--color: {ariaBorderColor};"
     aria-current={segment === item.to ? 'page' : undefined}
     href={item.to}
     on:click={() => {

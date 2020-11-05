@@ -5,8 +5,9 @@
   import Layout from '../layout'
 
   export let title = 'Nyfiken på vad vi kan göra tillsammans?'
-  export let text = ''
-  export let ctaText = 'Hör av dig'
+  export let text =
+    'Oavsett om du har en idé du vill förverkliga eller ett problem du vill lösa hjälper vi dig.'
+  export let ctaText = 'Kontakta oss'
 </script>
 
 <Animation.WithScrollFadeIn threshold={0.5}>
@@ -14,19 +15,21 @@
     <Layout.Base>
       <Layout.Content>
         <div
-          class="flex flex-col md:flex-row items-center text-white justify-between pb-16">
+          class="grid grid-cols-1 gap-12 md:grid-cols-2 items-center text-white justify-items-end pb-16">
           <div class="mb-12 md:mb-0">
             <h2
               class="text-4xl w-full lg:w-4/5 font-medium tracking-wide mb-10">
               {title}
             </h2>
-            <div class="lg:w-2/3">
+            <div>
               <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
             </div>
             <div class="mt-10">
               <Animation.ButtonHover>
-                <a href="/contact">
-                  <Buttons.Default>{ctaText}</Buttons.Default>
+                <a class="block" href="/contact">
+                  <Buttons.Default width={'w-full md:w-auto'}>
+                    {ctaText}
+                  </Buttons.Default>
                 </a>
               </Animation.ButtonHover>
             </div>
