@@ -122,69 +122,68 @@
 
 <!-- Blocks -->
 <Layout.Base>
-<Layout.Content>
-  <div class="flex flex-col gap-16">
-    <Animation.WithScrollFadeIn threshold={0.5}>
-      <div class="flex justify-between items-center gap-8">
-        <div class="align-middle max-w-md lg:max-w-lg">
-          <h1 class="text-4xl font-medium mb-6 leading-10">
-            Vi är en digital byrå med teknik som spetskompetens
-          </h1>
-          <Typography.ParagraphMd>
-            Vi är ett tätt sammansvetsat gäng som jobbar med moderna tekniker
-            och metoder. Vi brinner för att hjälpa våra kunder att navigera i
-            det digitala landskapet och dra nytta av digitaliseringens
-            möjligheter.
-          </Typography.ParagraphMd>
+  <Layout.Content>
+    <div class="flex flex-col gap-16">
+      <Animation.WithScrollFadeIn threshold={0.5}>
+        <div class="flex justify-between items-center gap-8">
+          <div class="align-middle max-w-md lg:max-w-lg">
+            <h1 class="text-4xl font-medium mb-6 leading-10">
+              Vi är en digital byrå med teknik som spetskompetens
+            </h1>
+            <Typography.ParagraphMd>
+              Vi är ett tätt sammansvetsat gäng som jobbar med moderna tekniker
+              och metoder. Vi brinner för att hjälpa våra kunder att navigera i
+              det digitala landskapet och dra nytta av digitaliseringens
+              möjligheter.
+            </Typography.ParagraphMd>
+          </div>
+          <div class="hidden md:block max-w-xl">
+            <img class="h-auto" src="TAC-2.jpg" alt="illustration" />
+          </div>
         </div>
-        <div class="hidden md:block max-w-xl">
-          <img class="h-auto" src="TAC-2.jpg" alt="illustration" />
+      </Animation.WithScrollFadeIn>
+      <Animation.WithScrollFadeIn threshold={0.5}>
+        <div class="flex justify-between items-center gap-8">
+          <div class="hidden md:block max-w-xl">
+            <IteamA />
+          </div>
+          <div class="max-w-md lg:max-w-lg">
+            <h1 class="text-4xl font-medium mb-6 leading-10 ">
+              Vi löser komplexa utmaningar
+            </h1>
+            <Typography.ParagraphMd>
+              Vi kombinerar strategi, kod och kultur för att ta fram digitala
+              lösningar som möter användarnas behov. Vi utvecklar inte bara
+              appar. Vi tar ett helhetligt perspektiv på din affär för att skapa
+              förändring på riktigt. Vi leder förändringsarbetet och hjälper er
+              att digitalisera er affär.
+            </Typography.ParagraphMd>
+          </div>
         </div>
-      </div>
-    </Animation.WithScrollFadeIn>
-    <Animation.WithScrollFadeIn threshold={0.5}>
-      <div class="flex justify-between items-center gap-8">
-        <div class="hidden md:block max-w-xl">
-          <IteamA />
+      </Animation.WithScrollFadeIn>
+      <Animation.WithScrollFadeIn threshold={0.5}>
+        <div class="flex justify-between items-center gap-8">
+          <div class="align-middle max-w-md lg:max-w-lg">
+            <h1 class="text-4xl font-medium mb-6 leading-10">
+              Er digitala partner
+            </h1>
+            <Typography.ParagraphMd>
+              Med ett långsiktigt engagemang hjälper vi er att navigera i den
+              digitala världen. Vi omvandlar visioner till verklighet, utmanar
+              föråldrade metoder och tillsammans utvecklar vi digitala tjänster
+              som era kunder älskar att använda.
+            </Typography.ParagraphMd>
+          </div>
+          <div class="hidden md:block max-w-xl">
+            <img
+              class="ml-auto"
+              src="Monday-meeting-4-Lowres.jpg"
+              alt="illustration" />
+          </div>
         </div>
-        <div class="max-w-md lg:max-w-lg">
-          <h1 class="text-4xl font-medium mb-6 leading-10 ">
-            Vi löser komplexa utmaningar
-          </h1>
-          <Typography.ParagraphMd>
-            Vi kombinerar strategi, kod och kultur för att ta fram digitala
-            lösningar som möter användarnas behov. Vi utvecklar inte bara appar.
-            Vi tar ett helhetligt perspektiv på din affär för att skapa
-            förändring på riktigt. Vi leder förändringsarbetet och hjälper er
-            att digitalisera er affär.
-          </Typography.ParagraphMd>
-        </div>
-      </div>
-    </Animation.WithScrollFadeIn>
-    <Animation.WithScrollFadeIn threshold={0.5}>
-      <div class="flex justify-between items-center gap-8">
-        <div class="align-middle max-w-md lg:max-w-lg">
-          <h1 class="text-4xl font-medium mb-6 leading-10">
-            Er digitala partner
-          </h1>
-          <Typography.ParagraphMd>
-            Med ett långsiktigt engagemang hjälper vi er att navigera i den
-            digitala världen. Vi omvandlar visioner till verklighet, utmanar
-            föråldrade metoder och tillsammans utvecklar vi digitala tjänster
-            som era kunder älskar att använda.
-          </Typography.ParagraphMd>
-        </div>
-        <div class="hidden md:block max-w-xl">
-          <img
-            class="ml-auto"
-            src="Monday-meeting-4-Lowres.jpg"
-            alt="illustration" />
-        </div>
-      </div>
-    </Animation.WithScrollFadeIn>
-  </div>
-
-</Layout.Content>
+      </Animation.WithScrollFadeIn>
+    </div>
+  </Layout.Content>
 </Layout.Base>
 
 <ContactBlock.Default />

@@ -6,9 +6,9 @@
 </script>
 
 <div
-  class={`bg-white rounded ${post.primary_tag.slug === 'blog' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
+  class={`bg-white rounded ${post.primary_tag.slug === 'case' ? 'md:flex-customwide ' : 'md:flex-customwide lg:flex-customnarrow'}`}>
   <Animation.CardHover>
-    <div class="p-3 h-cardSm lg:h-card">
+    <div class="p-3 pb-8 h-cardSm lg:h-card">
       <a
         rel="prefetch"
         href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
@@ -19,11 +19,11 @@
               src={post.feature_image}
               alt="feature" />
             <div class="absolute" style="bottom: 1rem; left: 1rem;">
-              {#each post.tags as tag}
-                <div class="inline-block bg-white rounded px-2 py-1 mr-2 mb-2">
-                  <p class="font-medium text-xs">{tag.name}</p>
-                </div>
-              {/each}
+              <div class="inline-block bg-white rounded px-2 py-1 mr-2 mb-2">
+                <p class="font-medium text-xs capitalize">
+                  {post.primary_tag.slug}
+                </p>
+              </div>
             </div>
             <div class="ml-2 mt-4">
               <Typography.H3>{post.title}</Typography.H3>
