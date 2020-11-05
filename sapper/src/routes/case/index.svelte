@@ -57,10 +57,9 @@
           {#each parsedPosts as post}
             <Animation.CardHover>
               <a
-                class="flex flex-col p-3 bg-white"
                 rel="prefetch"
                 href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
-                <div class="bg-white">
+                <div class="bg-white flex flex-col p-3 h-full">
                   <div
                     class="rounded bg-cover bg-center"
                     style="padding-bottom: 60%; background-image: url({post.feature_image})"
