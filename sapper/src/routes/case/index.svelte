@@ -34,6 +34,12 @@
 <!-- Case -->
 <svelte:head>
   <title>Iteam | Case</title>
+  
+  <style>
+    body {
+      background-color: #fcfaf6;
+    }
+  </style>
 </svelte:head>
 
 <Layout.Base>
