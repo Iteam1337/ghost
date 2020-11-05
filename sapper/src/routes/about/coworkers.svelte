@@ -19,7 +19,7 @@
   <title>Iteam | Medarbetare</title>
 </svelte:head>
 
-<Layout.Page>
+<Layout.Base>
   <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">
     <div class="w-1/2">
       <FeaturedImageIteam />
@@ -57,4 +57,4 @@
       </div>
     {/each}
   </div>
-</Layout.Page>
+</Layout.Base>

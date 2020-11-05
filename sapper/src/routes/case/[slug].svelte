@@ -22,7 +22,7 @@
 <svelte:head>
   <title>Case | {post.title}</title></svelte:head>
 <Animation.WithScrollFadeIn>
-  <Layout.Page>
+  <Layout.Base>
     <Layout.Content>
       <div class="sm:px-16 md:px-24">
         <Typography.H1>{post.title}</Typography.H1>
@@ -50,7 +50,7 @@
         </div>
       {/if}
     </Layout.Post>
-  </Layout.Page>
+  </Layout.Base>
 </Animation.WithScrollFadeIn>
 
 <ContactBlock.Challenge />

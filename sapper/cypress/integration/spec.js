@@ -4,7 +4,7 @@ describe('Sapper template app', () => {
   })
 
   it('has the correct <h1>', () => {
-    cy.contains('h1', 'Om oss')
+    cy.contains('h1', 'Vi är en digitaliseringsbyrå')
   })
 
   it('navigates to /blog', () => {

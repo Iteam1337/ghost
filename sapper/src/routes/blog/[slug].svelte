@@ -28,7 +28,7 @@
   </style>
 </svelte:head>
 
-<Layout.Page>
+<Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
       <div class="sm:px-16 md:px-24">
@@ -72,6 +72,6 @@
       </Typography.ParagraphSm>
     </div>
   </div>
-</Layout.Page>
+</Layout.Base>
 
 <ContactBlock.Default />
