@@ -2,7 +2,7 @@
   import NavItem from './NavItem.svelte'
   import Hamburger from '../../assets/hamburger.svg'
   import Close from '../../assets/close.svg'
-
+  import SocialMedia from '../SocialMedia.svelte'
   export let segment
 
   let menuHidden = true
@@ -19,7 +19,7 @@
   ]
 </script>
 
-<div class={!segment && 'bg-grey-cod text-white'}>
+<div class={(!segment || !menuHidden) && 'bg-grey-cod text-white'}>
   <nav
     class="px-8 flex justify-between lg:max-w-screen-xxl mx-auto items-center">
     <a
@@ -28,7 +28,7 @@
       href=".">
       <img
         on:click={!menuHidden && toggleMenu}
-        src={!segment ? 'iteam-white.png' : 'iteam.png'}
+        src={segment && menuHidden ? 'iteam.png' : 'iteam-white.png'}
         alt="Iteam"
         class="logo"
         style="width: 100px;" />
@@ -37,24 +37,32 @@
     <!-- Menu visible on desktop. -->
     <ul class="p-0 m-0 flex flex-col items-end hidden md:block">
       {#each menu as item}
-        <NavItem {item} {segment} />
+        <NavItem
+          ariaBorderColor={segment && menuHidden && 'black'}
+          {item}
+          {segment} />
       {/each}
     </ul>
 
     <!-- Menu visible on mobile. -->
     <div
-      class="{!segment ? 'bg-grey-cod' : 'bg-white'} w-full h-full fixed left-0 top-0 z-40 bg-opacity-95 pr-6 md:hidden"
+      class="bg-grey-cod w-full h-full fixed left-0 top-0 z-40 pr-6 md:hidden text-white"
       class:hidden={menuHidden}>
       <div class="relative h-full w-full">
-        <ul class="p-0 m-0 mt-24 flex flex-col md:block absolute left-0 top-0">
-          {#each menu as item}
-            <NavItem on:menuSelection={() => toggleMenu()} {item} {segment} />
-          {/each}
-        </ul>
+        <div class="p-0 m-0 mt-24 md:block absolute left-0 top-0">
+          <ul class="flex flex-col">
+            {#each menu as item}
+              <NavItem on:menuSelection={() => toggleMenu()} {item} {segment} />
+            {/each}
+          </ul>
+          <div class="pl-6 mt-20">
+            <SocialMedia />
+          </div>
+        </div>
       </div>
     </div>
     <div
-      class={`md:hidden h-8 w-8 z-50 text-${segment ? 'black' : 'white'}`}
+      class={`md:hidden h-8 ${menuHidden ? 'w-8' : 'w-6'} z-50 text-${segment ? 'black' : 'white'}`}
       on:click={() => toggleMenu()}>
       {#if menuHidden}
         <Hamburger />
