@@ -38,8 +38,8 @@
           <div class="max-w-xl">
             <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
             <Typography.ParagraphLg>
-              Genom agilitet, användarfokus och i nära samarbete med våra kunder
-              skapar vi digital innovation.
+              Iteam är en digitaliseringsbyrå som utvecklar digitala tjänster
+              för en hållbar framtid
             </Typography.ParagraphLg>
 
             <div class="mt-8">
@@ -128,17 +128,21 @@
         <div class="flex justify-between items-center gap-8">
           <div class="align-middle max-w-md lg:max-w-lg">
             <h1 class="text-4xl font-medium mb-6 leading-10">
-              Vi är en digital byrå med teknik som spetskompetens
+              Vi skapar nytta genom utveckling
             </h1>
             <Typography.ParagraphMd>
-              Vi är ett tätt sammansvetsat gäng som jobbar med moderna tekniker
-              och metoder. Vi brinner för att hjälpa våra kunder att navigera i
-              det digitala landskapet och dra nytta av digitaliseringens
-              möjligheter.
+              Vi är 25 utvecklare, Team Coacher och UX-designers. Vi hjälper dig
+              att ta fram digitala lösningar som möter användarnas behov. Vi
+              utvecklar inte bara appar. Vi tar ett helhetsperspektiv på din
+              affär för att skapa värde på riktigt. Vi leder förändringsarbetet
+              och hjälper er att digitalisera er affär.
             </Typography.ParagraphMd>
           </div>
           <div class="hidden md:block max-w-xl">
-            <img class="h-auto" src="TAC-2.jpg" alt="illustration" />
+            <img
+              class="h-auto"
+              src="Mikael-Nisse-Mimmi-Lowres.jpg"
+              alt="illustration" />
           </div>
         </div>
       </Animation.WithScrollFadeIn>
@@ -149,14 +153,14 @@
           </div>
           <div class="max-w-md lg:max-w-lg">
             <h1 class="text-4xl font-medium mb-6 leading-10 ">
-              Vi löser komplexa utmaningar
+              Startuptänk och snabbrörlighet
             </h1>
             <Typography.ParagraphMd>
-              Vi kombinerar strategi, kod och kultur för att ta fram digitala
-              lösningar som möter användarnas behov. Vi utvecklar inte bara
-              appar. Vi tar ett helhetligt perspektiv på din affär för att skapa
-              förändring på riktigt. Vi leder förändringsarbetet och hjälper er
-              att digitalisera er affär.
+              Det räcker inte att utveckala tjänster och hoppas att dina
+              användare är nöjda. Du behöver en process som hjälper dig att
+              hitta rätt. Genom smidig utveckling i korta iterativa cykler
+              testar vi hypoteser för att undersöka vad som fungerar bäst för
+              användarna och verksamheten.
             </Typography.ParagraphMd>
           </div>
         </div>
@@ -165,19 +169,20 @@
         <div class="flex justify-between items-center gap-8">
           <div class="align-middle max-w-md lg:max-w-lg">
             <h1 class="text-4xl font-medium mb-6 leading-10">
-              Er digitala partner
+              Du blir en del av oss
             </h1>
             <Typography.ParagraphMd>
-              Med ett långsiktigt engagemang hjälper vi er att navigera i den
-              digitala världen. Vi omvandlar visioner till verklighet, utmanar
-              föråldrade metoder och tillsammans utvecklar vi digitala tjänster
-              som era kunder älskar att använda.
+              Inför varje nytt projekt plockar vi ihop de kompetenserna du
+              behöver. Det är när personer med olika kompetenser och varierande
+              bakgrunder samarbetar i tvärfunktionella team som innovation
+              verkligen sker. Därför är våra kunder självklara medlemmar i våra
+              team och vi jobbar tillsammans mot våra gemensamma mål.
             </Typography.ParagraphMd>
           </div>
           <div class="hidden md:block max-w-xl">
             <img
               class="ml-auto"
-              src="Monday-meeting-4-Lowres.jpg"
+              src="Dennis-Radu-Amir-Lowres.jpg"
               alt="illustration" />
           </div>
         </div>
