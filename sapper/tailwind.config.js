@@ -29,7 +29,7 @@ module.exports = {
       },
       fontSize: {
         h1: '2.5em',
-        h2: '24px'
+        h2: '24px',
       },
       colors: {
         beige: '#fcfbfb',
@@ -43,7 +43,7 @@ module.exports = {
         grey: {
           dark: '#363636',
           medium: '#444444',
-          cod: '#1C1B1B'
+          cod: '#1C1B1B',
         },
         sand: '#F5F1ED',
       },
@@ -61,6 +61,9 @@ module.exports = {
     textColor: {
       white: '#fff',
       superblue: '#002FEE',
+    },
+    height: {
+      banner: '600px',
     },
   },
   variants: {},
