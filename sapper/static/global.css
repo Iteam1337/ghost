@@ -8,6 +8,14 @@ body {
   @apply font-body;
 }
 
+.darkness {
+  -webkit-filter: brightness(0.3);
+  filter: brightness(0.3);
+  -moz-filter: brightness(0.3);
+  -o-filter: brightness(0.3);
+  -ms-filter: brightness(0.3);
+}
+
 .custom-flex-span-narrow {
   flex: 1 1 calc((100% / 3) - 5rem);
 }
