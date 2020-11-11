@@ -14,9 +14,9 @@
 </svelte:head>
 
 <div
-  class="text-center justify-center text-white items-center flex flex-col h-screen">
+  class="text-center justify-center text-white items-center flex flex-col h-screen z-40">
   <div
-    class="h-full w-full bg-cover bg-center bg-no-repeat absolute darkness"
+    class="h-full w-full bg-cover bg-center bg-no-repeat absolute top-0 darkness"
     style="background-image: url(floating-shiba.gif)" />
   <div class="relative">
     <div class="pb-6">
@@ -25,9 +25,9 @@
     </div>
 
     <Animation.ButtonHover>
-      <Buttons.Default>
-        <button on:click={() => (window.location.href = '/')}>Till startsidan</button>
-      </Buttons.Default>
+      <a href="/">
+        <Buttons.Default>Till startsidan</Buttons.Default>
+      </a>
     </Animation.ButtonHover>
   </div>
 
