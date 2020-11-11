@@ -120,10 +120,11 @@
         <Typography.H2>Vi som jobbar här</Typography.H2>
       </div>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 my-12">
+        class="grid gap-12 my-12"
+        style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
         {#each coworkers as coworker}
           <div>
-            <img class="object-cover" src={coworker.image} alt="feature" />
+            <img src={coworker.image} alt="feature" />
             <p class="mt-4 font-medium">{coworker.title}</p>
             <p class="font-light">{coworker.role}</p>
             <p class="font-light">
