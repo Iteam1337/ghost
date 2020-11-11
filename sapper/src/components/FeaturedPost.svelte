@@ -26,7 +26,7 @@
               </div>
             </div>
             <div class="ml-2 mt-4">
-              <Typography.H3>{post.title}</Typography.H3>
+              <Typography.H3>{post.meta_title || post.title}</Typography.H3>
             </div>
           </div>
         </div>
