@@ -27,6 +27,11 @@
 
 <svelte:head>
   <title>Iteam - There is a Better Way</title>
+  <style>
+    body {
+      background-color: #fcfaf6;
+    }
+  </style>
 </svelte:head>
 
 <div class="pb-16">
