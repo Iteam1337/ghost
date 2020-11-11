@@ -7,6 +7,9 @@ module.exports = {
   purge: ['./src/**/*.svelte'],
   theme: {
     extend: {
+      height: {
+        banner: '600px',
+      },
       spacing: {
         card: '600px',
         cardSm: '468px',
@@ -61,9 +64,6 @@ module.exports = {
     textColor: {
       white: '#fff',
       superblue: '#002FEE',
-    },
-    height: {
-      banner: '600px',
     },
   },
   variants: {},
