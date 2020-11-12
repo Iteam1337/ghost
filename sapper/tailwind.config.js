@@ -54,6 +54,10 @@ module.exports = {
       opacity: {
         95: '0.95',
       },
+      textColor: {
+        white: '#fff',
+        superblue: '#002FEE',
+      },
     },
     container: {
       center: true,
@@ -61,10 +65,6 @@ module.exports = {
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
       body: ['Roboto', 'sans-serif'],
-    },
-    textColor: {
-      white: '#fff',
-      superblue: '#002FEE',
     },
   },
   variants: {},
