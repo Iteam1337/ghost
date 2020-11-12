@@ -13,6 +13,7 @@
   import Layout from '../components/layout'
   import Buttons from '../components/buttons'
   import Animation from '../components/animation'
+  import GreenBlock from './GreenBlock.svelte'
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session })
@@ -132,9 +133,9 @@
       <Animation.WithScrollFadeIn threshold={0.5}>
         <div class="flex justify-between items-center gap-8">
           <div class="align-middle max-w-md lg:max-w-lg">
-            <h1 class="text-4xl font-medium mb-6 leading-10">
+            <h3 class="text-4xl font-medium mb-6 leading-10">
               Vi skapar nytta genom utveckling
-            </h1>
+            </h3>
             <Typography.ParagraphMd>
               Vi är 25 utvecklare, Team Coacher och UX-designers. Vi hjälper dig
               att ta fram digitala lösningar som möter användarnas behov. Vi
@@ -157,9 +158,9 @@
             <IteamA />
           </div>
           <div class="max-w-md lg:max-w-lg">
-            <h1 class="text-4xl font-medium mb-6 leading-10 ">
+            <h3 class="text-4xl font-medium mb-6 leading-10 ">
               Startuptänk och snabbrörlighet
-            </h1>
+            </h3>
             <Typography.ParagraphMd>
               Det räcker inte att utveckala tjänster och hoppas att dina
               användare är nöjda. Du behöver en process som hjälper dig att
@@ -173,9 +174,9 @@
       <Animation.WithScrollFadeIn threshold={0.5}>
         <div class="flex justify-between items-center gap-8">
           <div class="align-middle max-w-md lg:max-w-lg">
-            <h1 class="text-4xl font-medium mb-6 leading-10">
+            <h3 class="text-4xl font-medium mb-6 leading-10">
               Du blir en del av oss
-            </h1>
+            </h3>
             <Typography.ParagraphMd>
               Inför varje nytt projekt plockar vi ihop de kompetenserna du
               behöver. Det är när personer med olika kompetenser och varierande
@@ -195,5 +196,7 @@
     </div>
   </Layout.Content>
 </Layout.Base>
+
+<GreenBlock />
 
 <ContactBlock.Default />

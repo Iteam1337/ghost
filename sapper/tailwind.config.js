@@ -43,7 +43,7 @@ module.exports = {
           marine: '#081754',
           dark: '#4271FF',
         },
-        green: '#36F49A',
+        green: '#38FFA1',
         grey: {
           dark: '#363636',
           medium: '#444444',
@@ -53,6 +53,7 @@ module.exports = {
       },
       opacity: {
         95: '0.95',
+        30: '0.3',
       },
       textColor: {
         white: '#fff',
