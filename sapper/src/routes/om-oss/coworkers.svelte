@@ -40,7 +40,7 @@
       <div
         class="transform hover:shadow-hover transition duration-500 ease-in
           hover:bg-white p-4 rounded-md my-2 mx-2 w-full sm:w-2/5 xl:w-1/5">
-        <a rel="prefetch" href={`/about/coworker/${coworker.slug}`}>
+        <a rel="prefetch" href={`/om-oss/medarbetare/${coworker.slug}`}>
           <div class="h-full pb-4">
             <div class="relative" style="height: 90%;">
               <img

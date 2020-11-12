@@ -12,10 +12,6 @@ const redirect = (req, res, next) => {
   const path = req.path.toLowerCase()
 
   const redirects = {
-    '/om-oss': {
-      status: 301,
-      location: '/about',
-    },
     '/medarbetare': {
       status: 410,
     },
