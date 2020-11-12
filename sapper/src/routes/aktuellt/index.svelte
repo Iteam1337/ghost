@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-  <title>Iteam | Blog</title>
+  <title>Iteam | Aktuellt</title>
   <style>
     body {
       background-color: #fcfaf6;

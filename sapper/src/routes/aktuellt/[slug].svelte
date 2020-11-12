@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-  <title>Blog | {post.title}</title>
+  <title>Aktuellt | {post.title}</title>
   <style>
     body {
       background-color: white;

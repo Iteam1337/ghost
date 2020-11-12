@@ -13,9 +13,9 @@
   const menu = [
     { text: 'Case', to: 'case' },
     // { text: 'Tjänster', to: 'services' },
-    { text: 'Om oss', to: 'about' },
-    { text: 'Aktuellt', to: 'blog' },
-    { text: 'Kontakta oss 👋', to: 'contact' },
+    { text: 'Om oss', to: 'om-oss' },
+    { text: 'Aktuellt', to: 'aktuellt' },
+    { text: 'Kontakta oss 👋', to: 'kontakt' },
   ]
 </script>
 
