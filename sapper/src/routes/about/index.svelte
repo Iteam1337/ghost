@@ -66,12 +66,12 @@
       <div class="w-full md:px-24">
         <Typography.H1>Vi är en digitaliseringsbyrå</Typography.H1>
         <div class="max-w-4xl">
-          <Typography.ParagraphMd>
+          <Typography.ParagraphLg>
             Genom att kombinera djupt tekniskt kunnande med stor nyfikenhet för
             användarens behov och respekt för affären skapar vi digitala
             tjänster och produkter som förändrar. Alltid i team och alltid
             agilt.
-          </Typography.ParagraphMd>
+          </Typography.ParagraphLg>
         </div>
       </div>
     </Layout.Content>
@@ -101,10 +101,7 @@
           {#each items as item}
             <div class="grid md:grid-cols-3 md:gap-16">
               <div class="md:col-span-1 ">
-                <h3
-                  class="m-heading font-medium sm:text-lg lg:text-2xl leading-tight tracking-wide mb-0">
-                  {item.title}
-                </h3>
+                <Typography.H2>{item.title}</Typography.H2>
               </div>
               <div class="md:col-span-2 lg:max-w-xl justify-self-center">
                 <Typography.ParagraphMd>{item.body}</Typography.ParagraphMd>
@@ -123,10 +120,11 @@
         <Typography.H2>Vi som jobbar här</Typography.H2>
       </div>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 my-12">
+        class="grid gap-12 my-12"
+        style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
         {#each coworkers as coworker}
           <div>
-            <img class="object-cover" src={coworker.image} alt="feature" />
+            <img src={coworker.image} alt="feature" />
             <p class="mt-4 font-medium">{coworker.title}</p>
             <p class="font-light">{coworker.role}</p>
             <p class="font-light">
@@ -144,32 +142,34 @@
   </Layout.Base>
 </Animation.WithScrollFadeIn>
 <Animation.WithScrollFadeIn>
-  <div class="px-8">
-    <Layout.Content>
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-        <img
-          class="hidden lg:block object-cover"
-          src={'looking-into-wall.png'}
-          alt="looking into the wall" />
-        <div
-          class="flex flex-col px-16 py-16 bg-blue-marine text-white justify-center align-middle">
-          <Typography.H2>
-            Vi skapades ur en vilja att skapa värde, ha kul och göra något bra
-            göra något bra
-          </Typography.H2>
-          <Typography.ParagraphMd>
-            Vi är 25 utvecklare, team coacher och UX-designers. Vi drivs alla av
-            viljan att skapa digitala lösningar som bidrar till en positiv
-            föränding. Teknik ska vara tillgänglig för alla. Teknik ska göra
-            gott.
-          </Typography.ParagraphMd>
+  <div class="grid grid-cols-1 lg:grid-cols-2 bg-blue-marine lg:h-banner">
+    <div
+      class="row-start-1 col-start-1 hidden lg:block bg-cover bg-top"
+      style="background-image: url(looking-into-wall.png);"
+      title="looking into the wall" />
+    <div class="col-span-full relative row-start-1 self-center px-8">
+      <div class="py-16 max-w-screen-xl mx-auto w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div
+            class="col-start-2 flex flex-col py-16 lg:ml-16 text-white gap-8">
+            <Typography.H2>
+              Vi skapades ur en vilja att skapa värde, ha kul och göra något bra
+              göra något bra
+            </Typography.H2>
+            <Typography.ParagraphMd>
+              Vi är 25 utvecklare, team coacher och UX-designers. Vi drivs alla
+              av viljan att skapa digitala lösningar som bidrar till en positiv
+              föränding. Teknik ska vara tillgänglig för alla. Teknik ska göra
+              gott.
+            </Typography.ParagraphMd>
+          </div>
         </div>
       </div>
-    </Layout.Content>
+    </div>
   </div>
 </Animation.WithScrollFadeIn>
 <Animation.WithScrollFadeIn>
-  <div class="bg-sand">
+  <div class="bg-sand px-8">
     <Layout.Content>
       <div class="pb-16 grid grid-cols-2 sm:grid-cols-4 gap-8">
         {#each iteamFacts as fact}

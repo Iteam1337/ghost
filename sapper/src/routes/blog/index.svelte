@@ -20,6 +20,11 @@
 
 <svelte:head>
   <title>Iteam | Blog</title>
+  <style>
+    body {
+      background-color: #fcfaf6;
+    }
+  </style>
 </svelte:head>
 
 <Layout.Base>

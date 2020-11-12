@@ -16,24 +16,16 @@
   import helpers from '../../utils/helpers.js'
 
   export let posts
-
-  const parsedPosts = posts.map((p) => {
-    let parsed
-
-    try {
-      parsed = JSON.parse(p.excerpt)
-    } catch (error) {}
-
-    return {
-      ...p,
-      parsedExcerpt: parsed,
-    }
-  })
 </script>
 
 <!-- Case -->
 <svelte:head>
   <title>Iteam | Case</title>
+  <style>
+    body {
+      background-color: #fcfaf6;
+    }
+  </style>
 </svelte:head>
 
 <Layout.Base>
@@ -54,13 +46,12 @@
     <Layout.Content>
       <div class="py-6">
         <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-          {#each parsedPosts as post}
+          {#each posts as post}
             <Animation.CardHover>
               <a
-                class="flex flex-col p-3 bg-white"
                 rel="prefetch"
                 href={`${helpers.getRouteFromPostTag(post.primary_tag.slug)}/${post.slug}`}>
-                <div class="bg-white">
+                <div class="bg-white flex flex-col p-3 h-full">
                   <div
                     class="rounded bg-cover bg-center"
                     style="padding-bottom: 60%; background-image: url({post.feature_image})"
@@ -68,12 +59,10 @@
 
                   <div class="ml-2 mt-6">
                     <Typography.ParagraphMd>
-                      {post.parsedExcerpt ? post.parsedExcerpt.customer : post.title}
+                      {post.meta_title || post.title}
                     </Typography.ParagraphMd>
-                    {#if post.parsedExcerpt}
-                      <Typography.H3>
-                        {post.parsedExcerpt.excerpt}
-                      </Typography.H3>
+                    {#if post.meta_description}
+                      <Typography.H3>{post.meta_description}</Typography.H3>
                     {/if}
                   </div>
                 </div>
