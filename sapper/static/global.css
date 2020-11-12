@@ -31,11 +31,6 @@ body {
   margin-top: 4rem;
 }
 
-.post p {
-  font-weight: 300;
-  font-size: 1rem;
-}
-
 .post blockquote {
   padding: 0.5rem 2rem;
   font-size: 1.25rem;
@@ -97,7 +92,7 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .post figcaption,

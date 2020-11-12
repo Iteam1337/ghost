@@ -31,8 +31,9 @@ module.exports = {
         heading: '0 0 0.3em 0;',
       },
       fontSize: {
-        h1: '2.5em',
-        h2: '24px',
+        h1: '2rem',
+        'h1-lg': '2.5rem',
+        'paragraphlg--desktop': '1.375rem',
       },
       colors: {
         beige: '#fcfbfb',
