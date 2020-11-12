@@ -30,9 +30,9 @@
 <Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
-      <div class="flex flex-col lg:flex-row justify-between w-full md:px-24">
-        <div class="max-w-xl">
-          <Typography.H1>Artiklar & nyheter</Typography.H1>
+      <div class="w-full md:px-24">
+        <Typography.H1>Artiklar & nyheter</Typography.H1>
+        <div class="max-w-4xl">
           <Typography.ParagraphLg>
             Vi gillar att experimentera. Vi laborerar med ny teknik,
             omvärldsbevakar och delar vårt lärande med varandra och våra kunder.
