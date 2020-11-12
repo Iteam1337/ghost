@@ -36,11 +36,11 @@
 
 <div class="pb-16">
   <div class="bg-grey-cod pb-16">
-    <Layout.Base>
+    <div class="px-8 lg:py-16">
       <Layout.Content>
         <div
           class="flex flex-col-reverse text-white lg:flex-row justify-between w-full items-center">
-          <div class="max-w-xl">
+          <div class="max-w-xl mt-12 lg:mt-0">
             <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
             <Typography.ParagraphLg>
               Iteam är en digitaliseringsbyrå som utvecklar digitala tjänster
@@ -60,7 +60,7 @@
           </div>
         </div>
       </Layout.Content>
-    </Layout.Base>
+    </div>
   </div>
   <Animation.WithScrollFadeIn>
     <Layout.Base>

@@ -66,12 +66,12 @@
       <div class="w-full md:px-24">
         <Typography.H1>Vi är en digitaliseringsbyrå</Typography.H1>
         <div class="max-w-4xl">
-          <Typography.ParagraphMd>
+          <Typography.ParagraphLg>
             Genom att kombinera djupt tekniskt kunnande med stor nyfikenhet för
             användarens behov och respekt för affären skapar vi digitala
             tjänster och produkter som förändrar. Alltid i team och alltid
             agilt.
-          </Typography.ParagraphMd>
+          </Typography.ParagraphLg>
         </div>
       </div>
     </Layout.Content>
