@@ -58,6 +58,8 @@
 <!-- Om oss -->
 <svelte:head>
   <title>Iteam | Om oss</title>
+  <meta property="og:title" content="Iteam | Om oss" />
+  <meta property="og:image" content={'iteam-white.png'} />
 </svelte:head>
 
 <Animation.WithScrollFadeIn>

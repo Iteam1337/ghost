@@ -15,7 +15,7 @@
     // { text: 'Tjänster', to: 'services' },
     { text: 'Om oss', to: 'om-oss' },
     { text: 'Aktuellt', to: 'aktuellt' },
-    { text: 'Kontakta oss 👋', to: 'kontakt' },
+    { text: 'Kontakta oss 👋', to: 'kontakta-oss' },
   ]
 </script>
 

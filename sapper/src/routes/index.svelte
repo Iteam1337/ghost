@@ -28,6 +28,8 @@
 
 <svelte:head>
   <title>Iteam - There is a Better Way</title>
+  <meta property="og:title" content="Iteam - There is a Better Way" />
+  <meta property="og:image" content={'iteam-white.png'} />
   <style>
     body {
       background-color: #fcfaf6;

@@ -16,11 +16,19 @@
 
   export let post
   export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
+  console.log('post', post)
 </script>
 
 <!-- Ett case -->
 <svelte:head>
-  <title>Case | {post.title}</title>
+  <title>Iteam | Case - {post.title}</title>
+  <meta
+    property="og:title"
+    content="Iteam | Case - {post.meta_title || post.title}" />
+  <meta
+    property="og:description"
+    content={post.meta_description || post.excerpt} />
+  <meta property="og:image" content={post.feature_image} />
 </svelte:head>
 <Animation.WithScrollFadeIn>
   <Layout.Base>

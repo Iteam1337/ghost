@@ -21,6 +21,8 @@
 <!-- Case -->
 <svelte:head>
   <title>Iteam | Case</title>
+  <meta property="og:title" content="Iteam | Case" />
+  <meta property="og:image" content={'iteam-white.png'} />
   <style>
     body {
       background-color: #fcfaf6;

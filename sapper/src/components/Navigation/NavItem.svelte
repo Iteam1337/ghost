@@ -16,7 +16,7 @@
 </style>
 
 <li
-  class="{segment && 'text-black'} px-2 py-4 font-medium text-2xl md:text-base block float-left pl-6 sm:block">
+  class="px-2 py-4 font-medium text-2xl md:text-base block float-left pl-6 sm:block">
   <a
     style="--color: {ariaBorderColor};"
     aria-current={segment === item.to ? 'page' : undefined}

@@ -1,12 +1,14 @@
 <script>
-  import Layout from '../components/layout'
-  import Typography from '../components/typography/'
-  import Animation from '../components/animation'
+  import Layout from '../../components/layout'
+  import Typography from '../../components/typography/'
+  import Animation from '../../components/animation'
 </script>
 
 <!-- Kontakt -->
 <svelte:head>
-  <title>Kontakt</title>
+  <title>Iteam | Kontakta oss</title>
+  <meta property="og:title" content="Iteam | Kontakta oss" />
+  <meta property="og:image" content={'iteam-white.png'} />
 </svelte:head>
 
 <Layout.Base>
