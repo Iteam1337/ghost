@@ -26,7 +26,7 @@
             </div>
             <div class="mt-10">
               <Animation.ButtonHover>
-                <a class="block" href="/contact">
+                <a class="block" href="/kontakta-oss">
                   <Buttons.Default width={'w-full md:w-auto'}>
                     {ctaText}
                   </Buttons.Default>
