@@ -12,17 +12,15 @@
       <Layout.Content>
         <div class="flex flex-col">
           <div class="grid md:grid-cols-2">
-            <div>
-              <h3
-                class="text-4xl font-medium mb-6 leading-10 max-w-md lg:max-w-xl">
-                Våra dedikerade team löser utmaningar tillsammans med er
-              </h3>
-              <Typography.ParagraphMd>
-                Vi utvecklar din tjänst tillsammans med dig. Det blir mycket
-                bättre så. Vi hjälper dig att fokusera på det som är viktigt och
-                som skapar värde för dig och dina kunder.
-              </Typography.ParagraphMd>
-            </div>
+            <h3
+              class="text-4xl font-medium mb-6 leading-10 max-w-md lg:max-w-xl">
+              Våra dedikerade team löser utmaningar tillsammans med er
+            </h3>
+            <Typography.ParagraphMd>
+              Vi utvecklar din tjänst tillsammans med dig. Det blir mycket
+              bättre så. Vi hjälper dig att fokusera på det som är viktigt och
+              som skapar värde för dig och dina kunder.
+            </Typography.ParagraphMd>
           </div>
         </div>
       </Layout.Content>

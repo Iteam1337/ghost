@@ -15,7 +15,7 @@
     <Layout.Base>
       <Layout.Content>
         <div
-          class="grid grid-cols-1 gap-12 md:grid-cols-2 items-center text-white justify-items-end pb-16">
+          class="grid grid-cols-1 gap-12 md:grid-cols-2 items-center text-white justify-items-center md:justify-items-end pb-16">
           <div class="mb-12 md:mb-0">
             <h2
               class="text-4xl w-full lg:w-4/5 font-medium tracking-wide mb-10">

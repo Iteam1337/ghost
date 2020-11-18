@@ -20,7 +20,8 @@
 
 <!-- Ett case -->
 <svelte:head>
-  <title>Case | {post.title}</title></svelte:head>
+  <title>Case | {post.title}</title>
+</svelte:head>
 <Animation.WithScrollFadeIn>
   <Layout.Base>
     <Layout.Content>
