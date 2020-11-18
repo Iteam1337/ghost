@@ -10,7 +10,6 @@
   import MagnifyingGlassSymbol from '../assets/illustrations/magnifying-glass.svg'
   import VRGlassesSymbol from '../assets/illustrations/vr-glasses.svg'
   import IteamA from '../assets/illustrations/a.svg'
-  import Layout from '../components/layout'
   import Buttons from '../components/buttons'
   import Animation from '../components/animation'
   import GreenBlock from './GreenBlock.svelte'
@@ -37,49 +36,41 @@
   </style>
 </svelte:head>
 
-<div class="pb-16">
-  <div class="bg-grey-cod pb-16">
-    <div class="px-8 lg:py-16">
-      <Layout.Content>
-        <div
-          class="flex flex-col-reverse text-white lg:flex-row justify-between w-full items-center">
-          <div class="max-w-xl mt-12 lg:mt-0">
-            <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
-            <Typography.ParagraphLg>
-              Iteam är en digitaliseringsbyrå som utvecklar digitala tjänster
-              för en hållbar framtid
-            </Typography.ParagraphLg>
+<div class="bg-grey-cod iteam-width grid py-16 md:py-32">
+  <div
+    class="flex flex-col-reverse text-white lg:flex-row justify-between w-full items-center">
+    <div class="max-w-xl mt-12 lg:mt-0">
+      <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
+      <Typography.ParagraphLg>
+        Iteam är en digitaliseringsbyrå som utvecklar digitala tjänster för en
+        hållbar framtid
+      </Typography.ParagraphLg>
 
-            <div class="mt-8">
-              <a href="/case">
-                <Animation.ButtonHover>
-                  <Buttons.Default>Se våra case</Buttons.Default>
-                </Animation.ButtonHover>
-              </a>
-            </div>
-          </div>
-          <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
-            <FeaturedImageCraneIteam />
-          </div>
-        </div>
-      </Layout.Content>
+      <div class="mt-8">
+        <a href="/case">
+          <Animation.ButtonHover>
+            <Buttons.Default>Se våra case</Buttons.Default>
+          </Animation.ButtonHover>
+        </a>
+      </div>
+    </div>
+    <div class="w-full max-w-md self-center mt-8 lg:mt-0 ">
+      <FeaturedImageCraneIteam />
     </div>
   </div>
-  <Animation.WithScrollFadeIn>
-    <Layout.Base>
-      <Layout.Content>
-        <div class="flex flex-col md:flex-row md:flex-wrap gap-6">
-          {#each posts as post}
-            <FeaturedPost {post} />
-          {/each}
-        </div>
-      </Layout.Content>
-    </Layout.Base>
-  </Animation.WithScrollFadeIn>
 </div>
+<Animation.WithScrollFadeIn>
+  <div class="grid iteam-width my-16 md:my-32">
+    <div class="flex flex-col md:flex-row md:flex-wrap gap-6">
+      {#each posts as post}
+        <FeaturedPost {post} />
+      {/each}
+    </div>
+  </div>
+</Animation.WithScrollFadeIn>
 
 <!-- Tjänster -->
-<div class="bg-grey-dark text-center text-white py-20 px-8 lg:px-20">
+<div class="bg-grey-dark text-center text-white py-32 px-8">
   <Animation.WithScrollFadeIn>
     <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
     <div class="mt-4 inline-block max-w-2xl text-center">
@@ -118,86 +109,77 @@
           text={'Lorem ipsum dolor sit meow meow meow.'} />
       </div>
     </div>
-    <!-- <div class="mt-12">
-      <Animation.ButtonHover transparentButton>
-        <a href="/services">
-          <Buttons.Transparent>Alla tjänster</Buttons.Transparent>
-        </a>
-      </Animation.ButtonHover>
-    </div> -->
   </Animation.WithScrollFadeIn>
 </div>
 
 <!-- Blocks -->
-<Layout.Base>
-  <Layout.Content>
-    <div class="flex flex-col gap-16">
-      <Animation.WithScrollFadeIn threshold={0.5}>
-        <div class="flex justify-between items-center gap-8">
-          <div class="align-middle max-w-md lg:max-w-lg">
-            <h3 class="text-4xl font-medium mb-6 leading-10">
-              Vi skapar nytta genom utveckling
-            </h3>
-            <Typography.ParagraphMd>
-              Vi är 25 utvecklare, Team Coacher och UX-designers. Vi hjälper dig
-              att ta fram digitala lösningar som möter användarnas behov. Vi
-              utvecklar inte bara appar. Vi tar ett helhetsperspektiv på din
-              affär för att skapa värde på riktigt. Vi leder förändringsarbetet
-              och hjälper er att digitalisera er affär.
-            </Typography.ParagraphMd>
-          </div>
-          <div class="hidden md:block max-w-xl">
-            <img
-              class="h-auto"
-              src="Mikael-Nisse-Mimmi-Lowres.jpg"
-              alt="illustration" />
-          </div>
+<div class="grid iteam-width my-16 md:my-32">
+  <div class="flex flex-col gap-16">
+    <Animation.WithScrollFadeIn threshold={0.5}>
+      <div class="flex justify-between items-center gap-8">
+        <div class="align-middle max-w-md lg:max-w-lg">
+          <h3 class="text-4xl font-medium mb-6 leading-10">
+            Vi skapar nytta genom utveckling
+          </h3>
+          <Typography.ParagraphMd>
+            Vi är 25 utvecklare, Team Coacher och UX-designers. Vi hjälper dig
+            att ta fram digitala lösningar som möter användarnas behov. Vi
+            utvecklar inte bara appar. Vi tar ett helhetsperspektiv på din affär
+            för att skapa värde på riktigt. Vi leder förändringsarbetet och
+            hjälper er att digitalisera er affär.
+          </Typography.ParagraphMd>
         </div>
-      </Animation.WithScrollFadeIn>
-      <Animation.WithScrollFadeIn threshold={0.5}>
-        <div class="flex justify-between items-center gap-8">
-          <div class="hidden md:block max-w-xl">
-            <IteamA />
-          </div>
-          <div class="max-w-md lg:max-w-lg">
-            <h3 class="text-4xl font-medium mb-6 leading-10 ">
-              Startuptänk och snabbrörlighet
-            </h3>
-            <Typography.ParagraphMd>
-              Det räcker inte att utveckala tjänster och hoppas att dina
-              användare är nöjda. Du behöver en process som hjälper dig att
-              hitta rätt. Genom smidig utveckling i korta iterativa cykler
-              testar vi hypoteser för att undersöka vad som fungerar bäst för
-              användarna och verksamheten.
-            </Typography.ParagraphMd>
-          </div>
+        <div class="hidden md:block max-w-xl">
+          <img
+            class="h-auto"
+            src="Mikael-Nisse-Mimmi-Lowres.jpg"
+            alt="illustration" />
         </div>
-      </Animation.WithScrollFadeIn>
-      <Animation.WithScrollFadeIn threshold={0.5}>
-        <div class="flex justify-between items-center gap-8">
-          <div class="align-middle max-w-md lg:max-w-lg">
-            <h3 class="text-4xl font-medium mb-6 leading-10">
-              Du blir en del av oss
-            </h3>
-            <Typography.ParagraphMd>
-              Inför varje nytt projekt plockar vi ihop de kompetenserna du
-              behöver. Det är när personer med olika kompetenser och varierande
-              bakgrunder samarbetar i tvärfunktionella team som innovation
-              verkligen sker. Därför är våra kunder självklara medlemmar i våra
-              team och vi jobbar tillsammans mot våra gemensamma mål.
-            </Typography.ParagraphMd>
-          </div>
-          <div class="hidden md:block max-w-xl">
-            <img
-              class="ml-auto"
-              src="Dennis-Radu-Amir-Lowres.jpg"
-              alt="illustration" />
-          </div>
+      </div>
+    </Animation.WithScrollFadeIn>
+    <Animation.WithScrollFadeIn threshold={0.5}>
+      <div class="flex justify-between items-center gap-8">
+        <div class="hidden md:block max-w-xl">
+          <IteamA />
         </div>
-      </Animation.WithScrollFadeIn>
-    </div>
-  </Layout.Content>
-</Layout.Base>
+        <div class="max-w-md lg:max-w-lg">
+          <h3 class="text-4xl font-medium mb-6 leading-10 ">
+            Startuptänk och snabbrörlighet
+          </h3>
+          <Typography.ParagraphMd>
+            Det räcker inte att utveckala tjänster och hoppas att dina användare
+            är nöjda. Du behöver en process som hjälper dig att hitta rätt.
+            Genom smidig utveckling i korta iterativa cykler testar vi hypoteser
+            för att undersöka vad som fungerar bäst för användarna och
+            verksamheten.
+          </Typography.ParagraphMd>
+        </div>
+      </div>
+    </Animation.WithScrollFadeIn>
+    <Animation.WithScrollFadeIn threshold={0.5}>
+      <div class="flex justify-between items-center gap-8">
+        <div class="align-middle max-w-md lg:max-w-lg">
+          <h3 class="text-4xl font-medium mb-6 leading-10">
+            Du blir en del av oss
+          </h3>
+          <Typography.ParagraphMd>
+            Inför varje nytt projekt plockar vi ihop de kompetenserna du
+            behöver. Det är när personer med olika kompetenser och varierande
+            bakgrunder samarbetar i tvärfunktionella team som innovation
+            verkligen sker. Därför är våra kunder självklara medlemmar i våra
+            team och vi jobbar tillsammans mot våra gemensamma mål.
+          </Typography.ParagraphMd>
+        </div>
+        <div class="hidden md:block max-w-xl">
+          <img
+            class="ml-auto"
+            src="Dennis-Radu-Amir-Lowres.jpg"
+            alt="illustration" />
+        </div>
+      </div>
+    </Animation.WithScrollFadeIn>
+  </div>
+</div>
 
 <GreenBlock />
 

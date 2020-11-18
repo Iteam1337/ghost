@@ -8,6 +8,14 @@ body {
   @apply font-body;
 }
 
+.iteam-width {
+  grid-template-columns: 2rem 1fr minmax(100px, 1280px) 1fr 2rem;
+}
+
+.iteam-width > * {
+  grid-column: 3/4;
+}
+
 .darkness {
   -webkit-filter: brightness(0.3);
   filter: brightness(0.3);
