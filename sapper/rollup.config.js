@@ -9,6 +9,7 @@ import sveltePreprocess from 'svelte-preprocess'
 import pkg from './package.json'
 const sapperEnv = require('sapper-environment')
 import svelteSVG from 'rollup-plugin-svelte-svg'
+import image from 'svelte-image'
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
 const legacy = !!process.env.SAPPER_LEGACY_BUILD
@@ -37,7 +38,7 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       svelte({
-        preprocess,
+        preprocess: { ...preprocess, ...image({ placeholder: 'blur' }) },
         dev,
         hydratable: true,
         emitCss: true,

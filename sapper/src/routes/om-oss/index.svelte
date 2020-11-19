@@ -16,6 +16,7 @@
   import ContactBlock from '../../components/contact'
   import Meta from '../../components/Meta.svelte'
   import md5 from 'md5'
+  import Image from 'svelte-image'
   export let pages
 
   const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
@@ -83,14 +84,12 @@
     <Layout.Content>
       <div class="mb-12 sm:mb-24">
         <div class="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-8">
-          <img
-            class="h-auto w-full object-cover md:mb-32"
+          <Image
             src="Kitchen-Monday-meeting-Lowres.png"
             alt="beautiful kitchen" />
-          <img
-            class="h-auto w-full object-cover md:mt-32"
-            src="Hopper-Interior-Lowres.png"
-            alt="nice room" />
+          <div class="md:mt-32 w-full">
+            <Image src="Hopper-Interior-Lowres.png" alt="nice room" />
+          </div>
         </div>
       </div>
     </Layout.Content>

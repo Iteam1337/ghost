@@ -2,6 +2,7 @@
   import Layout from '../components/layout'
   import Animation from '../components/animation'
   import Typography from '../components/typography'
+  import Image from 'svelte-image'
 
   const customers = ['trr', 'tsab', 'vimla', 'tj', 'nh', 'gr']
 </script>
@@ -29,11 +30,8 @@
       <Layout.Content>
         <div class="grid grid-cols-12 grid-rows-6 w-full">
           <div
-            class="grid col-start-1 col-end-6 row-start-2 row-span-full hidden md:block max-w-xl  z-50">
-            <img
-              class="h-auto"
-              src="Radu-Amir-working-Lowres.jpg"
-              alt="illustration" />
+            class="grid col-start-1 col-end-6 row-start-2 row-span-full hidden md:block max-w-xl  z-50 w-full">
+            <Image src="Radu-Amir-working-Lowres.jpg" alt="People working" />
           </div>
 
           <div
