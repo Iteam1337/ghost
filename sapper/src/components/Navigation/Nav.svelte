@@ -3,6 +3,7 @@
   import Hamburger from '../../assets/hamburger.svg'
   import Close from '../../assets/close.svg'
   import SocialMedia from '../SocialMedia.svelte'
+
   export let segment
 
   let menuHidden = true
@@ -11,6 +12,7 @@
   }
 
   const menu = [
+    { text: 'Hem', to: '' },
     { text: 'Case', to: 'case' },
     // { text: 'Tjänster', to: 'services' },
     { text: 'Om oss', to: 'om-oss' },
@@ -19,11 +21,11 @@
   ]
 </script>
 
-<div class={(!segment || !menuHidden) && 'bg-grey-cod text-white'}>
-  <nav
+<div class={!segment || !menuHidden ? 'bg-grey-cod text-white' : ''}>
+  <div
     class="px-8 flex justify-between lg:max-w-screen-xxl mx-auto items-center z-50 relative">
     <a
-      class="py-5 z-50"
+      class="py-8"
       aria-current={segment === undefined ? 'page' : undefined}
       href=".">
       <img
@@ -35,42 +37,42 @@
     </a>
 
     <!-- Menu visible on desktop. -->
-    <ul class="p-0 m-0 flex flex-col items-end hidden md:block">
-      {#each menu as item}
-        <NavItem
-          ariaBorderColor={segment && menuHidden && 'black'}
-          {item}
-          {segment} />
+    <nav class="p-0 m-0 md:flex flex-row items-end hidden ">
+      {#each menu.filter((m) => !!m.to) as item}
+        <NavItem ariaBorderColor={segment && 'black'} {item} {segment} />
       {/each}
-    </ul>
+    </nav>
 
     <!-- Menu visible on mobile. -->
-    <div
-      class="bg-grey-cod w-full h-full fixed left-0 top-0 z-40 pr-6 md:hidden text-white"
-      class:hidden={menuHidden}>
-      <div class="relative h-full w-full">
-        <div class="p-0 m-0 mt-24 md:block absolute left-0 top-0">
-          <ul class="flex flex-col">
-            {#each menu as item}
-              <NavItem on:menuSelection={() => toggleMenu()} {item} {segment} />
-            {/each}
-          </ul>
-          <div class="pl-6 mt-20">
+    <div class="md:hidden">
+      {#if !menuHidden}
+        <div
+          class="bg-grey-cod fixed items-start justify-start inset-0 z-40 text-white grid pt-24 px-6">
+          <div class="grid gap-y-12">
+            <nav class="grid gap-y-10">
+              {#each menu as item}
+                <NavItem
+                  on:menuSelection={() => toggleMenu()}
+                  {item}
+                  {segment} />
+              {/each}
+            </nav>
             <SocialMedia />
           </div>
         </div>
+      {/if}
+      <div
+        class="fixed rounded-full z-50 {!menuHidden || !segment ? 'bg-grey-cod' : segment === 'case' || segment === 'aktuellt' ? 'bg-beige' : 'bg-white'}"
+        style="top:1rem;right:1rem;width:51px;height:51px;padding:12px;"
+        on:click={() => toggleMenu()}>
+        {#if menuHidden}
+          <Hamburger />
+        {:else}
+          <Close />
+        {/if}
       </div>
     </div>
-    <div
-      class={`md:hidden h-8 ${menuHidden ? 'w-8' : 'w-6'} z-50 text-${segment ? 'black' : 'white'}`}
-      on:click={() => toggleMenu()}>
-      {#if menuHidden}
-        <Hamburger />
-      {:else}
-        <Close />
-      {/if}
-    </div>
-  </nav>
+  </div>
 </div>
 
 <!-- Mobile nav -->

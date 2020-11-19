@@ -36,7 +36,7 @@ module.exports = {
         'paragraphlg--desktop': '1.375rem',
       },
       colors: {
-        beige: '#fcfbfb',
+        beige: '#fcfaf6',
         blue: {
           light: '#E8EEFF',
           cornflower: '#668cff',
