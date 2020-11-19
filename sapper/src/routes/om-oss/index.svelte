@@ -2,7 +2,10 @@
   import { API } from '../../services/api.js'
 
   export async function preload(page, session) {
-    return API({ fetch: this.fetch, session }).Pages.ByTags(['Medarbetare'])
+    return API({ fetch: this.fetch, session }).Pages.ByTags(
+      ['Medarbetare'],
+      'all'
+    )
   }
 </script>
 
