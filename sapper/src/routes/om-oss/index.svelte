@@ -11,6 +11,7 @@
   import Layout from '../../components/layout'
   import Animation from '../../components/animation'
   import ContactBlock from '../../components/contact'
+  import Meta from '../../components/Meta.svelte'
   export let pages
 
   const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
@@ -56,11 +57,7 @@
 </script>
 
 <!-- Om oss -->
-<svelte:head>
-  <title>Iteam | Om oss</title>
-  <meta property="og:title" content="Iteam | Om oss" />
-  <meta property="og:image" content={'iteam-white.png'} />
-</svelte:head>
+<Meta title="Iteam | Om oss" />
 
 <Animation.WithScrollFadeIn>
   <Layout.Base>

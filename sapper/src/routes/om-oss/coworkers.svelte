@@ -12,12 +12,11 @@
   import Typography from '../../components/typography/'
   import Links from '../../components/links'
   import FeaturedImageIteam from '../../assets/featured-image-iteam.svg'
+  import Meta from '../../components/Meta.svelte'
 </script>
 
 <!-- Medarbetare -->
-<svelte:head>
-  <title>Iteam | Medarbetare</title>
-</svelte:head>
+<Meta title="Iteam | Medarbetare" />
 
 <Layout.Base>
   <div class="flex flex-col md:flex-row-reverse justify-between px-8 sm:px-32">

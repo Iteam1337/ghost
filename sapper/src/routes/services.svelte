@@ -3,11 +3,12 @@
   import Layout from '../components/layout'
   import Typography from '../components/typography/'
   import Animation from '../components/animation'
+  import Meta from '../components/Meta.svelte'
 </script>
 
 <!-- Tjänster -->
 <svelte:head>
-  <title>Iteam | Tjänster</title>
+  <Meta title="Iteam | Tjänster" />
 </svelte:head>
 
 <Layout.Base>

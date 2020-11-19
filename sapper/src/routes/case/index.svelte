@@ -14,21 +14,21 @@
   import Typography from '../../components/typography/'
   import ContactBlock from '../../components/contact'
   import helpers from '../../utils/helpers.js'
+  import Meta from '../../components/Meta.svelte'
 
   export let posts
 </script>
 
 <!-- Case -->
 <svelte:head>
-  <title>Iteam | Case</title>
-  <meta property="og:title" content="Iteam | Case" />
-  <meta property="og:image" content={'iteam-white.png'} />
   <style>
     body {
       background-color: #fcfaf6;
     }
   </style>
 </svelte:head>
+
+<Meta title="Iteam | Case" />
 
 <Layout.Base>
   <Animation.WithScrollFadeIn>
