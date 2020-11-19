@@ -122,18 +122,24 @@
         class="grid gap-12 my-12"
         style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
         {#each coworkers as coworker}
-          <div>
-            <img src={coworker.image} alt="feature" />
-            <p class="mt-4 font-medium">{coworker.title}</p>
-            <p class="font-light">{coworker.role}</p>
-            <p class="font-light">
-              <a href="tel:{coworker.phone}">{coworker.phone}</a>
-            </p>
-            <p class="font-light text-sm leading-7">
-              <a
-                class="underline"
-                href="mailto:{coworker.email}">{coworker.email}</a>
-            </p>
+          <div class="grid" style="grid-template-rows: 284px max-content;">
+            <img
+              class="block w-full h-full object-cover"
+              src={coworker.image}
+              alt="feature" />
+
+            <div>
+              <p class="mt-4 font-medium">{coworker.title}</p>
+              <p class="font-light">{coworker.role}</p>
+              <p class="font-light">
+                <a href="tel:{coworker.phone}">{coworker.phone}</a>
+              </p>
+              <p class="font-light text-sm leading-7">
+                <a
+                  class="underline"
+                  href="mailto:{coworker.email}">{coworker.email}</a>
+              </p>
+            </div>
           </div>
         {/each}
       </div>
