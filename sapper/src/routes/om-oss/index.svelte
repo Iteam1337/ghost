@@ -15,6 +15,7 @@
   import Animation from '../../components/animation'
   import ContactBlock from '../../components/contact'
   import Meta from '../../components/Meta.svelte'
+  import md5 from 'md5'
   export let pages
 
   const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
@@ -128,7 +129,7 @@
           <div class="grid" style="grid-template-rows: 284px max-content;">
             <img
               class="block w-full h-full object-cover"
-              src={coworker.image}
+              src={coworker.image || `https://www.gravatar.com/avatar/${md5(coworker.email)}?s=300`}
               alt="feature" />
 
             <div>
