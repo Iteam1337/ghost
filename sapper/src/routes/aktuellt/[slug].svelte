@@ -13,14 +13,13 @@
   import ContactBlock from '../../components/contact/'
   import helpers from '../../utils/helpers'
   import Animation from '../../components/animation/'
-
+  import Meta from '../../components/Meta.svelte'
   export let post
 
   const bio = post.primary_author.bio?.split('\n') ?? []
 </script>
 
 <svelte:head>
-  <title>Aktuellt | {post.title}</title>
   <style>
     body {
       background-color: white;
@@ -28,6 +27,7 @@
   </style>
 </svelte:head>
 
+<Meta title="Iteam | Aktuellt - {post.title}" />
 <Layout.Base>
   <Animation.WithScrollFadeIn>
     <Layout.Content>
