@@ -16,9 +16,11 @@
   import ContactBlock from '../../components/contact'
   import Meta from '../../components/Meta.svelte'
   import md5 from 'md5'
+  import helpers from '../../utils/helpers.js'
+
   export let pages
 
-  const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
+  const coworkers = pages.map(({ title, excerpt, feature_image: image, slug }) => {
     const [role, phone, email] = excerpt.split('\n')
     return {
       title,
@@ -26,6 +28,7 @@
       phone,
       email,
       image,
+      slug
     }
   })
 
@@ -58,6 +61,7 @@
     { title: '300', body: 'Kunder har vi hjälpt sedan starten' },
     { title: '30', body: 'Miljoner SEK i omsättning under 2019' },
   ]
+
 </script>
 
 <!-- Om oss -->
@@ -126,6 +130,7 @@
         class="grid gap-12 my-12"
         style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
         {#each coworkers as coworker}
+        <a href={`/om-oss/${coworker.slug}`}>
           <div class="grid" style="grid-template-rows: 284px max-content;">
             <img
               class="block w-full h-full object-cover"
@@ -145,6 +150,7 @@
               </p>
             </div>
           </div>
+          </a>
         {/each}
       </div>
     </Layout.Content>
