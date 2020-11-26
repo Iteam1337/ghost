@@ -17,6 +17,7 @@
   import Meta from '../../components/Meta.svelte'
   import md5 from 'md5'
   import Image from 'svelte-image'
+
   export let pages
 
   const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
