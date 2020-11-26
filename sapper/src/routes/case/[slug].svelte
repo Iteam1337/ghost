@@ -13,22 +13,18 @@
   import Layout from '../../components/layout'
   import helpers from '../../utils/helpers.js'
   import Animation from '../../components/animation'
+  import Meta from '../../components/Meta.svelte'
 
   export let post
   export let filteredTags = post.tags.filter((tag) => tag.name.includes('#'))
 </script>
 
 <!-- Ett case -->
-<svelte:head>
-  <title>Iteam | Case - {post.title}</title>
-  <meta
-    property="og:title"
-    content="Iteam | Case - {post.meta_title || post.title}" />
-  <meta
-    property="og:description"
-    content={post.meta_description || post.excerpt} />
-  <meta property="og:image" content={post.feature_image} />
-</svelte:head>
+<Meta
+  title="Iteam | Case - {post.meta_title || post.title}"
+  description={post.meta_description || post.excerpt}
+  image={post.feature_image} />
+
 <Animation.WithScrollFadeIn>
   <Layout.Container>
     <div class="max-w-4xl mx-auto">

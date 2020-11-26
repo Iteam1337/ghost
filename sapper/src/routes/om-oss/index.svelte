@@ -2,7 +2,10 @@
   import { API } from '../../services/api.js'
 
   export async function preload(page, session) {
-    return API({ fetch: this.fetch, session }).Pages.ByTags(['Medarbetare'])
+    return API({ fetch: this.fetch, session }).Pages.ByTags(
+      ['Medarbetare'],
+      'all'
+    )
   }
 </script>
 
@@ -11,6 +14,8 @@
   import Layout from '../../components/layout'
   import Animation from '../../components/animation'
   import ContactBlock from '../../components/contact'
+  import Meta from '../../components/Meta.svelte'
+  import md5 from 'md5'
   export let pages
 
   const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
@@ -56,11 +61,7 @@
 </script>
 
 <!-- Om oss -->
-<svelte:head>
-  <title>Iteam | Om oss</title>
-  <meta property="og:title" content="Iteam | Om oss" />
-  <meta property="og:image" content={'iteam-white.png'} />
-</svelte:head>
+<Meta title="Iteam | Om oss" />
 
 <Animation.WithScrollFadeIn>
   <Layout.Container>
@@ -110,7 +111,10 @@
     <div class="coworker-grid">
       {#each coworkers as coworker}
         <div>
-          <img src={coworker.image} alt="feature" />
+          <img
+            class="block w-full h-full object-cover"
+            src={coworker.image || `https://www.gravatar.com/avatar/${md5(coworker.email)}?s=300`}
+            alt="feature" />
           <p class="mt-4 font-medium">{coworker.title}</p>
           <p class="font-light">{coworker.role}</p>
           <p class="font-light">

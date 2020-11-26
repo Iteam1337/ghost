@@ -59,7 +59,7 @@ export const API = (context) => ({
     },
   },
   Pages: {
-    ByTags: async (tags) => {
+    ByTags: async (tags, limit = '15') => {
       let filter = '?filter='
 
       tags.forEach((tag) => {
@@ -68,7 +68,7 @@ export const API = (context) => ({
 
       filter = filter.substring(0, filter.length - 1)
 
-      return await get(context, `/pages${filter}`)
+      return await get(context, `/pages${filter}&limit=${limit}`)
     },
   },
   Post: {

@@ -2,14 +2,12 @@
   import Layout from '../../components/layout'
   import Typography from '../../components/typography/'
   import Animation from '../../components/animation'
+  import Meta from '../../components/Meta.svelte'
 </script>
 
 <!-- Kontakt -->
-<svelte:head>
-  <title>Iteam | Kontakta oss</title>
-  <meta property="og:title" content="Iteam | Kontakta oss" />
-  <meta property="og:image" content={'iteam-white.png'} />
-</svelte:head>
+
+<Meta title="Iteam | Kontakta oss" />
 
 <Animation.WithScrollFadeIn>
   <Layout.Container>

@@ -14,6 +14,7 @@
   import Animation from '../components/animation'
   import GreenBlock from './GreenBlock.svelte'
   import Layout from '../components/layout'
+  import Meta from '../components/Meta.svelte'
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session })
@@ -27,15 +28,14 @@
 </script>
 
 <svelte:head>
-  <title>Iteam - There is a Better Way</title>
-  <meta property="og:title" content="Iteam - There is a Better Way" />
-  <meta property="og:image" content={'iteam-white.png'} />
   <style>
     body {
       background-color: #fcfaf6;
     }
   </style>
 </svelte:head>
+
+<Meta title="Iteam - There is a Better Way" />
 
 <Layout.Container background={'bg-grey-cod'}>
   <div
@@ -46,7 +46,6 @@
         Iteam är en digitaliseringsbyrå som utvecklar digitala tjänster för en
         hållbar framtid
       </Typography.ParagraphLg>
-
       <div class="mt-8">
         <a href="/case">
           <Animation.ButtonHover>

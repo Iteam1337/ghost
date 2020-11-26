@@ -14,21 +14,21 @@
   import Typography from '../../components/typography/'
   import ContactBlock from '../../components/contact'
   import helpers from '../../utils/helpers.js'
+  import Meta from '../../components/Meta.svelte'
 
   export let posts
 </script>
 
 <!-- Case -->
 <svelte:head>
-  <title>Iteam | Case</title>
-  <meta property="og:title" content="Iteam | Case" />
-  <meta property="og:image" content={'iteam-white.png'} />
   <style>
     body {
       background-color: #fcfaf6;
     }
   </style>
 </svelte:head>
+
+<Meta title="Iteam | Case" />
 
 <Animation.WithScrollFadeIn>
   <Layout.Container>
@@ -51,7 +51,6 @@
                 class="rounded bg-cover bg-center"
                 style="padding-bottom: 60%; background-image: url({post.feature_image})"
                 title="featured case graphic" />
-
               <div class="ml-2 mt-6">
                 <Typography.ParagraphMd>
                   {post.meta_title || post.title}

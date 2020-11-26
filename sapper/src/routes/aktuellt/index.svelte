@@ -14,6 +14,7 @@
   import ContactBlock from '../../components/contact'
   import helpers from '../../utils/helpers.js'
   import Layout from '../../components/layout'
+  import Meta from '../../components/Meta.svelte'
 
   export let posts
 </script>
@@ -26,6 +27,8 @@
     }
   </style>
 </svelte:head>
+
+<Meta title="Iteam | Aktuellt" />
 
 <Animation.WithScrollFadeIn>
   <Layout.Container>
