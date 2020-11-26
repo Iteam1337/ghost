@@ -32,22 +32,49 @@
   <Animation.WithScrollFadeIn>
     <Layout.Content>
       <div class="w-full md:px-24">
-        <Typography.H1>Bli en del av vårt team</Typography.H1>
+        <Typography.H1>Bli en del av teamet</Typography.H1>
+        <div class="max-w-4xl">
+          <Typography.ParagraphLg>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Typography.ParagraphLg>
+        </div>
       </div>
     </Layout.Content>
+
     <Layout.Content>
       <div class="py-6">
         <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
           {#each posts as post}
             <div class="mt-8 md:mt-12">
-              <div class="text-blue-cornflower">
-                <Typography.H2>{post.title}</Typography.H2>
-              </div>
-              <Typography.ParagraphMd>
-                {post.excerpt.split('\n')[0]}
-              </Typography.ParagraphMd>
+              <a href={`/karriar/${post.slug}`}>
+                <div class="text-blue-cornflower">
+                  <Typography.H2>{post.title}</Typography.H2>
+                </div>
+                <Typography.ParagraphMd>
+                  {post.excerpt.split('\n')[0]}
+                </Typography.ParagraphMd>
+              </a>
             </div>
           {/each}
+        </div>
+
+        <div class="mt-8 md:mt-12">
+          <div class="text-blue-cornflower">
+            <Typography.H2>Spontanansökan & praktik</Typography.H2>
+          </div>
+          <Typography.ParagraphMd>
+            Hittar du ingen tjänst som passar? Gör en
+            <b><a
+                href="mailto:joinus@iteam.se"
+                class="underline">spontanansökan</a></b>
+            eller anmäl intresse för
+            <b><a
+                href="mailto:internship@iteam.se"
+                class="underline">praktik</a></b>
+          </Typography.ParagraphMd>
         </div>
       </div>
     </Layout.Content>

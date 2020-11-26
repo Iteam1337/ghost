@@ -3,7 +3,7 @@
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session })
-      .Posts.ByTags(['karriar'])
+      .Posts.ByTags(['case'])
       .then(({ posts }) => ({ posts }))
   }
 </script>
