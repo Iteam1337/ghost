@@ -8,6 +8,22 @@ body {
   @apply font-body;
 }
 
+@layer components {
+  .coworker-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    @apply grid gap-12;
+  }
+}
+
+.iteam-width {
+  display: grid;
+  grid-template-columns: 2rem 1fr minmax(100px, 1280px) 1fr 2rem;
+}
+
+.iteam-width > * {
+  grid-column: 3/4;
+}
+
 .darkness {
   -webkit-filter: brightness(0.3);
   filter: brightness(0.3);
@@ -101,8 +117,7 @@ body {
 .post blockquote,
 .post ul,
 .post .kg-bookmark-card {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  max-width: 56rem;
 }
 
 .post .kg-bookmark-card {
@@ -179,8 +194,7 @@ body {
   .post blockquote,
   .post ul,
   .post .kg-bookmark-card {
-    padding-left: 5.75rem;
-    padding-right: 5.75rem;
+    max-width: 56rem;
   }
 
   .post blockquote {

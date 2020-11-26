@@ -11,32 +11,23 @@
 </script>
 
 <Animation.WithScrollFadeIn threshold={0.5}>
-  <div class="bg-grey-medium">
-    <Layout.Base>
-      <Layout.Content>
-        <div
-          class="grid grid-cols-1 gap-12 md:grid-cols-2 items-center text-white justify-items-center md:justify-items-end pb-16">
-          <div class="mb-12 md:mb-0">
-            <h2
-              class="text-4xl w-full lg:w-4/5 font-medium tracking-wide mb-10">
-              {title}
-            </h2>
-            <div>
-              <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
-            </div>
-            <div class="mt-10">
-              <Animation.ButtonHover>
-                <a class="block" href="/kontakta-oss">
-                  <Buttons.Default width={'w-full md:w-auto'}>
-                    {ctaText}
-                  </Buttons.Default>
-                </a>
-              </Animation.ButtonHover>
-            </div>
-          </div>
-          <slot />
-        </div>
-      </Layout.Content>
-    </Layout.Base>
-  </div>
+  <Layout.Container background={'bg-grey-medium'}>
+    <div
+      class="grid gap-12 md:grid-cols-2 items-center text-white justify-items-center md:justify-items-end">
+      <div class="grid gap-y-10">
+        <h2 class="text-4xl w-full lg:w-4/5 font-medium tracking-wide">
+          {title}
+        </h2>
+        <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
+        <Animation.ButtonHover>
+          <a class="block" href="/kontakta-oss">
+            <Buttons.Default width={'w-full md:w-auto'}>
+              {ctaText}
+            </Buttons.Default>
+          </a>
+        </Animation.ButtonHover>
+      </div>
+      <slot />
+    </div>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>

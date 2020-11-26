@@ -20,17 +20,19 @@
 
   export let pages
 
-  const coworkers = pages.map(({ title, excerpt, feature_image: image, slug }) => {
-    const [role, phone, email] = excerpt.split('\n')
-    return {
-      title,
-      role,
-      phone,
-      email,
-      image,
-      slug
+  const coworkers = pages.map(
+    ({ title, excerpt, feature_image: image, slug }) => {
+      const [role, phone, email] = excerpt.split('\n')
+      return {
+        title,
+        role,
+        phone,
+        email,
+        image,
+        slug,
+      }
     }
-  })
+  )
 
   export let items = [
     {
@@ -61,100 +63,79 @@
     { title: '300', body: 'Kunder har vi hjälpt sedan starten' },
     { title: '30', body: 'Miljoner SEK i omsättning under 2019' },
   ]
-
 </script>
 
 <!-- Om oss -->
 <Meta title="Iteam | Om oss" />
 
 <Animation.WithScrollFadeIn>
-  <Layout.Base>
-    <Layout.Content>
-      <div class="w-full md:px-24">
-        <Typography.H1>Vi är en digitaliseringsbyrå</Typography.H1>
-        <div class="max-w-4xl">
-          <Typography.ParagraphLg>
-            Genom att kombinera djupt tekniskt kunnande med stor nyfikenhet för
-            användarens behov och respekt för affären skapar vi digitala
-            tjänster och produkter som förändrar. Alltid i team och alltid
-            agilt.
-          </Typography.ParagraphLg>
-        </div>
+  <Layout.Container>
+    <div class="max-w-4xl mx-auto">
+      <Typography.H1>Vi är en digitaliseringsbyrå</Typography.H1>
+      <div class="max-w-4xl">
+        <Typography.ParagraphLg>
+          Genom att kombinera djupt tekniskt kunnande med stor nyfikenhet för
+          användarens behov och respekt för affären skapar vi digitala tjänster
+          och produkter som förändrar. Alltid i team och alltid agilt.
+        </Typography.ParagraphLg>
       </div>
-    </Layout.Content>
-  </Layout.Base>
-  <div class="px-8">
-    <Layout.Content>
-      <div class="mb-12 sm:mb-24">
-        <div class="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-8">
-          <img
-            class="h-auto w-full object-cover md:mb-32"
-            src="Kitchen-Monday-meeting-Lowres.png"
-            alt="beautiful kitchen" />
-          <img
-            class="h-auto w-full object-cover md:mt-32"
-            src="Hopper-Interior-Lowres.png"
-            alt="nice room" />
-        </div>
-      </div>
-    </Layout.Content>
-  </div>
+    </div>
+    <div class="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-8">
+      <img
+        class="h-auto w-full object-cover md:mb-32"
+        src="Kitchen-Monday-meeting-Lowres.png"
+        alt="beautiful kitchen" />
+      <img
+        class="h-auto w-full object-cover md:mt-32"
+        src="Hopper-Interior-Lowres.png"
+        alt="nice room" />
+    </div>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>
 <Animation.WithScrollFadeIn>
-  <div class="bg-grey-dark text-white">
-    <Layout.Base>
-      <Layout.Content>
-        <div class="grid grid-rows gap-24 lg:mb-12">
-          {#each items as item}
-            <div class="grid md:grid-cols-3 md:gap-16">
-              <div class="md:col-span-1 ">
-                <Typography.H2>{item.title}</Typography.H2>
-              </div>
-              <div class="md:col-span-2 lg:max-w-xl justify-self-center">
-                <Typography.ParagraphMd>{item.body}</Typography.ParagraphMd>
-              </div>
-            </div>
-          {/each}
+  <Layout.Container background={'bg-grey-dark'}>
+    <div class="grid grid-rows gap-24 text-white">
+      {#each items as item}
+        <div class="grid md:grid-cols-5 md:gap-16">
+          <div class="md:col-span-2 col-start-1">
+            <Typography.H2>{item.title}</Typography.H2>
+          </div>
+          <div class="col-start-3 col-span-full justify-self-center">
+            <Typography.ParagraphMd>{item.body}</Typography.ParagraphMd>
+          </div>
         </div>
-      </Layout.Content>
-    </Layout.Base>
-  </div>
+      {/each}
+    </div>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>
 <Animation.WithScrollFadeIn>
-  <Layout.Base>
-    <Layout.Content>
-      <div class="text-center ">
-        <Typography.H2>Vi som jobbar här</Typography.H2>
-      </div>
-      <div
-        class="grid gap-12 my-12"
-        style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
-        {#each coworkers as coworker}
+  <Layout.Container>
+    <div class="text-center ">
+      <Typography.H2>Vi som jobbar här</Typography.H2>
+    </div>
+    <div class="coworker-grid">
+      {#each coworkers as coworker}
         <a href={`/om-oss/${coworker.slug}`}>
-          <div class="grid" style="grid-template-rows: 284px max-content;">
+          <div>
             <img
-              class="block w-full h-full object-cover"
+              class="block w-full object-cover"
               src={coworker.image || `https://www.gravatar.com/avatar/${md5(coworker.email)}?s=300`}
               alt="feature" />
-
-            <div>
-              <p class="mt-4 font-medium">{coworker.title}</p>
-              <p class="font-light">{coworker.role}</p>
-              <p class="font-light">
-                <a href="tel:{coworker.phone}">{coworker.phone}</a>
-              </p>
-              <p class="font-light text-sm leading-7">
-                <a
-                  class="underline"
-                  href="mailto:{coworker.email}">{coworker.email}</a>
-              </p>
-            </div>
+            <p class="mt-4 font-medium">{coworker.title}</p>
+            <p class="font-light">{coworker.role}</p>
+            <p class="font-light">
+              <a href="tel:{coworker.phone}">{coworker.phone}</a>
+            </p>
+            <p class="font-light text-sm leading-7">
+              <a
+                class="underline"
+                href="mailto:{coworker.email}">{coworker.email}</a>
+            </p>
           </div>
-          </a>
-        {/each}
-      </div>
-    </Layout.Content>
-  </Layout.Base>
+        </a>
+      {/each}
+    </div>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>
 <Animation.WithScrollFadeIn>
   <div class="grid grid-cols-1 lg:grid-cols-2 bg-blue-marine lg:h-banner">
@@ -184,21 +165,17 @@
   </div>
 </Animation.WithScrollFadeIn>
 <Animation.WithScrollFadeIn>
-  <div class="bg-sand px-8">
-    <Layout.Content>
-      <div class="pb-16 grid grid-cols-2 sm:grid-cols-4 gap-8">
-        {#each iteamFacts as fact}
-          <div class="text-center">
-            <div class="text-superblue">
-              <Typography.H3 fontWeight="font-black">
-                {fact.title}
-              </Typography.H3>
-            </div>
-            <Typography.ParagraphMd>{fact.body}</Typography.ParagraphMd>
+  <Layout.Container background={'bg-sand'}>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+      {#each iteamFacts as fact}
+        <div class="text-center">
+          <div class="text-superblue">
+            <Typography.H3 fontWeight="font-black">{fact.title}</Typography.H3>
           </div>
-        {/each}
-      </div>
-    </Layout.Content>
-  </div>
+          <Typography.ParagraphMd>{fact.body}</Typography.ParagraphMd>
+        </div>
+      {/each}
+    </div>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>
 <ContactBlock.Default />
