@@ -13,6 +13,7 @@
   import Buttons from '../components/buttons'
   import Animation from '../components/animation'
   import GreenBlock from './GreenBlock.svelte'
+  import Layout from '../components/layout'
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session })
@@ -36,10 +37,10 @@
   </style>
 </svelte:head>
 
-<div class="bg-grey-cod iteam-width grid py-16 md:py-32">
+<Layout.Container background={'bg-grey-cod'}>
   <div
     class="flex flex-col-reverse text-white lg:flex-row justify-between w-full items-center">
-    <div class="max-w-xl mt-12 lg:mt-0">
+    <div class="lg:max-w-xl mt-12 lg:mt-0">
       <Typography.H1>Vi utvecklar framtidens tjänster</Typography.H1>
       <Typography.ParagraphLg>
         Iteam är en digitaliseringsbyrå som utvecklar digitala tjänster för en
@@ -58,31 +59,31 @@
       <FeaturedImageCraneIteam />
     </div>
   </div>
-</div>
+</Layout.Container>
 <Animation.WithScrollFadeIn>
-  <div class="grid iteam-width my-16 md:my-32">
+  <Layout.Container>
     <div class="flex flex-col md:flex-row md:flex-wrap gap-6">
       {#each posts as post}
         <FeaturedPost {post} />
       {/each}
     </div>
-  </div>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>
 
 <!-- Tjänster -->
-<div class="bg-grey-dark text-center text-white py-32 px-8">
-  <Animation.WithScrollFadeIn>
-    <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
-    <div class="mt-4 inline-block max-w-2xl text-center">
-      <Typography.ParagraphMd>
-        Vi erbjuder dig ett självgående team som utvecklar din produkt. Man kan
-        säga att du hyr din egen startup. Det inspirerar din organisation att
-        tänka på nya sätt och leder till en bättre affär.
-      </Typography.ParagraphMd>
-    </div>
+<Animation.WithScrollFadeIn>
+  <Layout.Container background={'bg-grey-dark'}>
+    <div class="text-center text-white">
+      <h2 class="text-3xl font-medium tracking-wide">Våra tjänster</h2>
+      <div class="mt-4 inline-block max-w-2xl text-center">
+        <Typography.ParagraphMd>
+          Vi erbjuder dig ett självgående team som utvecklar din produkt. Man
+          kan säga att du hyr din egen startup. Det inspirerar din organisation
+          att tänka på nya sätt och leder till en bättre affär.
+        </Typography.ParagraphMd>
+      </div>
 
-    <div class="mb-8 mt-16">
-      <div class="flex flex-wrap justify-center px-8 md:px-12 gap-4">
+      <div class="flex flex-wrap mt-16 justify-center gap-4">
         <Card
           symbol={BeakerSymbol}
           title={'User research'}
@@ -109,11 +110,11 @@
           text={'Lorem ipsum dolor sit meow meow meow.'} />
       </div>
     </div>
-  </Animation.WithScrollFadeIn>
-</div>
+  </Layout.Container>
+</Animation.WithScrollFadeIn>
 
 <!-- Blocks -->
-<div class="grid iteam-width my-16 md:my-32">
+<Layout.Container>
   <div class="flex flex-col gap-16">
     <Animation.WithScrollFadeIn threshold={0.5}>
       <div class="flex justify-between items-center gap-8">
@@ -179,7 +180,7 @@
       </div>
     </Animation.WithScrollFadeIn>
   </div>
-</div>
+</Layout.Container>
 
 <GreenBlock />
 

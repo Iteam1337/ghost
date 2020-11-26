@@ -7,7 +7,7 @@
 </script>
 
 <Animation.WithScrollFadeIn>
-  <div class="iteam-width grid bg-green bg-opacity-30 gap-y-16 py-16 md:py-32">
+  <Layout.Container background={'bg-green bg-opacity-30'}>
     <div class="grid md:grid-cols-2">
       <div class="col-start-1">
         <h3 class="text-4xl font-medium mb-6 leading-10 max-w-md lg:max-w-xl">
@@ -74,5 +74,5 @@
         </Typography.ParagraphMd>
       </div>
     </div>
-  </div>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>
