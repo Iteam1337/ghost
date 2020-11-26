@@ -38,7 +38,18 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       svelte({
-        preprocess: { ...preprocess, ...image({ placeholder: 'blur' }) },
+        preprocess: {
+          ...preprocess,
+          ...image({
+            placeholder: 'blur',
+            webpOptions: {
+              quality: 100,
+              lossless: false,
+              force: true,
+            },
+            webp: false,
+          }),
+        },
         dev,
         hydratable: true,
         emitCss: true,

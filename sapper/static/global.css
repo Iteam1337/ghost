@@ -15,6 +15,10 @@ body {
   }
 }
 
+.custom-image-wrapper {
+  min-width: 600px;
+}
+
 .iteam-width {
   display: grid;
   grid-template-columns: 2rem 1fr minmax(100px, 1280px) 1fr 2rem;
