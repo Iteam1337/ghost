@@ -17,7 +17,7 @@
   "dependencies": {
     "compression": "1.7.4",
     "dotenv": "8.2.0",
-    "md5": "^2.3.0",
+    "md5": "2.3.0",
     "moment": "2.29.1",
     "polka": "next",
     "rollup-plugin-svelte-svg": "0.2.3",
