@@ -20,7 +20,7 @@
         </h2>
         <Typography.ParagraphLg>{text}</Typography.ParagraphLg>
         <Animation.ButtonHover>
-          <a class="block" href="/kontakta-oss">
+          <a href="/kontakta-oss">
             <Buttons.Default width={'w-full md:w-auto'}>
               {ctaText}
             </Buttons.Default>

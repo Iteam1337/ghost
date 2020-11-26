@@ -15,6 +15,7 @@
   import GreenBlock from './GreenBlock.svelte'
   import Layout from '../components/layout'
   import Meta from '../components/Meta.svelte'
+  import Image from 'svelte-image'
 
   export async function preload(_page, session) {
     return API({ fetch: this.fetch, session })
@@ -129,11 +130,8 @@
             hjälper er att digitalisera er affär.
           </Typography.ParagraphMd>
         </div>
-        <div class="hidden md:block max-w-xl">
-          <img
-            class="h-auto"
-            src="Mikael-Nisse-Mimmi-Lowres.jpg"
-            alt="illustration" />
+        <div class="hidden md:block max-w-xl w-full">
+          <Image src="Mikael-Nisse-Mimmi-Lowres.jpg" alt="two co-workers" />
         </div>
       </div>
     </Animation.WithScrollFadeIn>
@@ -170,8 +168,8 @@
             team och vi jobbar tillsammans mot våra gemensamma mål.
           </Typography.ParagraphMd>
         </div>
-        <div class="hidden md:block max-w-xl">
-          <img
+        <div class="hidden md:block max-w-xl h-full w-full relative">
+          <Image
             class="ml-auto"
             src="Dennis-Radu-Amir-Lowres.jpg"
             alt="illustration" />

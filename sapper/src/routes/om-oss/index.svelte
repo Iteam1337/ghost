@@ -16,6 +16,8 @@
   import ContactBlock from '../../components/contact'
   import Meta from '../../components/Meta.svelte'
   import md5 from 'md5'
+  import Image from 'svelte-image'
+
   export let pages
 
   const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
@@ -76,14 +78,10 @@
       </div>
     </div>
     <div class="grid md:grid-cols-2 grid-cols-1 justify-items-center gap-8">
-      <img
-        class="h-auto w-full object-cover md:mb-32"
-        src="Kitchen-Monday-meeting-Lowres.png"
-        alt="beautiful kitchen" />
-      <img
-        class="h-auto w-full object-cover md:mt-32"
-        src="Hopper-Interior-Lowres.png"
-        alt="nice room" />
+      <Image src="Kitchen-Monday-meeting-Lowres.png" alt="beautiful kitchen" />
+      <div class="md:mt-32 w-full">
+        <Image src="Hopper-Interior-Lowres.png" alt="nice room" />
+      </div>
     </div>
   </Layout.Container>
 </Animation.WithScrollFadeIn>
@@ -133,9 +131,13 @@
 <Animation.WithScrollFadeIn>
   <div class="grid grid-cols-1 lg:grid-cols-2 bg-blue-marine lg:h-banner">
     <div
-      class="row-start-1 col-start-1 hidden lg:block bg-cover bg-top"
-      style="background-image: url(looking-into-wall.png);"
-      title="looking into the wall" />
+      class="row-start-1 col-start-1 hidden lg:block relative w-full h-full overflow-hidden">
+      <Image
+        class="custom-image"
+        wrapperClass="custom-image-wrapper"
+        src="looking-into-wall.png"
+        alt="looking into wall" />
+    </div>
     <div class="col-span-full relative row-start-1 self-center px-8">
       <div class="py-16 max-w-screen-xl mx-auto w-full">
         <div class="grid grid-cols-1 lg:grid-cols-2">

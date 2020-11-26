@@ -2,6 +2,7 @@
   import Layout from '../components/layout'
   import Animation from '../components/animation'
   import Typography from '../components/typography'
+  import Image from 'svelte-image'
 
   const customers = ['trr', 'tsab', 'vimla', 'tj', 'nh', 'gr']
 </script>
@@ -24,10 +25,7 @@
       <div class="grid grid-cols-12 grid-rows-6 w-full">
         <div
           class="grid col-start-1 col-end-6 row-start-2 row-span-full hidden md:block max-w-xl  z-50">
-          <img
-            class="h-auto"
-            src="Radu-Amir-working-Lowres.jpg"
-            alt="illustration" />
+          <Image src="Radu-Amir-working-Lowres.jpg" alt="two co-workers" />
         </div>
         <div
           class="grid col-span-full row-span-full md:col-start-5 md:col-end-13 row-start-1 md:row-end-5">
