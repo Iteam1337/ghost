@@ -112,7 +112,7 @@
       {#each coworkers as coworker}
         <div>
           <img
-            class="block w-full h-full object-cover"
+            class="block w-full object-cover"
             src={coworker.image || `https://www.gravatar.com/avatar/${md5(coworker.email)}?s=300`}
             alt="feature" />
           <p class="mt-4 font-medium">{coworker.title}</p>
