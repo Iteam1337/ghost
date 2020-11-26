@@ -152,9 +152,10 @@
 <Animation.WithScrollFadeIn>
   <div class="grid grid-cols-1 lg:grid-cols-2 bg-blue-marine lg:h-banner">
     <div
-      class="row-start-1 col-start-1 hidden lg:block bg-cover bg-top"
-      style="background-image: url(looking-into-wall.png);"
-      title="looking into the wall" />
+      class="row-start-1 col-start-1 hidden lg:block h-full w-full"
+      title="looking into the wall">
+      <Image src="looking-into-wall.png" alt="looking into wall" />
+    </div>
     <div class="col-span-full relative row-start-1 self-center px-8">
       <div class="py-16 max-w-screen-xl mx-auto w-full">
         <div class="grid grid-cols-1 lg:grid-cols-2">
