@@ -1,3 +1,7 @@
-<div class="px-8 flex justify-between lg:max-w-screen-xl mx-auto">
+<script>
+  export let background = ''
+</script>
+
+<div class="iteam-width gap-y-16 py-16 md:py-32 {background} ">
   <slot />
 </div>

@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "reviewers": ["momentiris", "lundeeell"],
+  "reviewers": ["momentiris"],
   "packageRules": [
     {
       "automerge": true,

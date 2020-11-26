@@ -26,22 +26,20 @@
   image={post.feature_image} />
 
 <Animation.WithScrollFadeIn>
-  <Layout.Base>
-    <Layout.Content>
-      <div class="sm:px-16 md:px-24">
-        <Typography.H1>{post.title}</Typography.H1>
-        <Typography.ParagraphLg>
-          {helpers.getIngressFromHTMLBlob(post.html)}
-        </Typography.ParagraphLg>
-        <div class="flex flex-wrap mt-8">
-          {#each post.tags as tag}
-            {#if tag.slug !== 'case' && tag.visibility === 'public'}
-              <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
-            {/if}
-          {/each}
-        </div>
+  <Layout.Container>
+    <div class="max-w-4xl mx-auto">
+      <Typography.H1>{post.title}</Typography.H1>
+      <Typography.ParagraphLg>
+        {helpers.getIngressFromHTMLBlob(post.html)}
+      </Typography.ParagraphLg>
+      <div class="flex flex-wrap mt-8">
+        {#each post.tags as tag}
+          {#if tag.slug !== 'case' && tag.visibility === 'public'}
+            <Links.RoundedLabel>{tag.name}</Links.RoundedLabel>
+          {/if}
+        {/each}
       </div>
-    </Layout.Content>
+    </div>
     <Layout.Post type="case">
       {@html helpers.getHTMLBlobWithoutIngress(post.html)}
       {#if post.html.includes('<h3 id="tekniker">Tekniker</h3>')}
@@ -54,7 +52,7 @@
         </div>
       {/if}
     </Layout.Post>
-  </Layout.Base>
+  </Layout.Container>
 </Animation.WithScrollFadeIn>
 
 <ContactBlock.Challenge />
