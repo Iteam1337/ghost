@@ -80,6 +80,15 @@ export const API = (context) => ({
       return { post }
     },
   },
+  Coworkers: {
+    BySlug: async (slug) => {
+      const {
+        pages: [coworker]
+      } = await get(context, `/pages/slug/${slug}&include=tags,authors`)
+
+      return { coworker }
+    },
+  },
   Posts: {
     ByTags: async (tags) => {
       let filter = '?filter='

@@ -16,18 +16,22 @@
   import ContactBlock from '../../components/contact'
   import Meta from '../../components/Meta.svelte'
   import md5 from 'md5'
+
   export let pages
 
-  const coworkers = pages.map(({ title, excerpt, feature_image: image }) => {
-    const [role, phone, email] = excerpt.split('\n')
-    return {
-      title,
-      role,
-      phone,
-      email,
-      image,
+  const coworkers = pages.map(
+    ({ title, excerpt, feature_image: image, slug }) => {
+      const [role, phone, email] = excerpt.split('\n')
+      return {
+        title,
+        role,
+        phone,
+        email,
+        image,
+        slug,
+      }
     }
-  })
+  )
 
   export let items = [
     {
@@ -110,22 +114,24 @@
     </div>
     <div class="coworker-grid">
       {#each coworkers as coworker}
-        <div>
-          <img
-            class="block w-full object-cover"
-            src={coworker.image || `https://www.gravatar.com/avatar/${md5(coworker.email)}?s=300`}
-            alt="feature" />
-          <p class="mt-4 font-medium">{coworker.title}</p>
-          <p class="font-light">{coworker.role}</p>
-          <p class="font-light">
-            <a href="tel:{coworker.phone}">{coworker.phone}</a>
-          </p>
-          <p class="font-light text-sm leading-7">
-            <a
-              class="underline"
-              href="mailto:{coworker.email}">{coworker.email}</a>
-          </p>
-        </div>
+        <a href={`/om-oss/${coworker.slug}`}>
+          <div>
+            <img
+              class="block w-full object-cover transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              src={coworker.image || `https://www.gravatar.com/avatar/${md5(coworker.email)}?s=300`}
+              alt="feature" />
+            <p class="mt-4 font-medium">{coworker.title}</p>
+            <p class="font-light">{coworker.role}</p>
+            <p class="font-light">
+              <a href="tel:{coworker.phone}">{coworker.phone}</a>
+            </p>
+            <p class="font-light text-sm leading-7">
+              <a
+                class="underline"
+                href="mailto:{coworker.email}">{coworker.email}</a>
+            </p>
+          </div>
+        </a>
       {/each}
     </div>
   </Layout.Container>
