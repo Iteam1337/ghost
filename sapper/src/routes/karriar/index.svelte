@@ -44,41 +44,48 @@
       </div>
     </Layout.Content>
 
-    <Layout.Content>
-      <div class="py-6">
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-          {#each posts as post}
-            <div class="mt-8 md:mt-12">
-              <a href={`/karriar/${post.slug}`}>
-                <div class="text-blue-cornflower">
-                  <Typography.H2>{post.title}</Typography.H2>
-                </div>
-                <Typography.ParagraphMd>
-                  {post.excerpt.split('\n')[0]}
-                </Typography.ParagraphMd>
-              </a>
-            </div>
-          {/each}
-        </div>
-
-        <div class="mt-8 md:mt-12">
-          <div class="text-blue-cornflower">
-            <Typography.H2>Spontanansökan & praktik</Typography.H2>
+    {#if posts.length > 0}
+      <Layout.Content>
+        <div class="py-6">
+          <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+            {#each posts as post}
+              <div class="mt-8 md:mt-12">
+                <a href={`/karriar/${post.slug}`}>
+                  <div class="text-blue-cornflower">
+                    <Typography.H2>{post.title}</Typography.H2>
+                  </div>
+                  <Typography.ParagraphMd>
+                    {post.excerpt.split('\n')[0]}
+                  </Typography.ParagraphMd>
+                </a>
+              </div>
+            {/each}
           </div>
-          <Typography.ParagraphMd>
-            Hittar du ingen tjänst som passar? Gör en
-            <b><a
-                href="mailto:joinus@iteam.se"
-                class="underline">spontanansökan</a></b>
-            eller anmäl intresse för
-            <b><a
-                href="mailto:internship@iteam.se"
-                class="underline">praktik</a></b>
-          </Typography.ParagraphMd>
         </div>
+      </Layout.Content>
+    {:else}
+      <Layout.Content>
+        <Typography.ParagraphMd>Inga lediga tjänster</Typography.ParagraphMd>
+      </Layout.Content>
+    {/if}
+
+    <Layout.Content>
+      <div class="mt-8 md:mt-12">
+        <div class="text-blue-cornflower">
+          <Typography.H2>Spontanansökan & praktik</Typography.H2>
+        </div>
+        <Typography.ParagraphMd>
+          Hittar du ingen tjänst som passar? Gör en
+          <b><a
+              href="mailto:joinus@iteam.se"
+              class="underline">spontanansökan</a></b>
+          eller anmäl intresse för
+          <b><a
+              href="mailto:internship@iteam.se"
+              class="underline">praktik</a></b>
+        </Typography.ParagraphMd>
       </div>
     </Layout.Content>
   </Animation.WithScrollFadeIn>
 </Layout.Base>
-
 <ContactBlock.Default />
