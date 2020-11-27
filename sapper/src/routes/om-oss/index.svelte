@@ -16,7 +16,6 @@
   import ContactBlock from '../../components/contact'
   import Meta from '../../components/Meta.svelte'
   import md5 from 'md5'
-  import helpers from '../../utils/helpers.js'
 
   export let pages
 
@@ -118,7 +117,7 @@
         <a href={`/om-oss/${coworker.slug}`}>
           <div>
             <img
-              class="block w-full object-cover"
+              class="block w-full object-cover transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105"
               src={coworker.image || `https://www.gravatar.com/avatar/${md5(coworker.email)}?s=300`}
               alt="feature" />
             <p class="mt-4 font-medium">{coworker.title}</p>

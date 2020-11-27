@@ -10,16 +10,22 @@
   import Animation from '../../components/animation/'
   import Layout from '../../components/layout'
   import Typography from '../../components/typography'
+  import Meta from '../../components/Meta.svelte'
   import md5 from 'md5'
 
   export let coworker
   const [workTitle, phone, email] = coworker.custom_excerpt.split('\n')
 </script>
 
+<Meta
+  title="Iteam | Coworkers - {coworker.meta_title || coworker.title}"
+  description={coworker.meta_description || coworker.excerpt}
+  image={coworker.feature_image} />
+
 <Animation.WithScrollFadeIn>
   <Layout.Container>
     <img
-      class="rounded-full h-48 sm:h-auto transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 mb-16"
+      class="rounded-full h-48 sm:h-auto  mb-16"
       src={`https://www.gravatar.com/avatar/${md5(email)}?s=300`}
       alt={coworker.title} />
     <Typography.H1>{coworker.title}</Typography.H1>
