@@ -54,6 +54,6 @@
     "tailwindcss": "1.9.6"
   },
   "optionalDependencies": {
-    "cypress": "^5.3.0"
+    "cypress": "^7.0.0"
   }
 }
