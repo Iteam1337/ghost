@@ -22,7 +22,7 @@
     "polka": "next",
     "rollup-plugin-svelte-svg": "0.2.3",
     "sapper-environment": "1.0.1",
-    "sirv": "1.0.7"
+    "sirv": "1.0.19"
   },
   "devDependencies": {
     "@babel/core": "7.12.3",
